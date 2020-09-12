@@ -1,0 +1,2 @@
+class ContentLibrariesController < ApplicationController
+end
