@@ -11,7 +11,7 @@ class ContentLibrariesController < ApplicationController
   private
 
   def content_libraries_params
-    params.require(:restaurant).permit(:name, :address, :rating)
+    params.require(:content_libraries).permit()
   end
 
 end
