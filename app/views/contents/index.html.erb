@@ -1,1 +1,20 @@
 <h1>Home to your content (index & show)</h1>
+
+  <div class="">
+    <% @contents.each do |content|  %>
+      <div class="">
+        <div class="card" style="width: 18rem;">
+
+          <div class="card-body">
+            <h4 class="card-title"><strong><%= content.title %></strong></h4>
+            <p><%= content.description %> </p>
+            <p><%= content.content %> </p>
+
+
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>
