@@ -1,9 +1,12 @@
 class ContentsController < ApplicationController
-  def index
-    @contents = Content.all
+  def random
+    @randomcontent = Content.random_content
   end
 
-  # def random
-  #   display random content
-  # end
+  def index
+    @randomcontent = Content.random_content
+  end
+
+  def search
+  end
 end
