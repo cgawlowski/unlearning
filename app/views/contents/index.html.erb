@@ -1,20 +1,14 @@
-<h1>Home to your content (index & show)</h1>
+<div class="container">
 
-  <div class="">
-    <% @contents.each do |content|  %>
-      <div class="">
-        <div class="card" style="width: 18rem;">
-
-          <div class="card-body">
-            <h4 class="card-title"><strong><%= content.title %></strong></h4>
-            <p><%= content.description %> </p>
-            <p><%= content.content %> </p>
+  <%= render "new" %>
 
 
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
+  <!-- code green arrow -->
+  <!-- calling the random method -->
+
 
 </div>
+
+
+
+
