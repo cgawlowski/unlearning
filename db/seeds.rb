@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 contents = Content.create(
   format: "article",
   duration: 90,
@@ -13,8 +14,8 @@ contents = Content.create(
   category: "economy",
   title: "Goldman Sends Some Traders Home After Covid-19 Case in Manhattan",
   description: "Goldman Sachs Group Inc. sent some traders home from its Manhattan headquarters after at least one employee tested positive for Covid-19",
-  published_date: "",
-  preview_picture: "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ifjOKyg5WG_0/v1/150x-1.jpg",
-  content: "",
+  publishing_date: 09/17/2020,
+  preview_picture: " ",
+  content: " ",
   author: "Bloomberg"
   )
