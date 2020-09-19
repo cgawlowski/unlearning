@@ -1,10 +1,11 @@
 <div class="container">
 
-  <%= render "new" %>
 
+  <p>Content here</p>
+  <%= render "/contents/video" %>
 
   <!-- code green arrow -->
-  <!-- calling the random method -->
+  <%= link_to 'Next', contents_path(@randomcontent),  class: "btn btn-primary"%>
 
 
 </div>
