@@ -1,7 +1,14 @@
 class ContentsController < ApplicationController
   def index
-    @contents = Content.all
+    # if params[:query].present?
+    #     @contents = Content.where(format: params[:video])
+    # else
+      @contents = Content.all
+  #  end
   end
+
+  private
+
 
   # def random
   #   display random content
