@@ -6,9 +6,8 @@ Rails.application.routes.draw do
   end
   get "/search", to: "contents#search"
   resources :favorites, only: [ :destroy ]
-  get '/search', to: 'contents#search'
-
+  get '/advanced-search', to:'contents#advanced_search'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :podcasts
+
 end
