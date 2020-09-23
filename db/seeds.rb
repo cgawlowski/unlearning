@@ -14,8 +14,33 @@ contents = Content.create(
   category: "economy",
   title: "Goldman Sends Some Traders Home After Covid-19 Case in Manhattan",
   description: "Goldman Sachs Group Inc. sent some traders home from its Manhattan headquarters after at least one employee tested positive for Covid-19",
-  publishing_date: 09/17/2020,
+  published_date: DateTime.new(2001,2,3.5),
   preview_picture: " ",
   content: " ",
   author: "Bloomberg"
+  )
+  contents = Content.create(
+  format: "video",
+  duration: 90,
+  source_url: "https://www.youtube.com/watch?v=S22xeq8xxFQ&feature=emb_title&ab_channel=TheSchoolofLife",
+  category: "philosophy",
+  title: "Why Voltaire Said: You Must Cultivate Your Own Garden ",
+  description: "Goldman Sachs Group Inc. sent some traders home from its Manhattan headquarters after at least one employee tested positive for Covid-19",
+  published_date: DateTime.new(2020,2,3.5),
+  preview_picture: " ",
+  content: " ",
+  author: "The School of Life"
+  )
+
+  contents = Content.create(
+    format: "podcast",
+    duration: 120,
+    source_url: "https://www.youtube.com/watch?v=S22xeq8xxFQ&feature=emb_title&ab_channel=TheSchoolofLife",
+    category: "philosophy",
+    title: "Why Voltaire Said: You Must Cultivate Your Own Garden ",
+    description: "Goldman Sachs Group Inc. sent some traders home from its Manhattan headquarters after at least one employee tested positive for Covid-19",
+    published_date: DateTime.new(2020,2,3.5),
+    preview_picture: " ",
+    content: " ",
+    author: "The School of Life"
   )

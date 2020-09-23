@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="time">
+    <h1>How much time do you have today?</h1>
+  </div>
+
+    <div class="row">
+      <h1>What type of content  do you want?</h1>
+    </div>
+    <div class="input-group">
+      <%= form_tag(contents_path, :method => "get", id: "search-form") do %>
+      <select name=format, class=form-control, :search, params[:search]>
+        <option value="None"> - Select-  </option>
+        <option value="None"> Article </option>
+        <option value="None"> Video</option>
+        <option value="None"> Podcast </option>
+        <% end %>
+      </select>
+        <span class="input-group-btn">
+        <%= submit_tag "Search", class: 'btn btn-success' %>
+        </span>
+    </div>
+</div>
+
