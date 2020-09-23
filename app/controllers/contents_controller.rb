@@ -4,8 +4,8 @@ class ContentsController < ApplicationController
   end
 
   def index
-    if params[:search].present?
-      @contents = Content.where(format: set_format)
+    if params[:search] == "true"
+      @contents = Content.where(format: params[:format])
     else
       @randomcontent = Content.random_content
     end
