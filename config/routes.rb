@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   resources :contents, only: [ :index ] do
     resources :favorites, only: [ :index, :create ]
   end
+  get "/search", to: "contents#search"
   resources :favorites, only: [ :destroy ]
   get '/search', to: 'contents#search'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  resources :podcasts
 end

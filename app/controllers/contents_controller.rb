@@ -11,10 +11,6 @@ class ContentsController < ApplicationController
     end
   end
 
-  def search
-    @contents = @contents.search(params[:search]) if params[:search].present?
-  end
-
   private
 
   def set_format
