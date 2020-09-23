@@ -4,10 +4,26 @@ class ContentsController < ApplicationController
   end
 
   def index
-    @randomcontent = Content.random_content
+    if params[:search].present?
+      @contents = Content.where(format: set_format)
+    else
+      @randomcontent = Content.random_content
+    end
   end
 
   def search
-    @content = Content.find(params[:query])
+    @contents = @contents.search(params[:search]) if params[:search].present?
+  end
+
+  private
+
+  def set_format
+    if params[:video]
+      return "video"
+    elsif params[:article]
+      return "article"
+    elsif params[:podcast]
+      return "podcast"
+    end
   end
 end
