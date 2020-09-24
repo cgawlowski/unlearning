@@ -1,0 +1,11 @@
+<% @podcasts.each do |p| %>
+  <p>
+  <%= p["title_original"] %>
+  ||
+  <%= image_tag p["image"] %> ||
+  <%= p["description_original"] %> |
+  lenght <%= p["audio_length_sec"] %> sec|
+  <%= link_to "Audio", p["audio"] %>
+  </p>
+
+<% end %>

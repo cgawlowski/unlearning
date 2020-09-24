@@ -45,3 +45,4 @@ contents = Content.create(
     content: " ",
     author: "The School of Life"
     )
+
