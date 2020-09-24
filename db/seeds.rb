@@ -19,6 +19,7 @@ contents = Content.create(
   content: " ",
   author: "Bloomberg"
   )
+
   contents = Content.create(
   format: "video",
   duration: 90,
@@ -43,4 +44,5 @@ contents = Content.create(
     preview_picture: " ",
     content: " ",
     author: "The School of Life"
-  )
+    )
+

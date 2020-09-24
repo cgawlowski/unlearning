@@ -4,10 +4,11 @@ class ContentsController < ApplicationController
   end
 
   def index
-    if params[:search] == "true"
-      @contents = Content.where(format: params[:format])
+    if params[:search]=="true"
+      #binding.pry
+         @contents = Content.where(format: params[:format])
     else
-      @randomcontent = Content.random_content
+      @contents = Content.all
     end
   end
 
@@ -29,4 +30,5 @@ class ContentsController < ApplicationController
       return "podcast"
     end
   end
+
 end

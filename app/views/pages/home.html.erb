@@ -1,5 +1,22 @@
-<h1>Pages#home</h1>
+<div class="container">
+  <div class="row justify-content" >
+    <div class="form">
+      <%= form_with(url: "/contents", method: "get", local:true) do %>
+        <%= check_box_tag(:format, :article) %>
+        <%= label_tag(:article, "Article") %>
+        <%= check_box_tag(:format, :video) %>
+        <%= label_tag(:video, "Video") %>
+        <%= check_box_tag(:format, :podcast) %>
+        <%= label_tag(:podcast, "Podcast") %>
+        <%= hidden_field_tag :search, 'true' %>
+        <%= submit_tag("Random search") %>
+      <% end %>
+    </div>
+  </div>
 
+  <h5><%= link_to "Customized search", " " %><h5>
+  <h5><%= link_to "Application#Index", "/contents" %><h5>
+</div>
 
 <%= link_to "Customize your content ", search_path %>
 

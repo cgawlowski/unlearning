@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
   def index
     @favorites = @user_id
     # Voir the Where function
-    #    @restaurants = Restaurant.where(stars: 5)
+    # @restaurants = Restaurant.where(stars: 5)
 
   end
 
