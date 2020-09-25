@@ -1,45 +1,14 @@
-
-<h3>Application#Index</h3>
-  <div class="container">
-    <div class="content">
-      <% if @content.format=="video" %>
-        <% return content_tag(:iframe, '', src: @randomcontent.source_url, width: 560, height: 315, frameborder: 0) %>
-      <% elsif %>
-        <% @randomcontent.format == "article"  %>
-        <% return @randomcontent.title, @randomcontent.description %>
-      <% else %>
-        <% @randomcontent.format == "podcast"  %>
-        <% return @randomcontent.title, @randomcontent.description   %>
-      <% end %>
-    </div>
-    <!-- Green arrow & like button -->
-    <div class="arrow">
-      <%= link_to 'Next', contents_path(@randomcontent),  class: "btn btn-primary"%>
-    </div>
-    <!-- Go to customize content -->
-    <div class="customize">
-      <a href="/search">Go to customize content</a>
-    </div>
-  </div>
-<h5><%= link_to "Home#Page", root_path %></h5>
-
 <div class="container">
-
   <div class="content">
-    <% if @randomcontent.format == "video"  %>
-    <% return content_tag(:iframe, '', src: @randomcontent.source_url, width: 560, height: 315, frameborder: 0) %>
-    <% elsif %>
-    <% @randomcontent.format == "article"  %>
-    <% return @randomcontent.title, @randomcontent.description %>
-    <% else %>
-    <% @randomcontent.format == "podcast"  %>
-    <% return @randomcontent.title, @randomcontent.description   %>
+    <% @contents.each do |content| %>
+      <%= content.title.first %>
+      <%= content.content %>
     <% end %>
   </div>
 
   <!-- Green arrow & like button -->
   <div class="arrow">
-    <%= link_to 'Next', contents_path(@randomcontent),  class: "btn btn-primary"%>
+    <%= link_to 'Next', contents_path(@contents),  class: "btn btn-primary"%>
   </div>
 
   <!-- Go to customize content -->

@@ -4,9 +4,8 @@ class ContentsController < ApplicationController
   end
 
   def index
-    if params[:search]=="true"
-      #binding.pry
-         @contents = Content.where(format: params[:format])
+    if params[:search] == true
+      @contents = Content.where(format: set_format)
     else
       @contents = Content.all
     end
@@ -19,16 +18,13 @@ class ContentsController < ApplicationController
     @podcasts = JSON.parse(response.body)["results"]
   end
 
-  private
-
   def set_format
-    if params[:video]
+    if params[:video] == 1
       return "video"
-    elsif params[:article]
+    elsif params[:article] == 1
       return "article"
-    elsif params[:podcast]
+    elsif params[:podcast] == 1
       return "podcast"
     end
   end
-
 end
