@@ -29,7 +29,7 @@ contents = Content.create(
   description: "Goldman Sachs Group Inc. sent some traders home from its Manhattan headquarters after at least one employee tested positive for Covid-19",
   published_date: DateTime.new(2020,2,3.5),
   preview_picture: " ",
-  content: " ",
+  content: "https://www.youtube.com/watch?v=S22xeq8xxFQ&feature=emb_title&ab_channel=TheSchoolofLife",
   author: "The School of Life"
   )
 
