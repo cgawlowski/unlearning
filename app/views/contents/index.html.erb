@@ -1,1 +1,20 @@
 <h3>Application#Index</h3>
+<div class="container">
+  <div class="content">
+    <% @contents.each do |content| %>
+      <%= content.title.first %>
+      <%= content.content %>
+    <% end %>
+  </div>
+
+  <!-- Green arrow & like button -->
+  <div class="arrow">
+    <%= link_to 'Next', contents_path(@contents),  class: "btn btn-primary"%>
+  </div>
+
+  <!-- Go to customize content -->
+  <div class="customize">
+    <a href="/search">Go to customize content</a>
+  </div>
+</div>
+

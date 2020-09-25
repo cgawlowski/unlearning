@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
   def home
-    @content = Content.all
+    @contents = Content.all
   end
-  
 end

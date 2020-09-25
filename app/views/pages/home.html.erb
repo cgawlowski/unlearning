@@ -2,32 +2,25 @@
   <div class="row justify-content" >
     <div class="form">
       <%= form_with(url: "/contents", method: "get", local:true) do %>
-          <div class="format">
-            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">What do you want ?</label>
-            <%= check_box_tag(:format, :article) %>
-            <%= label_tag(:article, "Article") %>
-            <%= check_box_tag(:format, :video) %>
-            <%= label_tag(:video, "Video") %>
-            <%= check_box_tag(:format, :podcast) %>
-            <%= label_tag(:podcast, "Podcast") %>
-          </div>
-          <div class="time">
-            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How much do yo have ?</label>
-            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-              <option selected>Choose...</option>
-              <option value="1">Something quick ! (5 minutes max)</option>
-              <option value="2">Less than 20 minutes</option>
-              <option value="3">I've got all the time in the world !</option>
-            </select>
-          </div>
-        <%= hidden_field_tag :search, 'true' %>
-        <%= submit_tag("Random search") %>
+        <%= check_box_tag(:article) %>
+        <%= label_tag(:article, "Article") %>
+        <%= check_box_tag(:video) %>
+        <%= label_tag(:video, "Video") %>
+        <%= check_box_tag(:podcast) %>
+        <%= label_tag(:podcast, "Podcast") %>
+        <div class="time">
+          <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How much do yo have ?</label>
+          <%= select_tag(:duration, raw('<option value="1">Something quick ! (5 minutes max)</option><option value="2">Less than 20 minutes</option><option value="3">I have got all the time in the world !</option>')) %>
+    <%= hidden_field_tag :search, true %>
+    <%= submit_tag("Search content") %>
+    </div>
       <% end %>
     </div>
   </div>
-<%= link_to "Customize your content", search_path %>
-<p><%= link_to "Search", contents_path %></p>
+ 
+  <%= link_to "Customize your content", search_path, class: "btn btn-primary"%>
 </div>
+
 
 
 
