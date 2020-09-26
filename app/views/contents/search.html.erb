@@ -1,25 +1,91 @@
-<div class="container">
-  <div class="time">
-    <h1>How much time do you have today?</h1>
+<div id="search">
+<div class="search-container">
+    <div class="search-form-check">
+        <%= form_with(url: "/contents", method: "get", local:true, class: 'search_my_class') do %>
+        
+        <div class="search-content">
+            <label class="search-format" for="inlineFormCustomSelectPref">What format do you want?</label>
+        
+            <div class="search-article">
+                <%= check_box_tag(:format, :article) %>
+                <%= label_tag(:article, "ARTICLE") %>
+            </div>
 
+            <div class="search-video">
+                <%= check_box_tag(:format, :video) %>
+                <%= label_tag(:video, "VIDEO") %>
+            </div>
+
+            <div class="search-podcast">
+                <%= check_box_tag(:format, :podcast) %>
+                <%= label_tag(:podcast, "PODCAST") %>
+            </div>
+        </div>
+
+        <div>
+            <label class="search-time" for="inlineFormCustomSelectPref">How much do yo have ?</label>
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                <option selected>Choose...</option>
+                <option value="1">Something quick ! (5 minutes max)</option>
+                <option value="2">Less than 20 minutes</option>
+                <option value="3">I've got all the time in the world !</option>
+            </select>
+            
+        </div>    
+
+         <div class="search-topic">
+            <label class="topic" for="inlineFormCustomSelectPref">Choose your topic</label>
+        
+            <div class="health">
+                <%= check_box_tag(:format, :health) %>
+                <%= label_tag(:article, "health") %>
+            </div>
+
+            <div class="politics">
+                <%= check_box_tag(:format, :politics) %>
+                <%= label_tag(:video, "politics") %>
+            </div>
+
+            <div class="movies">
+                <%= check_box_tag(:format, :movies) %>
+                <%= label_tag(:podcast, "movies") %>
+            </div>
+
+             <div class="humor">
+                <%= check_box_tag(:format, :humor) %>
+                <%= label_tag(:article, "humor") %>
+            </div>
+
+            <div class="tech_news">
+                <%= check_box_tag(:format, :tech_news) %>
+                <%= label_tag(:video, "tech news") %>
+            </div>
+
+            <div class="entertainment">
+                <%= check_box_tag(:format, :entertainment) %>
+                <%= label_tag(:podcast, "entertainment") %>
+            </div>
+
+             <div class="sport">
+                <%= check_box_tag(:format, :sport) %>
+                <%= label_tag(:article, "sport") %>
+            </div>
+
+            <div class="business">
+                <%= check_box_tag(:format, :business) %>
+                <%= label_tag(:video, "business") %>
+            </div>
+
+            <div class="books">
+                <%= check_box_tag(:format, :books) %>
+                <%= label_tag(:podcast, "books") %>
+            </div>
+        </div>
+        
+        <div class="search-buttons">
+            <%= link_to "Customize your content ", search_path, class: 'search_content_tag' %>
+        </div>   
+      <% end %>
   </div>
-
-    <div class="row">
-      <h1>What type of content  do you want?</h1>
-    </div>
-    <div class="input-group">
-      <%= form_tag(contents_path, :method => "get", id: "search-form") do %>
-      <select name=format, class=form-control, :search, params[:search]>
-        <option value="None"> - Select-  </option>
-        <option value="None"> Article </option>
-        <option value="None"> Video</option>
-        <option value="None"> Podcast </option>
-        <% end %>
-      </select>
-        <span class="input-group-btn">
-        <%= submit_tag "Search", class: 'btn btn-success' %>
-        </span>
-    </div>
 </div>
-
-
+</div>

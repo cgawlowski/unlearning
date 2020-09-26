@@ -14,9 +14,13 @@
   <body>
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
       <div class="home">
-        <%= link_to "Home", class: "nav-brand" do %>
-        <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+      
+      <%= link_to root_path, class: "home-button" do %>
+        <div class="logo">
+        <%= image_tag("circles.png", class: "circles") %> 
+        </div>
         <% end %>
+       
         <h3 id="unlearning">UnLearning</h3>
       </div>
 
@@ -29,10 +33,14 @@
       </div>
     </div>
     
-    <div class="footer">
-    </div>
+
     <%= yield %>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
+
+      <div class="footer">
+      <h1 class="footer-button">Search</h1>
+      <h1 class="footer-button">Library</h1>
+      </div>
   </body>
 </html>

@@ -19,6 +19,11 @@ class ContentsController < ApplicationController
     @podcasts = JSON.parse(response.body)["results"]
   end
 
+  def search
+    render :search, layout: "no_navbar"
+  end
+
+
   private
 
   def set_format
