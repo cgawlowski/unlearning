@@ -1,12 +1,33 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  width: 414px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #65C6C4;
+  border-bottom: solid white 1px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+#unlearning {
+font-family: Snell Roundhand, cursive;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+}
+
+.navbarSupportedContent {
+  justify-content: space-between;
+  background: white;
+  width: 414px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
