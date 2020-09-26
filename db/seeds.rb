@@ -48,7 +48,7 @@ contents = Content.create(
   description: "Voltaire's phrase - you must cultivate your own garden - is one of the most famous statements in the world. But what did Voltaire mean by this - and what can we learn from it to help us live our lives today? Here is a recipe for how to survive our troubled times.",
   published_date: DateTime.new(2020,2,3),
   preview_picture: "https://res.cloudinary.com/djcwoukgv/image/upload/v1601132157/voltaire.png",
-  content: "https://www.youtube.com/watch?v=S22xeq8xxFQ&feature=emb_title&ab_channel=TheSchoolofLife",
+  content: "https://www.youtube.com/embed/S22xeq8xxFQ",
   author: "The School of Life"
 )
 contents = Content.create(
@@ -60,7 +60,7 @@ contents = Content.create(
   description: "Chaos theory means deterministic systems can be unpredictable.",
   published_date: DateTime.new(2019,12,6),
   preview_picture: "https://res.cloudinary.com/djcwoukgv/image/upload/v1601146204/veritasium_z94iyn.png",
-  content: "https://www.youtube.com/watch?v=fDek6cYijxI&ab_channel=Veritasium",
+  content: "https://www.youtube.com/embed/fDek6cYijxI",
   author: "Veritasium"
 )
 
@@ -73,7 +73,7 @@ contents = Content.create(
   description: "Slow motion is a key part of modern visual culture, from iPhone selfies to movies. So how does it work?",
   published_date: DateTime.new(2020,7,23),
   preview_picture: "",
-  content: "https://www.youtube.com/watch?v=v3MtBE37wHY&ab_channel=Vox",
+  content: "https://www.youtube.com/embed/v3MtBE37wHY",
   author: "Vox"
 )
 
@@ -86,7 +86,7 @@ contents = Content.create(
   description: "Famous director<s techniques to create masterpieces",
   published_date: DateTime.new(2020,3,23),
   preview_picture: "https://res.cloudinary.com/djcwoukgv/image/upload/v1601146341/hitchcock_tl3khz.png",
-  content: "https://www.youtube.com/watch?v=UgnNakO6JZw&ab_channel=Nerdwriter1",
+  content: "https://www.youtube.com/embed/UgnNakO6JZw",
   author: "Nerdwriter1"
 )
 

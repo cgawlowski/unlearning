@@ -6,7 +6,19 @@
     <% @contents.each_with_index do |content, index| %>
     <div class="carousel-item <%= index == 0 ? 'active' : "" %>">
       <div class="card">
-        <%= image_tag content.preview_picture , class: "card-img-top"%>
+      <% if content.format == "video"  %>
+      <%= content_tag(:iframe, '', src: content.content,
+                   width: 560, height: 315, frameborder: 0) %>
+        <div class="card-body">
+            <div class="card-text-title">
+              <%= content.title %>
+            </div>
+            <div class="card-text-description">
+              <%= content.description %>
+            </div>
+          </div>
+      <% else %>
+      <%= image_tag content.preview_picture , class: "card-img-top"%>
           <div class="card-body">
             <div class="card-text-title">
               <%= content.title %>
@@ -17,7 +29,8 @@
             <div class="card-text-content">
               <%= content.content %>
             </div>
-        </div>
+          </div>
+      <% end %>
       </div>
       </div>
       <% end %>
