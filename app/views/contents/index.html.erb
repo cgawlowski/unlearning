@@ -1,9 +1,22 @@
+<h3>Application#Index</h3>
 <div class="container">
   <div class="content">
     <% @contents.each do |content| %>
-      <%= content.title.first %>
+    <div class="card" style="width: 48rem;">
+      <img src="https://techcrunch.com/wp-content/uploads/2020/09/1600733344-echodotkidsedition-1.jpg?w=1390&crop=1" class="card-img-top" alt="...">
+        <div class="card-body">
+          <div>
+            <%= content.title %>
+          </div>
+          <div>
+            <%= content.description %>
+          </div>
+        </div>
+      <p class="card-text">
       <%= content.content %>
+    </div>
     <% end %>
+
   </div>
 
   <!-- Green arrow & like button -->
