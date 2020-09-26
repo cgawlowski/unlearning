@@ -6,27 +6,47 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+Content.destroy_all
 contents = Content.create(
   format: "article",
-  duration: 05,
-  source_url: "https://techcrunch.com/2020/09/24/heres-everything-amazon-announced-at-its-latest-hardware-event/",
+  duration: 04,
+  source_url: "https://www.npr.org/2020/09/11/897692090/how-big-oil-misled-the-public-into-believing-plastic-would-be-recycled",
   category: "Tech",
-  title: "Here is everything you need to know about Amazon latest hardware event",
-  description: "From new Ring  flying indoor drone cameras to an adorable new kids version of one of its most popular Amazon  home products, Jeff Bezos’ Seattle retailer unveiled a slew of new hardware goodies just ahead of the holiday shopping season.",
-  published_date: DateTime.new(2020,9,24),
-  preview_picture: "https://techcrunch.com/wp-content/uploads/2020/09/1600733344-echodotkidsedition-1.jpg?w=1390&crop=1",
-  content: "Amazon kicked off its latest hardware showcase by unveiling a new version of the company’s Echo devices, which now include spherical speakers (with a version for kids featuring cute animal graphics). Amazon also unveiled an updated, more personalized Echo capabilities and a new tracking feature for its Show 10 that mirrors Facebook’s Portal in its ability to follow users as they move around a room.
-Ring’s new things
+  title: "How Big Oil Misled The Public Into Believing Plastic Would Be Recycled",
+  description: "Laura Leebrick, a manager at Rogue Disposal & Recycling in southern Oregon, is standing on the end of its landfill watching an avalanche of plastic trash pour out of a semitrailer: containers, bags, packaging, strawberry containers, yogurt cups.
+None of this plastic will be turned into new plastic things. All of it is buried.",
+  published_date: DateTime.new(2020,9,11),
+  preview_picture: "https://media.npr.org/assets/img/2020/08/03/img_6898_slide-8e9d4545963201bab96b2487eccbc77cca4d6e7a-s600-c85.jpg",
+  content: "To me that felt like it was a betrayal of the public trust," she said. "I had been lying to people ... unwittingly.
+Rogue, like most recycling companies, had been sending plastic trash to China, but when China shut its doors two years ago, Leebrick scoured the U.S. for buyers. She could find only someone who wanted white milk jugs. She sends the soda bottles to the state.
 
-Ring also had plenty to pitch at the Amazon hardware show. The security camera company is updating its line with the Always Home Cam, a diminutive drone that can be scheduled to fly preset paths, which users can determine themselves.
+But when Leebrick tried to tell people the truth about burying all the other plastic, she says people didn't want to hear it.
+I remember the first meeting where I actually told a city council that it was costing more to recycle than it was to dispose of the same material as garbage," she says, "and it was like heresy had been spoken in the room: You're lying. This is gold. We take the time to clean it, take the labels off, separate it and put it here. It's gold. This is valuable.
+But it's not valuable, and it never has been. And what's more, the makers of plastic — the nation's largest oil and gas companies — have known this all along, even as they spent millions of dollars telling the American public the opposite.
 
-It also rolled out new hardware for the automotive market with three different devices focused on car owners. A Ring Car Alarm that will retail for $59.99; and the Car Cam and Car Connect will both be $199.99. Ring Car Alarm provides basic features that work with the Ring app, sending alerts to trigger a series of potential responses. The alarm also integrates with other Ring devices or Amazon Alexa hardware and connects using Amazon’s low-bandwidth Sidewalk wireless network protocol.
+In Partnership
+NPR and Frontline
+This story is part of a joint investigation with the PBS series Frontline that includes the documentary Plastic Wars, which aired March 31 on PBS. Watch it online now.
 
-Meanwhile, the Car Cam allows users to check in on their car via video as long as users are in range of a wifi network, or opt-in to the additional LTE companion plan Ring is selling. The cam also includes an Emergency Crash Assist feature that alerts first responders, and a recording feature that turns on if a user says “Alexa, I’m being pulled over”. Finally, the car connect is an API that manufacturers, starting with Tesla,  can use to provide Ring customers with mobile alerts for events detected around vehicles or watch footage recorded with onboard cameras.
+NPR and PBS Frontline spent months digging into internal industry documents and interviewing top former officials. We found that the industry sold the public on an idea it knew wouldn't work — that the majority of plastic could be, and would be, recycled — all while making billions of dollars selling the world new plastic.
 
-Ring also added new opt-in end-to-end video encryption for those users who want it.",
-  author: "Jonathan Shieber, Brian Heater"
+The industry's awareness that recycling wouldn't keep plastic out of landfills and the environment dates to the program's earliest days, we found. There is serious doubt that [recycling plastic] can ever be made viable on an economic basis, one industry insider wrote in a 1974 speech.
+
+Yet the industry spent millions telling people to recycle, because, as one former top industry insider told NPR, selling recycling sold plastic, even if it wasn't true.
+
+If the public thinks that recycling is working, then they are not going to be as concerned about the environment, Larry Thomas, former president of the Society of the Plastics Industry, known today as the Plastics Industry Association and one of the industry's most powerful trade groups in Washington, D.C., told NPR.
+
+In response, industry representative Steve Russell, until recently the vice president of plastics for the trade group the American Chemistry Council, said the industry has never intentionally misled the public about recycling and is committed to ensuring all plastic is recycled.
+
+The proof is the dramatic amount of investment that is happening right now, Russell said. I do understand the skepticism, because it hasn't happened in the past, but I think the pressure, the public commitments and, most important, the availability of technology is going to give us a different outcome.
+
+Here's the basic problem: All used plastic can be turned into new things, but picking it up, sorting it out and melting it down is expensive. Plastic also degrades each time it is reused, meaning it can't be reused more than once or twice.
+On the other hand, new plastic is cheap. It's made from oil and gas, and it's almost always less expensive and of better quality to just start fresh.
+All of these problems have existed for decades, no matter what new recycling technology or expensive machinery has been developed. In all that time, less than 10 percent of plastic has ever been recycled. But the public has known little about these difficulties.
+It could be because that's not what they were told.
+Starting in the 1990s, the public saw an increasing number of commercials and messaging about recycling plastic.
+The bottle may look empty, yet it's anything but trash, says one ad from 1990 showing a plastic bottle bouncing out of a garbage truck. It's full of potential. ... We've pioneered the country's largest, most comprehensive plastic recycling program to help plastic fill valuable uses and roles."
+  author: "Laura Sullivan"
   )
 
   contents = Content.create(
@@ -37,21 +57,7 @@ Ring also added new opt-in end-to-end video encryption for those users who want 
   title: "Why Voltaire Said: You Must Cultivate Your Own Garden ",
   description: "Voltaire's phrase - you must cultivate your own garden - is one of the most famous statements in the world. But what did Voltaire mean by this - and what can we learn from it to help us live our lives today? Here is a recipe for how to survive our troubled times.",
   published_date: DateTime.new(2020,2,3.5),
-  preview_picture: " ",
+  preview_picture: "",
   content: "https://www.youtube.com/watch?v=S22xeq8xxFQ&feature=emb_title&ab_channel=TheSchoolofLife",
   author: "The School of Life"
   )
-
-  contents = Content.create(
-    format: "podcast",
-    duration: 120,
-    source_url: "https://www.youtube.com/watch?v=S22xeq8xxFQ&feature=emb_title&ab_channel=TheSchoolofLife",
-    category: "philosophy",
-    title: "Why Voltaire Said: You Must Cultivate Your Own Garden ",
-    description: "Goldman Sachs Group Inc. sent some traders home from its Manhattan headquarters after at least one employee tested positive for Covid-19",
-    published_date: DateTime.new(2020,2,3.5),
-    preview_picture: " ",
-    content: " ",
-    author: "The School of Life"
-    )
-
