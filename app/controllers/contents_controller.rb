@@ -6,11 +6,11 @@ class ContentsController < ApplicationController
   def index
     if params[:search] == true
       if params[:duration] == "1"
-      @contents = Content.where(format: set_format, "LENGTH(duration) < 5")
+      @contents = Content.where(format: set_format).where("LENGTH(duration) < 5")
       elsif params[:duration] == "2"
-        @contents = Content.where(format: set_format, "LENGTH(duration) < 20")
+        @contents = Content.where(format: set_format).where("LENGTH(duration) < 20")
       else
-        @contents = Content.where(format: set_format, "LENGTH(duration) > 20")
+        @contents = Content.where(format: set_format).where("LENGTH(duration) > 20")
       end
     else
       @contents = Content.all
