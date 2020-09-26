@@ -3,19 +3,38 @@ class ContentsController < ApplicationController
     @randomcontent = Content.random_content
   end
 
-  def index
-    if params[:search] == true
-      if params[:duration] == "1"
-      @contents = Content.where(format: set_format).where("LENGTH(duration) < 5")
-      elsif params[:duration] == "2"
-        @contents = Content.where(format: set_format).where("LENGTH(duration) < 20")
-      else
-        @contents = Content.where(format: set_format).where("LENGTH(duration) > 20")
+  # def index
+  #   if params[:search] == "true"
+  #     if params[:duration] == "1"
+  #     @contents = Content.where(format: set_format).where("LENGTH(duration::text) < 5")
+  #     elsif params[:duration] == "2"
+  #       @contents = Content.where(format: set_format).where("LENGTH(duration) < 20")
+  #     else
+  #       @contents = Content.where(format: set_format).where("LENGTH(duration) > 20")
+  #     end
+  #   else
+  #     @contents = Content.all
+  #   end
+  # end
+
+def index
+  @contents = []
+  if params[:search] == "true"
+    @contents_temp = Content.where(format: set_format)
+    @contents_temp.each do |item|
+      if params[:duration] == "1" && item.duration < 5
+        @contents.push(item)
+      elsif params[:duration] == "2" && item.duration < 20
+        @contents.push(item)
+      elsif params[:duration] == "3" && item.duration > 20
+        @contents.push(item)
+      else @contents = Content.all
       end
-    else
-      @contents = Content.all
     end
+  else
+    @contents = Content.all
   end
+end
 
   def set_time
     if params[:duration] == "1"
@@ -28,11 +47,11 @@ class ContentsController < ApplicationController
   end
 
   def set_format
-    if params[:video] == 1
+    if params[:video] == "1"
       return "video"
-    elsif params[:article] == 1
+    elsif params[:article] == "1"
       return "article"
-    elsif params[:podcast] == 1
+    elsif params[:podcast] == "1"
       return "podcast"
     end
   end
