@@ -6,7 +6,19 @@
     <% @contents.each_with_index do |content, index| %>
     <div class="carousel-item <%= index == 0 ? 'active' : "" %>">
       <div class="card">
-        <img src="https://res.cloudinary.com/djcwoukgv/image/upload/v1601132157/voltaire.png" class="card-img-top" alt="...">
+      <% if content.format == "video"  %>
+      <%= content_tag(:iframe, '', src: content.content,
+                   width: 560, height: 315, frameborder: 0) %>
+        <div class="card-body">
+            <div class="card-text-title">
+              <%= content.title %>
+            </div>
+            <div class="card-text-description">
+              <%= content.description %>
+            </div>
+          </div>
+      <% else %>
+      <%= image_tag content.preview_picture , class: "card-img-top"%>
           <div class="card-body">
             <div class="card-text-title">
               <%= content.title %>
@@ -17,7 +29,9 @@
             <div class="card-text-content">
               <%= content.content %>
             </div>
-        </div>
+          </div>
+      <% end %>
+
       </div>
       </div>
       <% end %>
@@ -39,13 +53,6 @@
   </div>
 </div>
 
-
-
-
-  <div class="arrow">
-
-      <%= link_to 'Next', contents_path(@contents),  class: "btn btn-primary" ".btn1"%>
-    </div>
 
     <!-- Go to customize content -->
     <div class="customize">
