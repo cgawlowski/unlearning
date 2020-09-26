@@ -1,8 +1,0 @@
-const results = document.querySelector("#results");
-const usesSearch = document.querySelector("#search");
-usesSearch.addEventListener('keyup', (event) => {
-  const userInput = event.currentTarget.value;
-  fetch(`/search/${userInput}`)
-    .then(response => response.json())
-
-    });
