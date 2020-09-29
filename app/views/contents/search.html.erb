@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="row justify-content" >
     <div class="form-check">
@@ -51,3 +52,42 @@
 </div>
 
 
+             <div class="humor">
+                <%= check_box_tag(:format, :humor) %>
+                <%= label_tag(:article, "humor") %>
+            </div>
+
+            <div class="tech_news">
+                <%= check_box_tag(:format, :tech_news) %>
+                <%= label_tag(:video, "tech news") %>
+            </div>
+
+            <div class="entertainment">
+                <%= check_box_tag(:format, :entertainment) %>
+                <%= label_tag(:podcast, "entertainment") %>
+            </div>
+
+             <div class="sport">
+                <%= check_box_tag(:format, :sport) %>
+                <%= label_tag(:article, "sport") %>
+            </div>
+
+            <div class="business">
+                <%= check_box_tag(:format, :business) %>
+                <%= label_tag(:video, "business") %>
+            </div>
+
+            <div class="books">
+                <%= check_box_tag(:format, :books) %>
+                <%= label_tag(:podcast, "books") %>
+            </div>
+            
+        </div>
+        
+        <div class="search-buttons">
+            <%= link_to "Customize your content ", search_path, class: 'search_content_tag' %>
+        </div>   
+      <% end %>
+  </div>
+</div>
+</div>
