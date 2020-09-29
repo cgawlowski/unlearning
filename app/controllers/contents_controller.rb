@@ -50,7 +50,6 @@ end
     render :search, layout: "no_navbar"
   end
 
-
   private
 
   def set_format
@@ -69,5 +68,4 @@ end
             { headers: {"X-ListenAPI-Key" => ENV["LISTEN_API_KEY"]}})
     @podcasts = JSON.parse(response.body)["results"]
   end
-
 end
