@@ -17,24 +17,24 @@ class ContentsController < ApplicationController
   #   end
   # end
 
-def index
-  @contents = []
-  if params[:search] == "true"
-    @contents_temp = Content.where(format: set_format)
-    @contents_temp.each do |item|
-      if params[:duration] == "1" && item.duration < 5
-        @contents.push(item)
-      elsif params[:duration] == "2" && item.duration < 20
-        @contents.push(item)
-      elsif params[:duration] == "3" && item.duration > 20
-        @contents.push(item)
-      else @contents = Content.all
+  def index
+    @contents = []
+    if params[:search] == "true"
+      @contents_temp = Content.where(format: set_format)
+      @contents_temp.each do |item|
+        if params[:duration] == "1" && item.duration < 5
+          @contents.push(item)
+        elsif params[:duration] == "2" && item.duration < 20
+          @contents.push(item)
+        elsif params[:duration] == "3" && item.duration > 20
+          @contents.push(item)
+        else @contents = Content.all
+        end
       end
+    else
+      @contents = Content.all
     end
-  else
-    @contents = Content.all
   end
-end
 
   def set_time
     if params[:duration] == "1"
