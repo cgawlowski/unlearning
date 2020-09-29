@@ -4,10 +4,10 @@
   <p class="card">
   <%= p["title_original"] %>
   ||
-  <%= image_tag p["image"] %> ||
-  <%= p["description_original"] %> |
-  lenght <%= p["audio_length_sec"] %> sec|
-  <%= link_to "Audio", p["audio"] %>
+  <%= image_tag p["image"], class: "image_card" %> ||
+  <%= p["description_original"]%> ||
+  lenght <%= p["audio_length_sec"] %> sec||
+  <%= link_to "Listen podcast", p["audio"] %>
   </p>
 
 <% end %>
