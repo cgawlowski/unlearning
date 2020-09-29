@@ -1,41 +1,41 @@
 <div class="container">
-    <div class="content-card">
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <!-- boucle  -->
-    <% @contents.each_with_index do |content, index| %>
-    <div class="carousel-item <%= index == 0 ? 'active' : "" %>">
-      <div class="card">
-      <% if content.format == "video"  %>
-      <%= content_tag(:iframe, '', src: content.content,
-                   width: 560, height: 315, frameborder: 0) %>
-        <div class="card-body">
-            <div class="card-text-title">
-              <%= content.title %>
-            </div>
-            <div class="card-text-description">
-              <%= content.description %>
-            </div>
+  <div class="content-card">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="">
+      <div class="carousel-inner">
+        <!-- boucle  -->
+        <% @contents.each_with_index do |content, index| %>
+        <div class="carousel-item <%= index == 0 ? 'active' : "" %>">
+          <div class="card">
+          <% if content.format == "video"  %>
+          <%= content_tag(:iframe, '', src: content.content,
+                       width: 560, height: 315, frameborder: 0) %>
+            <div class="card-body">
+                <div class="card-text-title">
+                  <%= content.title %>
+                </div>
+                <div class="card-text-description">
+                  <%= content.description %>
+                </div>
+              </div>
+          <% else %>
+          <%= image_tag content.preview_picture , class: "card-img-top"%>
+              <div class="card-body">
+                <div class="card-text-title">
+                  <%= content.title %>
+                </div>
+                <div class="card-text-description">
+                  <%= content.description %>
+                </div>
+                <div class="card-text-content">
+                  <%= content.content %>
+                </div>
+              </div>
+          <% end %>
           </div>
-      <% else %>
-      <%= image_tag content.preview_picture , class: "card-img-top"%>
-          <div class="card-body">
-            <div class="card-text-title">
-              <%= content.title %>
-            </div>
-            <div class="card-text-description">
-              <%= content.description %>
-            </div>
-            <div class="card-text-content">
-              <%= content.content %>
-            </div>
-          </div>
-      <% end %>
-      </div>
       </div>
       <% end %>
     <!-- end of boucle  -->
-  </div>
+    </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -49,6 +49,6 @@
 </div>
     <!-- Go to customize content -->
     <div class="customize">
-      <a href="/search">Go to customize content</a>
+      <a href="/search" class="button">Go to customize content</a>
     </div>
 </div>

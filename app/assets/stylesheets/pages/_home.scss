@@ -1,11 +1,16 @@
 // Specific CSS for your home-page
 .container {
-    width: 414px;
-    background-color: #65C6C4;
+    // width: 414px;
+
+}
+
+.landing {
+  // width: 600px;
+  background-color: #65C6C4;
 }
 
 .my_class {
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   grid-row-gap: 70px;
