@@ -3,5 +3,4 @@ class PagesController < ApplicationController
     @content = Content.all
     render :home, layout: "no_navbar"
   end
-  
 end
