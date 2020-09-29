@@ -46,6 +46,13 @@ end
     end
   end
 
+  def search
+    render :search, layout: "no_navbar"
+  end
+
+
+  private
+
   def set_format
     if params[:video] == "1"
       return "video"
