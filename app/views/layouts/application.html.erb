@@ -14,21 +14,18 @@
   <body>
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
       <div class="home">
-      
+
       <%= link_to root_path, class: "home-button" do %>
         <div class="logo">
-        <%= image_tag("circles.png", class: "circles") %> 
+        <%= image_tag("circles.png", class: "circles") %>
         </div>
         <% end %>
 
         <h3 id="unlearning">UnLearning</h3>
       </div>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+
       <div>
-        <%= link_to "Profile", "#", class: "profile" %>
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
       </div>
     </div>
