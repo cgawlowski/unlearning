@@ -128,3 +128,16 @@ contents = Content.create(
   Cependant, dans tous les cas, il ne faut pas trop en attendre, le résultat le plus optimiste à espérer étant tout au plus un apaisement des tensions si Pyongyang réaffirmait son engagement dans la mise en place d'un programme provisoire de dénucléarisation, et ce  en échange d'un allégement limité des sanctions",
   author: "Cyrille Gawlowski"
 )
+
+contents = Content.create(
+  format: "podcast",
+  duration: 39,
+  source_url: " ",
+  category: "geopolitics",
+  title: "What 'China' means in 2020, and how perceptions and opinions about China changed since President Trump took office",
+  description: "We take a look at what China means for American voters",
+  published_date: DateTime.new(2020,3,23),
+  preview_picture: "https://res.cloudinary.com/djcwoukgv/image/upload/v1601146341/hitchcock_tl3khz.png",
+  content: "https://open.spotify.com/embed-podcast/episode/46UnxD6Asv9r3IJh2tj6p0",
+  author: "Defense One Radio"
+)
