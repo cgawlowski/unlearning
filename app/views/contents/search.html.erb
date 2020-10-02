@@ -1,22 +1,19 @@
-
 <div class="container">
   <div class="row justify-content" >
     <div class="form-check">
-      <%= form_with(url: "/contents", method: "get", local:true, class: 'my_class') do %>
+
+      <%= form_with(url: "/advanced-search", method: "get", local:true, class: 'my_class') do %>
 
         <div class="content">
           <label class="format" for="inlineFormCustomSelectPref">What format do you want?</label>
-
           <div class="article">
             <%= check_box_tag(:article) %>
             <%= label_tag(:article, "ARTICLE") %>
           </div>
-
           <div class="video">
             <%= check_box_tag(:video) %>
             <%= label_tag(:video, "VIDEO") %>
           </div>
-
           <div class="podcast">
             <%= check_box_tag(:podcast) %>
             <%= label_tag(:podcast, "PODCAST") %>
@@ -24,17 +21,24 @@
         </div>
 
         <div>
-           <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How much time do yo have ?</label>
-          <%= select_tag(:duration, raw('<option value="1">Something quick ! (5 minutes max)</option><option value="2">Less than 20 minutes</option><option value="3">I have got all the time in the world !</option>'), class: "custom-select my-1 mr-sm-2", id: "inlineFormCustomSelectPref") %>
+          <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How much time do yo have ?</label>
+            <%= select_tag(:duration, raw('
+              <option value="1">Something quick ! (5 minutes max)</option>
+              <option value="2">Less than 20 minutes</option>
+              <option value="3">I have got all the time in the world !</option>'),
+            class: "custom-select my-1 mr-sm-2", id: "inlineFormCustomSelectPref") %>
           <%= hidden_field_tag :search, true %>
-
         </div>
 
-        <div>
-           <label class="my-1 mr-2" for="inlineFormCustomSelectPref">What topic?</label>
-          <%= select_tag(:category, raw('<option value="1">Tech news</option><option value="2">Health</option><option value="3">International news</option>'), class: "custom-select my-1 mr-sm-2", id: "inlineFormCustomSelectPref") %>
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Which topic(s) ?</label>
+            <%= select_tag(:category, raw('
+              <option value="1">Cinema</option>
+              <option value="2">Philosophy</option>
+              <option value="3">Science</option>
+              <option value="4">Geopolitics</option>'),
+            class: "custom-select my-1 mr-sm-2") %>
           <%= hidden_field_tag :search, true %>
-
         </div>
 
         <div class="buttons">
@@ -42,45 +46,9 @@
             <%= hidden_field_tag :search, 'true' %>
             <%= submit_tag("Search", class: 'submit_tag') %>
           </div>
-
         </div>
       <% end %>
     </div>
-    </div>
+  </div>
+</div>
 
-            <div class="humor">
-                <%= check_box_tag(:format, :humor) %>
-                <%= label_tag(:article, "humor") %>
-            </div>
-
-            <div class="tech_news">
-                <%= check_box_tag(:format, :tech_news) %>
-                <%= label_tag(:video, "tech news") %>
-            </div>
-
-            <div class="entertainment">
-                <%= check_box_tag(:format, :entertainment) %>
-                <%= label_tag(:podcast, "entertainment") %>
-            </div>
-
-             <div class="sport">
-                <%= check_box_tag(:format, :sport) %>
-                <%= label_tag(:article, "sport") %>
-            </div>
-
-            <div class="business">
-                <%= check_box_tag(:format, :business) %>
-                <%= label_tag(:video, "business") %>
-            </div>
-
-            <div class="books">
-                <%= check_box_tag(:format, :books) %>
-                <%= label_tag(:podcast, "books") %>
-            </div>
-
-
-        <div class="search-buttons">
-            <%= link_to "Customize your content ", search_path, class: 'search_content_tag' %>
-        </div>
-
- </div>
