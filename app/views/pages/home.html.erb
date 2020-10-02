@@ -22,13 +22,15 @@
           </div>
         </div>
 
-        <div>
-           <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How much time do yo have ?</label>
-          <%= select_tag(:duration, raw('<option value="1">Something quick ! (5 minutes max)</option><option value="2">Less than 20 minutes</option><option value="3">I have got all the time in the world !</option>'), class: "custom-select my-1 mr-sm-2", id: "inlineFormCustomSelectPref") %>
-          <%= hidden_field_tag :search, true %>
-          <%= submit_tag("Search content") %>
-        </div>
-        <%= link_to "Customize your content", search_path, class: "btn btn-primary"%>
+        <div class="buttons">
+            <div class="submit_button">
+                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How much time do yo have ?</label>
+                  <%= select_tag(:duration, raw('<option value="1">Something quick ! (5 minutes max)</option><option value="2">Less than 20 minutes</option><option value="3">I have got all the time in the world !</option>'), class: "custom-select my-1 mr-sm-2", id: "inlineFormCustomSelectPref") %>
+                  <%= hidden_field_tag :search, true %>
+                  <%= submit_tag("Search content") %>
+            </div>
+            <%= link_to "Customize your content", search_path, class: 'content_tag' %>
+        </div>   
       <% end %>
     </div>
   </div>

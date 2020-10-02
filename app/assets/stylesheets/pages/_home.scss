@@ -20,7 +20,7 @@
 }
 
 .my_class {
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   grid-row-gap: 70px;
@@ -116,4 +116,25 @@
 
 .advanced_search {
     width: 414px;
+    background-color: #E2F9F8;
+    
+
+}
+
+.card {
+    width: 380px;
+    background-color: white;
+}
+
+.image_card {
+    width: 71px;
+height: 72px;
+}
+
+.description {
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+color: #4F4F4F;
 }
