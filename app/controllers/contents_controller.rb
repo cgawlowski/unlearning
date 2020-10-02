@@ -36,15 +36,40 @@ class ContentsController < ApplicationController
   #   end
   # end
 
-  # def set_time
-  #   if params[:duration] == "1"
-  #     return Content.where(:duration <=5)
-  #   elsif params[:duration] == "2"
-  #     return Content.where(:duration <=20)
-  #   else params[:duration] == "3"
-  #     return Content.where(:duration >20)
-  #   end
-  # end
+  def index
+    @contents = []
+    if params[:search] == "true"
+      @contents_temp = Content.where(format: set_format)
+      @contents_temp.each do |item|
+        if params[:duration] == "1" && item.duration < 5
+          @contents.push(item)
+        elsif params[:duration] == "2" && item.duration < 20
+          @contents.push(item)
+        elsif params[:duration] == "3" && item.duration > 20
+          @contents.push(item)
+        else @contents = Content.all
+        end
+      end
+    else
+      @contents = Content.all
+    end
+    puts @contents
+  end
+
+  def set_time
+    if params[:duration] == "1"
+      return Content.where(:duration <=5)
+    elsif params[:duration] == "2"
+      return Content.where(:duration <=20)
+    else params[:duration] == "3"
+      return Content.where(:duration >20)
+    end
+  end
+
+  def search
+    render :search, layout: "no_navbar"
+  end
+
 
   private
 
@@ -69,5 +94,4 @@ class ContentsController < ApplicationController
       return "geopolitics"
     end
   end
-
 end

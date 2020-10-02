@@ -1,23 +1,86 @@
+.card-all-content{
+  overflow: scroll;
+  padding-left: 10px;
+}
 
-.card-body {
+.card-video {
+  padding-top: 12px;
+  font-size: 20px;
+}
 
+.card-video description {
+  padding-top: 12px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+
+.button {
+  transition-duration: 0.4s;
+  background-color: #65C6C4;
+  border-radius: 25px;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: white;
+  color: white;
 }
 
 .card-text-title {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
-  text-align: center;
+}
+
+.card-body-article{
+  padding-top: 12px;
+  height: 600px;
 }
 
 .card-text-description {
-  font-size: 12px;
+  opacity: 0.3;
+  font-size: 14px;
   font-style: italic;
-  overflow: scroll;
+  font-weight: bold;
+}
+
+.customize {
+  padding-top: 20px;
+  text-align: center;
 }
 
 .card-text-content {
-  height: 200px;
   font-size: 12px;
-  font-weight: normal;
-  overflow: scroll;
 }
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.arrow-icon{
+    color: #65C6C4;
+    position: fixed;
+    bottom: 60px;
+    top: unset;
+
+}
+

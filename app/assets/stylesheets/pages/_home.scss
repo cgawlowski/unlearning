@@ -4,15 +4,14 @@
     justify-content: center;
 }
 
-
 .home-container {
     display: flex;
     justify-content: center;
-    width: 414px;
+    // width: 414px;
     height: 720px;
     background-color: #65C6C4;
 }
- 
+
 .form-check {
     top: 100px;
     background-color: #65C6C4;
@@ -34,14 +33,14 @@
     grid-row-gap: 20px;
     font-style: normal;
     font-family: Inter;
-    color: #4F4F4F;  
+    color: #4F4F4F;
 }
 
 .format {
     font-family: Inter;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;  
+    font-size: 24px;
 }
 
 .article, .video, .podcast {
@@ -116,25 +115,4 @@
 
 .advanced_search {
     width: 414px;
-    background-color: #E2F9F8;
-    
-
-}
-
-.card {
-    width: 380px;
-    background-color: white;
-}
-
-.image_card {
-    width: 71px;
-height: 72px;
-}
-
-.description {
-    font-family: Inter;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-color: #4F4F4F;
 }
