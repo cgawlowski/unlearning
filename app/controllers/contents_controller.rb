@@ -34,6 +34,7 @@ class ContentsController < ApplicationController
     else
       @contents = Content.all
     end
+    puts @contents
   end
 
   def set_time

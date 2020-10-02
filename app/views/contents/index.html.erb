@@ -1,26 +1,24 @@
 <div class="container">
   <div class="w3-content">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="false" data-interval="false">
       <div class="carousel-inner">
         <!-- boucle  -->
         <% @contents.each_with_index do |content, index| %>
         <div class="carousel-item <%= index == 0 ? 'active' : "" %>">
-          <div class="card-video">
-            <!-- <div class="card-text-title">
-                <%= content.title %>
-            </div> -->
+          <div class="card-all-content">
               <% if content.format == "video"  %>
               <%= content_tag(:iframe, '', src: content.content,
                            width: 400, height: 315, frameborder: 0) %>
-                <div class="card-body-video">
+                <div class="card-video">
                     <div class="card-text-description">
                       <%= content.description %>
                     </div>
                     <div class="category">
-                      <%=  content.author %>
-                      <%=  content.category %>
+                      <button class="button"><%=  content.category %></button>
+                      <p>By <%=  content.author %> </p>
                     </div>
                 </div>
+
               <% else %>
                 <div class="card-text-title">
                     <%= content.title %>
@@ -30,37 +28,31 @@
                   <div class="card-text-description">
                       <%= content.description %>
                       <div class="category">
-                      <%=  content.author %>
-                      <%=  content.category %>
-                    </div>
-
+                        <button class="button"><%=  content.category %></button>
+                        <p>By <%=  content.author %> </p>
+                      </div>
                   </div>
-                <div class="card-text-content">
-                      <%= content.content %>
-                </div>
+                  <div class="card-text-content">
+                    <%= content.content %>
+                  </div>
               </div>
+          </div>
               <% end %>
           </div>
       </div>
       <% end %>
     <!-- end of boucle  -->
-    </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  </div>
+  <a class="carousel-control-next arrow-icon" href="#carouselExampleControls" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
 
     <!-- Green arrow & like button -->
-  </div>
+</div>
 <!-- Go to customize content -->
   <div class="customize">
       <a href="/search" class="content_tag">Go to customize content</a>
-    </div>
-</div>
+  </div>
 
 
-</div>
