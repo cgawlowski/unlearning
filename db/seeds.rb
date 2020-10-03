@@ -7,11 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Content.destroy_all
+
 contents = Content.create(
   format: "article",
   duration: 4,
   source_url: "https://www.npr.org/2020/09/11/897692090/how-big-oil-misled-the-public-into-believing-plastic-would-be-recycled",
-  category: "Tech",
+  category: "tech",
   title: "How Big Oil Misled The Public Into Believing Plastic Would Be Recycled",
   description: "Laura Leebrick, a manager at Rogue Disposal & Recycling in southern Oregon, is standing on the end of its landfill watching an avalanche of plastic trash pour out of a semitrailer: containers, bags, packaging, strawberry containers, yogurt cups.
 None of this plastic will be turned into new plastic things. All of it is buried.",
@@ -37,7 +38,7 @@ contents = Content.create(
   format: "video",
   duration: 19,
   source_url: "https://www.youtube.com/watch?v=S22xeq8xxFQ&feature=emb_title&ab_channel=TheSchoolofLife",
-  category: "Philosophy",
+  category: "philosophy",
   title: "Why Voltaire Said: You Must Cultivate Your Own Garden ",
   description: "Voltaire's phrase - you must cultivate your own garden - is one of the most famous statements in the world. But what did Voltaire mean by this - and what can we learn from it to help us live our lives today? Here is a recipe for how to survive our troubled times.",
   published_date: DateTime.new(2020,2,3),
@@ -49,7 +50,7 @@ contents = Content.create(
   format: "video",
   duration: 13,
   source_url: "https://www.youtube.com/watch?v=fDek6cYijxI&ab_channel=Veritasium",
-  category: "Science",
+  category: "science",
   title: "The Science Behind the Butterfly Effect",
   description: "Chaos theory means deterministic systems can be unpredictable.",
   published_date: DateTime.new(2019,12,6),
@@ -62,7 +63,7 @@ contents = Content.create(
   format: "video",
   duration: 10,
   source_url: "https://www.youtube.com/watch?v=v3MtBE37wHY&ab_channel=Vox",
-  category: "Cinema",
+  category: "cinema",
   title: "How slow motion works",
   description: "Slow motion is a key part of modern visual culture, from iPhone selfies to movies. So how does it work?",
   published_date: DateTime.new(2020,7,23),
@@ -75,7 +76,7 @@ contents = Content.create(
   format: "video",
   duration: 9,
   source_url: "https://www.youtube.com/watch?v=UgnNakO6JZw&ab_channel=Nerdwriter1",
-  category: "Cinema",
+  category: "cinema",
   title: "How Alfred Hitchcock Blocks A Scene ",
   description: "Famous director<s techniques to create masterpieces",
   published_date: DateTime.new(2020,3,23),
@@ -88,7 +89,7 @@ contents = Content.create(
   format: "article",
   duration: 4,
   source_url: "https://resonancesinternationales.wordpress.com/2018/06/09/premier-article-de-blog/",
-  category: "Geopolitics",
+  category: "geopolitics",
   title: "États-Unis-Corée du Nord : qu'attendre du sommet de Singapour ?",
   description: "Après de nombreux rebondissements diplomatiques, l'heure semble désormais à l'optimisme : la République populaire démocratique de Corée (RPDC) a en effet montré de nombreux signes d'ouvertures à l'égard de la communauté internationale, après le contexte particulièrement tendu des derniers mois.",
   published_date: DateTime.new(2020,3,23),
@@ -108,3 +109,25 @@ contents = Content.create(
   Garantir la sécurité du régime nord-coréen.</p>",
   author: "Cyrille Gawlowski"
 )
+
+response = HTTParty.get(
+            'https://listen-api.listennotes.com/api/v2/search?q=cinema&'\
+            'sort_by_date=0&type=episode&offset=0&len_min=1&len_max=60&'\
+            'genre_ids=68&published_before=1580172454000&published_after=0&'\
+            'only_in=title%2Cdescription&language=English&safe_mode=0',
+            { headers: {"X-ListenAPI-Key" => ENV["LISTEN_API_KEY"]}})
+podcasts = JSON.parse(response.body)["results"]
+podcasts.each do |p|
+  Content.create(
+    format: "podcast",
+    duration: p["audio_length_sec"].to_i / 60,
+    source_url: p["audio"],
+    category: "cinema",
+    title: p["title_original"],
+    description: p["description_original"],
+    published_date: DateTime.new(2020,3,23),
+    preview_picture: p["image"],
+    content: "",
+    author: p["podcast"]["publisher_original"]
+  )
+end
