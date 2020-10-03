@@ -10,13 +10,13 @@
               <%= content_tag(:iframe, '', src: content.content,
                            width: 400, height: 315, frameborder: 0) %>
                 <div class="card-video">
-                    <div class="card-text-description">
+                  <div class="card-text-description">
                       <%= content.description %>
-                    </div>
-                    <div class="category">
-                      <button class="button"><%=  content.category %></button>
-                      <p>By <%=  content.author %> </p>
-                    </div>
+                  </div>
+                  <div class="category">
+                    <button class="button"><%=  content.category %></button>
+                    <p>By <%=  content.author %> </p>
+                  </div>
                 </div>
 
               <% else %>
@@ -32,10 +32,10 @@
                         <p>By <%=  content.author %> </p>
                       </div>
                   </div>
-                  <div class="card-text-content">
+                  <p class="card-text-content">
                     <%= content.content %>
-                  </div>
-              </div>
+                  </p>
+                </div>
           </div>
               <% end %>
           </div>
