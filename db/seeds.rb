@@ -122,7 +122,7 @@ podcasts.each do |p|
     description: p["description_original"],
     published_date: DateTime.new(2020,3,23),
     preview_picture: p["image"],
-    content: "",
+    content:  #p["audio"], !!!!!!
     author: p["podcast"]["publisher_original"]
   )
 end
