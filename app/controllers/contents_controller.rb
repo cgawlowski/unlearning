@@ -4,21 +4,6 @@ class ContentsController < ApplicationController
     find_contents
   end
 
-  # def index
-  #   if params[:search] == "true"
-  #     if params[:duration] == "1"
-  #     @contents = Content.where(format: set_format).where("LENGTH(duration::text) < 5")
-  #     elsif params[:duration] == "2"
-  #       @contents = Content.where(format: set_format).where("LENGTH(duration) < 20")
-  #     else
-  #       @contents = Content.where(format: set_format).where("LENGTH(duration) > 20")
-  #     end
-  #   else
-  #     @contents = Content.all
-  #   end
-  # end
-
-
   def set_time
     if params[:duration] == "1"
       return Content.where(:duration <=5)
@@ -51,13 +36,13 @@ class ContentsController < ApplicationController
   end
 
   def set_topic
-    if params[:category]  == "1" 
+    if params[:category]  == "1"
       return "cinema"
-    elsif params[:category]  == "2" 
+    elsif params[:category]  == "2"
       return "philosophy"
-    elsif params[:category]  == "3" 
+    elsif params[:category]  == "3"
       return "science"
-    elsif params[:category]  == "4" 
+    elsif params[:category]  == "4"
       return "geopolitics"
     end
   end
