@@ -1,15 +1,25 @@
-<div class="container">
-<div class="advanced_saerch">
-<% @podcasts.each do |p| %>
-  <p class="card">
-  <%= p["title_original"] %>
-  ||
-  <%= image_tag p["image"], class: "image_card" %> ||
-  <%= p["description_original"]%> ||
-  lenght <%= p["audio_length_sec"] %> sec||
-  <%= link_to "Listen podcast", p["audio"] %>
-  </p>
-
-<% end %>
-</div>
+<div class="head-container">
+  <div class="advanced-container">
+    <div class="advanced-search">
+      <% @podcasts.each do |p| %>
+        <p >
+        <div class="title-container">
+          <%= image_tag p["image"], class: "image_card" %> 
+          <span class="title"><%= p["title_original"] %></span>
+        </div>
+        
+        <span class="description"><%= p["description_original"]%> 
+        </span>
+        <div>
+        <%= link_to "#", class: "home-button" do %> 
+        <%= image_tag("play.png", class: "library_btn") %> 
+        <% end %>
+        <%= link_to "Listen", p["audio"] %>
+        <%= distance_of_time_in_words(p["audio_length_sec"]) %>
+        </div>
+        </p>
+        
+      <% end %>
+    </div>
+  </div>
 </div>
