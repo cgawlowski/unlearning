@@ -1,12 +1,14 @@
 .footer {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
   justify-content: space-around;
   background-image: linear-gradient(#A8CDE9, #408AB4);
   width: 414px;
   height: 50px;
   margin-left: auto;
   margin-right: auto;
+  position: fixed;
+  bottom: 0px;
 }
 
 .home_btn, .library_btn, .search_btn {

@@ -1,6 +1,25 @@
 class ContentsController < ApplicationController
-  def random
-    @randomcontent = Content.random_content
+
+  def index
+    @contents = []
+    if params[:search] == "true"
+      @contents_temp = Content.where(format: set_format)
+      if params[:category]
+        @contents_temp = @contents_temp.where(category: set_topic)
+      end
+      @contents_temp.each do |item|
+        if params[:duration] == "1" && item.duration < 5
+          @contents.push(item)
+        elsif params[:duration] == "2" && item.duration < 20
+          @contents.push(item)
+        elsif params[:duration] == "3" && item.duration > 20
+          @contents.push(item)
+        else @contents = Content.all
+        end
+      end
+    else
+      @contents = Content.all
+    end
   end
 
   # def index
@@ -17,25 +36,26 @@ class ContentsController < ApplicationController
   #   end
   # end
 
-def index
-  @contents = []
-  if params[:search] == "true"
-    @contents_temp = Content.where(format: set_format)
-    @contents_temp.each do |item|
-      if params[:duration] == "1" && item.duration < 5
-        @contents.push(item)
-      elsif params[:duration] == "2" && item.duration <= 20
-        @contents.push(item)
-      elsif params[:duration] == "3" && item.duration > 20
-        @contents.push(item)
-     
+
+  def index
+    @contents = []
+    if params[:search] == "true"
+      @contents_temp = Content.where(format: set_format)
+      @contents_temp.each do |item|
+        if params[:duration] == "1" && item.duration < 5
+          @contents.push(item)
+        elsif params[:duration] == "2" && item.duration < 20
+          @contents.push(item)
+        elsif params[:duration] == "3" && item.duration > 20
+          @contents.push(item)
+        else @contents = Content.all
+        end
       end
+    else
+      @contents = Content.all
     end
-  else
-    @contents = Content.all
-  end
- 
 end
+
 
   def set_time
     if params[:duration] == "1"
@@ -70,4 +90,17 @@ end
       return "podcast"
     end
   end
+
+  def set_topic
+    if params[:category]  == "1" 
+      return "cinema"
+    elsif params[:category]  == "2" 
+      return "philosophy"
+    elsif params[:category]  == "3" 
+      return "science"
+    elsif params[:category]  == "4" 
+      return "geopolitics"
+    end
+  end
+
 end
