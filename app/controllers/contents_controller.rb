@@ -36,7 +36,6 @@ class ContentsController < ApplicationController
   #   end
   # end
 
-
   def index
     @contents = []
     if params[:search] == "true"
@@ -92,13 +91,13 @@ end
   end
 
   def set_topic
-    if params[:category]  == "1" 
+    if params[:category]  == "1"
       return "cinema"
-    elsif params[:category]  == "2" 
+    elsif params[:category]  == "2"
       return "philosophy"
-    elsif params[:category]  == "3" 
+    elsif params[:category]  == "3"
       return "science"
-    elsif params[:category]  == "4" 
+    elsif params[:category]  == "4"
       return "geopolitics"
     end
   end

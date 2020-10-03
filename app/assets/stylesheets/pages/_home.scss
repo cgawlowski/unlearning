@@ -57,7 +57,7 @@
 
 .checkbox-container {
     display: inline-block;
-    
+
 }
 input[type="checkbox"] {
     position: absolute;
@@ -73,14 +73,14 @@ input[type="checkbox"] {
     background: #E2F9F8;
     border-radius: 20px;
     padding-left: 30px;
-    
-       
+
+
     }
     &:checked + label {
         background-color: #34699A;
         color:  white;
         &:hover, &:focus, &:active { background-color: #34699A; }
-    } 
+    }
 }
 
 
@@ -117,7 +117,6 @@ input[type="checkbox"] {
     border-top: 2px solid #767676;
     border-right: 2px solid #202020;
     border-bottom: 2px solid #202020;
-
 }
 
 
@@ -130,7 +129,7 @@ input[type="checkbox"] {
     background-color: #E2F9F8;
     display: flex;
     justify-content: center;
-    
+
     width: 414px;
 }
 

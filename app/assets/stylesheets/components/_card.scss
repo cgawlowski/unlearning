@@ -1,6 +1,7 @@
 .card-all-content{
   overflow: scroll;
   padding-left: 10px;
+  font-family: Inter;
 }
 
 .card-video {
@@ -11,6 +12,7 @@
 .card-video description {
   padding-top: 12px;
   padding-left: 10px;
+  font-style: normal;
   font-size: 14px;
 }
 
@@ -18,7 +20,7 @@
 .button {
   transition-duration: 0.4s;
   background-color: #65C6C4;
-  border-radius: 25px;
+  border-radius: 50px;
   border: none;
   color: black;
   text-align: center;
@@ -37,6 +39,7 @@
 .card-text-title {
   font-size: 18px;
   font-weight: bold;
+  padding-bottom: 5px;
 }
 
 .card-body-article{
@@ -45,7 +48,6 @@
 }
 
 .card-text-description {
-  opacity: 0.3;
   font-size: 14px;
   font-style: italic;
   font-weight: bold;
