@@ -1,12 +1,13 @@
 class FavoritesController < ApplicationController
   def index
-    @favorites = @user_id
-    # Voir the Where function
-    # @restaurants = Restaurant.where(stars: 5)
 
+    # Voir the Where function
+    # @favorites = Content.where(stars: 5)
   end
 
   def create
+    @favorite = Favorite.new(favorite_params)
+    @favorite.user = current_user
     content_id.save!
     puts "Saved #{content_id.title}"
     redirect_to root_path
@@ -14,5 +15,4 @@ class FavoritesController < ApplicationController
 
   def destroy
   end
-
 end
