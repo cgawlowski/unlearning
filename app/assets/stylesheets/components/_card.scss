@@ -33,20 +33,22 @@
 }
 
 .category{
-  padding-top:40px;
+  padding-top:10px;
 }
 
 .button {
   transition-duration: 0.4s;
   background-color: #65C6C4;
-  border-radius: 50px;
+  border-radius: 8px;
   border: none;
   color: black;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 4px 4px 12px;
+  padding-inline-start: 12px;
+  padding-inline-end: 12px;
   cursor: pointer;
 }
 
