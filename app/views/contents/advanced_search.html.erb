@@ -61,7 +61,10 @@
             <div class="card">
               <div class="title-container">
                 <%= image_tag content.preview_picture, class: "image_card" %> 
-                <span class="title"><%= content.title %></span>
+                <div>
+                  <span class="title"><%= content.title %></span>
+                  <span class="author">by_<%= content.author %> </span>
+                </div>
               </div>
           
               <div>
