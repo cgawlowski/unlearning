@@ -127,12 +127,14 @@ input[type="checkbox"] {
     display: flex;
     justify-content: center;
     width: 414px;
+    margin-bottom: 30px;
 }
 
 
 .advanced-search {
     display: flex;
     flex-direction: column;
+    margin-bottom: 50px;
 }
 
 
@@ -143,7 +145,7 @@ input[type="checkbox"] {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: -40px;
     padding: 10px;
     border-radius: 10px;
     filter: drop-shadow(2px 2px 16px rgba(0, 0, 0, 0.11));
@@ -183,7 +185,7 @@ font-size: 14px;
 color: #4F4F4F;
 }
 
-.video-description {
+.line {
 padding-bottom: 10px;
 margin-bottom: 10px;
 border-bottom: 1px solid #65C6C4;
@@ -206,4 +208,42 @@ text-transform: uppercase;
 font-style: normal;
 font-weight: normal;
 font-size: 13px;
+}
+
+.duration {
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+color: #333333;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.vector_btn {
+    display: flex;
+    justify-content: flex-end;
+    padding-right:10px;
+    
+   width: 14px;
+   height: 14px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.description-top {
+    display: flex;
+    justify-content: space-between;  
+}
+
+.video, .audio, .article {
+    width: 20px;
+height: 28px;
 }

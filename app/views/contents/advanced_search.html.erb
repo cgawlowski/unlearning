@@ -1,16 +1,19 @@
 <div class="head-container">
   <div class="advanced-container">
     <div class="advanced-search">
+    Cinema
       <% @contents.each do |content| %>
 
       <% if content.format == "video"  %>
         <p >
         <div class="card">
+        <div class="description-top">
           <div class="video-title-container">
             <span class="title"><%= content.title %></span>
             <span class="author">by_<%= content.author %> </span>
           </div>
-          
+          <%= image_tag "video.png", class: "video" %> 
+          </div>
           <div>
             <%= link_to "#", class: "home-button" do %> 
             <%= content_tag(:iframe, '', src: content.content,
@@ -21,11 +24,19 @@
                 <span class="description"><%= content.description %> 
                 </span>
 
-                <div class="video-description">
+                <div class="line">
                 </div>
 
-                <%= link_to "Watch", content.source_url %> ||
-                <%= distance_of_time_in_words(content.duration.minutes) %>
+                 <div class="card-bottom">
+                <div>
+                  <%= link_to "Watch", content.source_url %> ||
+                  <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span> 
+                </div>
+
+                <div class="vector_btn">
+                  <%= image_tag "Vector.png", class: "vector" %> 
+                </div>
+              </div>
               </div> 
             </div>
           </div>
@@ -37,21 +48,31 @@
           <div class="card">
             <div class="title-container">
               <%= image_tag content.preview_picture, class: "image_card" %> 
-              <div>
-              <span class="title"><%= content.title %></span>
-              <span class="author">by_<%= content.author %> </span>
+              <div class="text">
+                <span class="title"><%= content.title %></span>
+                <span class="author">by_<%= content.author %> </span>
               </div>
+              <%= image_tag "audio.png", class: "audio" %> 
             </div>
 
               <span class="description"><%= content.description %> 
               </span>
 
-              <div>
-                <%= link_to "#", class: "home-button" do %> 
-                <%= image_tag("play.png", class: "library_btn") %> 
-                <% end %>
-                <%= link_to "Listen", content.source_url %> ||
-                <%= distance_of_time_in_words(content.duration.minutes) %>
+              <div class="line">
+              </div>
+
+              <div class="card-bottom">
+                <div>
+                  <%= link_to "#", class: "home-button" do %> 
+                  <%= image_tag("play.png", class: "library_btn") %> 
+                  <% end %>
+                  <%= link_to "Listen", content.source_url %> ||
+                  <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span> 
+                </div>
+
+                <div class="vector_btn">
+                  <%= image_tag "Vector.png", class: "vector" %> 
+                </div>
               </div>
             </div>
            </p>
@@ -61,21 +82,30 @@
             <div class="card">
               <div class="title-container">
                 <%= image_tag content.preview_picture, class: "image_card" %> 
-                <div>
+                <div class="text">
                   <span class="title"><%= content.title %></span>
                   <span class="author">by_<%= content.author %> </span>
                 </div>
+                <%= image_tag "article.png", class: "article" %> 
               </div>
           
               <div>
                 <span class="description"><%= content.description %> 
                 </span>
 
-                <div class="video-description">
+                <div class="line">
                 </div>
 
-                <%= link_to "Read", content.source_url %> ||
-                <%= distance_of_time_in_words(content.duration.minutes) %>
+                 <div class="card-bottom">
+                <div>
+                  <%= link_to "Read", content.source_url %> ||
+                  <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span> 
+                </div>
+
+                <div class="vector_btn">
+                  <%= image_tag "Vector.png", class: "vector" %> 
+                </div>
+              </div>
               </div> 
             </div>
           </div>
@@ -85,3 +115,5 @@
     </div>
   </div>
 </div>
+
+             
