@@ -9,9 +9,9 @@
 }
 
 .form-check {
-    top: 100px;
+    margin-top: 100px;
     background-color: #65C6C4;
-
+    
 }
 
 .form-container {
@@ -32,6 +32,27 @@
     color: #4F4F4F;
 }
 
+.timesearch {
+    display: flex;
+    flex-direction: column;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+}
+
+.topic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    color: white;
+    
+}
 
 
 .content {
@@ -51,11 +72,20 @@
     font-size: 24px;
 }
 
+.search-format {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+}
+
 .checkbox-container {
     display: inline-block;
 
 }
 input[type="checkbox"] {
+    
     position: absolute;
     opacity: 0;
     & + label {
@@ -99,6 +129,17 @@ input[type="checkbox"] {
     width: 232px;
     height: 40px;
     font-size: 20px;
+    border: none;
+}
+
+.search-submit_tag {
+    background-color: #65C6C4;
+    color: white;
+    border-radius: 20px;
+    width: 232px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
 }
 
 .content_tag {
@@ -109,10 +150,7 @@ input[type="checkbox"] {
     height: 40px;
     font-size: 20px;
     padding-left: 10px;
-    border-left: 2px solid #767676;
-    border-top: 2px solid #767676;
-    border-right: 2px solid #202020;
-    border-bottom: 2px solid #202020;
+   
 }
 
 
@@ -243,7 +281,29 @@ color: #333333;
     justify-content: space-between;  
 }
 
-.video, .audio, .article {
+.video_btn, .audio_btn, .article_btn {
     width: 20px;
 height: 28px;
+}
+
+.video-btn {
+    display: flex;
+    justify-content: center;  
+}
+
+.custom-select {
+    border-radius: 10px;
+   
+}
+
+.container {
+    background-color: #408AB4;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.search-form-check {
+    margin-top: 100px;
+    background-color: #408AB4;
 }
