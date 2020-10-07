@@ -8,9 +8,9 @@
 }
 
 .form-check {
-    top: 100px;
+    margin-top: 100px;
     background-color: #65C6C4;
-
+    
 }
 
 .form-container {
@@ -31,6 +31,27 @@
     color: #4F4F4F;
 }
 
+.timesearch {
+    display: flex;
+    flex-direction: column;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+}
+
+.topic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    color: white;
+    
+}
 
 
 .content {
@@ -50,11 +71,20 @@
     font-size: 24px;
 }
 
+.search-format {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+}
+
 .checkbox-container {
     display: inline-block;
 
 }
 input[type="checkbox"] {
+    
     position: absolute;
     opacity: 0;
     & + label {
@@ -98,6 +128,17 @@ input[type="checkbox"] {
     width: 232px;
     height: 40px;
     font-size: 20px;
+    border: none;
+}
+
+.search-submit_tag {
+    background-color: #65C6C4;
+    color: white;
+    border-radius: 20px;
+    width: 232px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
 }
 
 .content_tag {
@@ -108,39 +149,29 @@ input[type="checkbox"] {
     height: 40px;
     font-size: 20px;
     padding-left: 10px;
-    border-left: 2px solid #767676;
-    border-top: 2px solid #767676;
-    border-right: 2px solid #202020;
-    border-bottom: 2px solid #202020;
+   
 }
 
 
 .head-container {
     display: flex;
     justify-content: center;
+    
 }
 
 .advanced-container {
     background-color: #E2F9F8;
     display: flex;
     justify-content: center;
-
     width: 414px;
+    margin-bottom: 30px;
 }
 
 
 .advanced-search {
-    width: 380px;
-    background-color: white;
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
-    grid-row-gap: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
-    filter: drop-shadow(2px 2px 16px rgba(0, 0, 0, 0.11));
-
+    margin-bottom: 50px;
 }
 
 
@@ -148,17 +179,33 @@ input[type="checkbox"] {
 .card {
     width: 380px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: -40px;
+    padding: 10px;
+    border-radius: 10px;
+    filter: drop-shadow(2px 2px 16px rgba(0, 0, 0, 0.11));
+    //margin: 0px 16px;
 }
 
 .title-container {
     display: flex;
-    justify-content: center;
     gap: 0px 20px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
 }
 
+
+.video-title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
 
 .image_card {
 width: 71px;
@@ -175,6 +222,13 @@ font-size: 14px;
 color: #4F4F4F;
 }
 
+.line {
+padding-bottom: 10px;
+margin-bottom: 10px;
+border-bottom: 1px solid #65C6C4;
+width: 160px;
+}
+
 .title {
     font-family: Inter;
 font-style: normal;
@@ -185,3 +239,70 @@ letter-spacing: 0.01em;
 text-transform: uppercase;
 }
 
+.author {
+    color: #4F4F4F;
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+}
+
+.duration {
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+color: #333333;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.vector_btn {
+    display: flex;
+    justify-content: flex-end;
+    padding-right:10px;
+    
+   width: 14px;
+   height: 14px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.description-top {
+    display: flex;
+    justify-content: space-between;  
+}
+
+.video_btn, .audio_btn, .article_btn {
+    width: 20px;
+height: 28px;
+}
+
+.video-btn {
+    display: flex;
+    justify-content: center;  
+}
+
+.custom-select {
+    border-radius: 10px;
+   
+}
+
+.container {
+    background-color: #408AB4;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.search-form-check {
+    margin-top: 100px;
+    background-color: #408AB4;
+}

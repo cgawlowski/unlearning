@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row justify-content" >
-    <div class="form-check">
+    <div class="search-form-check">
 
-      <%= form_with(url: "/advanced-search", method: "get", local:true, class: 'my_class') do %>
+      <%= form_with(url: "/advanced-search", method: "get", local:true, class: 'form-container') do %>
 
         <div class="content">
-          <label class="format" for="inlineFormCustomSelectPref">What format do you want?</label>
+          <label class="search-format" for="inlineFormCustomSelectPref">What format do you want?</label>
           <div class="article">
             <%= check_box_tag(:article) %>
             <%= label_tag(:article, "ARTICLE") %>
@@ -21,7 +21,7 @@
         </div>
 
         <div>
-          <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How much time do yo have ?</label>
+          <label class="timesearch" for="inlineFormCustomSelectPref">How much time do yo have ?</label>
             <%= select_tag(:duration, raw('
               <option value="1">Something quick ! (5 minutes max)</option>
               <option value="2">Less than 20 minutes</option>
@@ -30,7 +30,7 @@
           <%= hidden_field_tag :search, true %>
         </div>
 
-        <div class="form-group">
+        <div class="topic">
           <label for="exampleFormControlSelect2">Which topic(s) ?</label>
             <%= select_tag(:category, raw('
               <option value="1">Cinema</option>
@@ -44,7 +44,7 @@
         <div class="buttons">
           <div class="submit_button">
             <%= hidden_field_tag :search, 'true' %>
-            <%= submit_tag("Search", class: 'submit_tag') %>
+            <%= submit_tag("Search", class: 'search-submit_tag') %>
           </div>
         </div>
       <% end %>
