@@ -21,11 +21,12 @@
 .time {
     display: flex;
     flex-direction: column;
-    font-family: Inter;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
-    color: #4F4F4F;
+    color:  white;
 }
 
 .timesearch {
@@ -56,8 +57,9 @@
     align-items: center;
     grid-row-gap: 20px;
     font-style: normal;
-    font-family: Inter;
-    color: #4F4F4F;
+    font-family: "Inter", sans-serif;
+    justify-content: center;
+    color: white;
 }
 
 .format {
@@ -77,8 +79,8 @@
 
 .checkbox-container {
     display: inline-block;
-
 }
+
 input[type="checkbox"] {
     
     position: absolute;
@@ -101,7 +103,6 @@ input[type="checkbox"] {
         &:hover, &:focus, &:active { background-color: #34699A; }
     }
 }
-
 
 .buttons {
   display: flex;
@@ -139,7 +140,7 @@ input[type="checkbox"] {
     background-color: white;
     color: #4F4F4F;
     border-radius: 20px;
-    width: 260px;
+    width: 200px;
     height: 40px;
     font-size: 20px;
     padding-left: 10px;
