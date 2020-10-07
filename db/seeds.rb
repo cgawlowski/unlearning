@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Content.destroy_all
+
 contents = Content.create(
   format: "article",
   duration: 4,
@@ -108,3 +109,85 @@ contents = Content.create(
   Garantir la sécurité du régime nord-coréen.</p>",
   author: "Cyrille Gawlowski"
 )
+
+response = HTTParty.get(
+            'https://listen-api.listennotes.com/api/v2/search?q=cinema&'\
+            'sort_by_date=0&type=episode&offset=0&len_min=1&len_max=60&'\
+            'genre_ids=68&published_before=1580172454000&published_after=0&'\
+            'only_in=title%2Cdescription&language=English&safe_mode=0',
+            { headers: {"X-ListenAPI-Key" => ENV["LISTEN_API_KEY"]}})
+podcasts = JSON.parse(response.body)["results"]
+podcasts.each do |p|
+  Content.create(
+    format: "podcast",
+    duration: p["audio_length_sec"].to_i / 60,
+    source_url: p["audio"],
+    category: "Cinema",
+    title: p["title_original"],
+    description: p["description_original"],
+    published_date: DateTime.new(2020,3,23),
+    preview_picture: p["image"],
+    content: p["audio"],
+    author: p["podcast"]["publisher_original"]
+  )
+end
+
+
+
+response = HTTParty.get(
+  "https://listen-api.listennotes.com/api/v2/search?q=philosophy&sort_by_date=0&type=episode&offset=0&len_min=10&len_max=30&published_before=1580172454000&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=0", 
+             { headers: {"X-ListenAPI-Key" => ENV["LISTEN_API_KEY"]}})
+podcasts = JSON.parse(response.body)["results"]
+podcasts.each do |p|
+  Content.create(
+    format: "podcast",
+    duration: p["audio_length_sec"].to_i / 60,
+    source_url: p["audio"],
+    category: "philosophy",
+    title: p["title_original"],
+    description: p["description_original"],
+    published_date: DateTime.new(2020,3,23),
+    preview_picture: p["image"],
+    content: "",
+    author: p["podcast"]["publisher_original"]
+  )
+end
+
+
+response = HTTParty.get(
+  "https://listen-api.listennotes.com/api/v2/search?q=geopolitics&sort_by_date=0&type=episode&offset=0&len_min=10&len_max=30&genre_ids=68%2C82&published_before=1580172454000&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=0",
+              { headers: {"X-ListenAPI-Key" => ENV["LISTEN_API_KEY"]}})
+podcasts = JSON.parse(response.body)["results"]
+podcasts.each do |p|
+  Content.create(
+    format: "podcast",
+    duration: p["audio_length_sec"].to_i / 60,
+    source_url: p["audio"],
+    category: "geopolitics",
+    title: p["title_original"],
+    description: p["description_original"],
+    published_date: DateTime.new(2020,3,23),
+    preview_picture: p["image"],
+    content: "",
+    author: p["podcast"]["publisher_original"]
+  )
+end
+
+response = HTTParty.get(
+  "https://listen-api.listennotes.com/api/v2/search?q=science&sort_by_date=0&type=episode&offset=0&len_min=10&len_max=30&genre_ids=68%2C82&published_before=1580172454000&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=0",
+              { headers: {"X-ListenAPI-Key" => ENV["LISTEN_API_KEY"]}})
+podcasts = JSON.parse(response.body)["results"]
+podcasts.each do |p|
+  Content.create(
+    format: "podcast",
+    duration: p["audio_length_sec"].to_i / 60,
+    source_url: p["audio"],
+    category: "science",
+    title: p["title_original"],
+    description: p["description_original"],
+    published_date: DateTime.new(2020,3,23),
+    preview_picture: p["image"],
+    content: "",
+    author: p["podcast"]["publisher_original"]
+  )
+end

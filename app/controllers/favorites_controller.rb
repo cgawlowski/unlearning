@@ -1,17 +1,25 @@
 class FavoritesController < ApplicationController
   def index
-    # Voir the Where function
-    # @favorites = Content.where(stars: 5)
+    @favorites = Favorite.where(content_id: @content.id, user: current_user)
   end
 
-  def create
-    @favorite = Favorite.new(favorite_params)
-    @favorite.user = current_user
-    content_id.save!
-    puts "Saved #{content_id.title}"
-    redirect_to root_path
+  def toggle
+    @content = Content.find(params[:content_id])
+    @favorite = Favorite.find_by(content_id: @content.id, user: current_user)
+    if @favorite
+      @favorite.destroy!
+      flash[:alert] = "Defavorited"
+    else
+      @favorite = Favorite.new(content_id: @content.id, user: current_user)
+      @favorite.save!
+      flash[:alert] = "Favorite added"
+    end
+    redirect_to request.referrer
   end
 
-  def destroy
+  private
+
+  def favorite_params
+    params.require(:favorite).permit(:content_id)
   end
 end
