@@ -1,6 +1,14 @@
 .card-all-content{
   overflow: scroll;
-  padding-left: 10px;
+  font-family: Inter;
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 0.01em;
+    color: #4F4F4F;
+  }
 }
 
 .card-video {
@@ -11,21 +19,37 @@
 .card-video description {
   padding-top: 12px;
   padding-left: 10px;
+  font-style: normal;
   font-size: 14px;
 }
 
+.blue-line {
+  width: 240px;
+  height: 0px;
+  padding-left:0px;
+  // left: 26px;
+  // top: 428px;
+  border: 2px solid #65C6C4;
+
+}
+
+.category{
+  padding-top:10px;
+}
 
 .button {
   transition-duration: 0.4s;
   background-color: #65C6C4;
-  border-radius: 25px;
+  border-radius: 8px;
   border: none;
   color: black;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 4px 4px 12px;
+  padding-inline-start: 12px;
+  padding-inline-end: 12px;
   cursor: pointer;
 }
 
@@ -35,8 +59,18 @@
 }
 
 .card-text-title {
-  font-size: 18px;
-  font-weight: bold;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #000000;
+  margin-top: 25px;
+  margin-bottom: 10px;
+
 }
 
 .card-body-article{
@@ -45,7 +79,6 @@
 }
 
 .card-text-description {
-  opacity: 0.3;
   font-size: 14px;
   font-style: italic;
   font-weight: bold;
@@ -60,21 +93,21 @@
   font-size: 12px;
 }
 
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 35px;
-    height: 0;
-    overflow: hidden;
-}
+// .video-container {
+//     position: relative;
+//     padding-bottom: 56.25%;
+//     padding-top: 35px;
+//     height: 0;
+//     overflow: hidden;
+// }
 
-.video-container iframe {
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+// .video-container iframe {
+//     position: absolute;
+//     top:0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+// }
 
 .arrow-icon{
     color: #65C6C4;
@@ -84,3 +117,10 @@
 
 }
 
+.iframe-video{
+  width: 100%;
+}
+
+.card-podcast-content {
+  width: 100%;
+}

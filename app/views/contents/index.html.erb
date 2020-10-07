@@ -1,22 +1,23 @@
-<div class="container">
+<div class="container offset-footer">
   <div class="w3-content">
     <div id="carouselExampleControls" class="carousel slide" data-ride="false" data-interval="false">
       <div class="carousel-inner">
         <!-- boucle  -->
         <% @contents.each_with_index do |content, index| %>
-        <div class="carousel-item <%= index == 0 ? 'active' : "" %>">
-          <div class="card-all-content">
+          <div class="carousel-item <%= index == 0 ? 'active' : "" %>">
+            <div class="card-all-content">
               <% if content.format == "video"  %>
-              <%= content_tag(:iframe, '', src: content.content,
-                           width: 400, height: 315, frameborder: 0) %>
+                <%= content_tag(:iframe, '', src: content.content, class: "iframe-video", height: 315, frameborder: 0) %>
                 <div class="card-video">
-                    <div class="card-text-description">
+                  <div class="card-text-description">
                       <%= content.description %>
-                    </div>
-                    <div class="category">
-                      <button class="button"><%=  content.category %></button>
-                      <p>By <%=  content.author %> </p>
-                    </div>
+                      <hr class="blue-line">
+                  </div>
+                  <div class="category">
+                    <button class="button"><%=  content.category %></button>
+                    <p>By <%=  content.author %> </p>
+                    <p>Published: <%=  content.published_date %> </p>
+                  </div>
                 </div>
               <% elsif content.format == "article" %>
                 <div class="card-text-title">
@@ -26,54 +27,54 @@
                 <div class="card-body-article">
                   <div class="card-text-description">
                       <%= content.description %>
+                      <hr class="blue-line">
                       <div class="category">
                         <button class="button"><%=  content.category %></button>
                         <p>By <%=  content.author %> </p>
+                        <p>Published: <%=  content.published_date %> </p>
                       </div>
                   </div>
                   <div class="card-text-content">
-                    <%= content.content %>
+                    <%= content.content.html_safe %>
                   </div>
-              </div>
-        <% else %>
+                </div>
+              <% else %>
                 <div class="card-text-title">
                     <%= content.title %>
                 </div>
                 <%= image_tag content.preview_picture , class: "card-img-top"%>
                 <div class="card-body-article">
                   <div class="card-text-description">
-                      <%= content.description %>
-                      <div class="category">
-                        <button class="button"><%=  content.category %></button>
-                        <p>By <%=  content.author %> </p>
-                      </div>
+                    <%= content.description %>
+                    <hr class="blue-line">
+                    <div class="category">
+                      <button class="button"><%=  content.category %></button>
+                      <p>By: <%=  content.author %> </p>
+                      <p>Published: <%=  content.published_date %> </p>
+                    </div>
                   </div>
-                  <div class="card-text-content">
-                    <%= content.content %>
-                  </div>
-              </div>
-              <% end %>
+                  <p class="card-podcast-content">
+                      <%= audio_tag content.content.html_safe, controls: true %>
+                  </p>
 
+                </div>
+              <% end %>
+              <a class="carousel-control-next arrow-icon" href="#carouselExampleControls" role="button" data-slide="next">
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-11.5.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
+                </svg>
+              </a>
+            </div>
           </div>
         <% end %>
       </div>
-    <!-- end of boucle  -->
+    </div>
 
-  </div>
-  <a class="carousel-control-next arrow-icon" href="#carouselExampleControls" role="button" data-slide="next">
-    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-11.5.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
-    </svg>
-    <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span> -->
-  </a>
 
-    <!-- Green arrow & like button -->
-
+      <!-- Green arrow & like button -->
 </div>
-<!-- Go to customize content -->
-  <div class="customize">
-      <a href="/search" class="content_tag">Go to customize content</a>
-  </div>
+
+
+
 
 
