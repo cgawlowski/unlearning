@@ -1,7 +1,7 @@
 class ContentsController < ApplicationController
-
   def index
     find_contents
+    @favorite = Favorite.new
   end
 
   def set_time
@@ -21,7 +21,6 @@ class ContentsController < ApplicationController
   def advanced_search
     find_contents
   end
-
 
   private
 
