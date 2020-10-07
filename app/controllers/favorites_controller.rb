@@ -1,6 +1,5 @@
 class FavoritesController < ApplicationController
   def index
-
     # Voir the Where function
     # @favorites = Content.where(stars: 5)
   end

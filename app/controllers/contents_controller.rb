@@ -1,5 +1,4 @@
 class ContentsController < ApplicationController
-
   def index
     @contents = []
     if params[:search] == "true"
