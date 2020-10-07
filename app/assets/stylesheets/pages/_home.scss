@@ -97,7 +97,7 @@ input[type="checkbox"] {
     height: 30px;
     background: #E2F9F8;
     border-radius: 20px;
-    padding-left: 30px;
+    text-align: center;
 
 
     }
@@ -305,4 +305,8 @@ height: 28px;
 .search-form-check {
     margin-top: 100px;
     background-color: #408AB4;
+}
+
+.article, .video, .podcast {
+    text-align: center;
 }
