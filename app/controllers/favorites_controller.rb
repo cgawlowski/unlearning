@@ -1,6 +1,7 @@
 class FavoritesController < ApplicationController
   def index
-    @favorites = Favorite.where(content_id: @content.id, user: current_user)
+    @favorite = Favorite.new(favorite_params)
+    @favorites = Favorite.find_by(user: current_user)
   end
 
   def toggle
@@ -14,6 +15,7 @@ class FavoritesController < ApplicationController
       @favorite.save!
       flash[:alert] = "Favorite added"
     end
+    # redirect_to content_favorites_path
     redirect_to request.referrer
   end
 

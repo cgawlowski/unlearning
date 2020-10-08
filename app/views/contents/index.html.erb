@@ -6,6 +6,7 @@
         <% @contents.each_with_index do |content, index| %>
           <div class="carousel-item <%= index == 0 ? 'active' : "" %>">
             <div class="card-all-content">
+              <!-- VIDEO -->
               <% if content.format == "video"  %>
                 <%= content_tag(:iframe, '', src: content.content, class: "iframe-video", height: 315, frameborder: 0) %>
                 <div class="card-video">
@@ -13,12 +14,24 @@
                     <%= content.description %>
                   </div>
                   <hr class="blue-line">
-                  <div class="category">
+                  <div class="row">
+                  <div class="category col-8">
                     <button class="button"><%=  content.category %></button>
                     <p>By: <%=  content.author %> </p>
                     <p>Published: <%=  content.published_date %> </p>
                   </div>
+                  <div class="favorite-button col-4">
+                    <%= link_to favorite_toggle_path(content_id: content.id) do %>
+                      <% if content.favorited?(current_user) %>
+                        <i class="fas fa-star"></i>
+                      <% else %>
+                        <i class="far fa-star"></i>
+                      <% end %>
+                    <% end %>
+                  </div>
+                  </div>
                 </div>
+                <!-- ARTICLE -->
               <% elsif content.format == "article" %>
                 <div class="card-text-title">
                     <%= content.title %>
@@ -29,53 +42,56 @@
                     <%= content.description %>
                   </div>
                   <hr class="blue-line">
-                  <div class="category">
-                    <button class="button"><%=  content.category %></button>
-                    <p>By: <%=  content.author %> </p>
-                    <p>Published: <%=  content.published_date %> </p>
-                  </div>
-                  <div class="favorite-button">
-                    <%= link_to favorite_toggle_path(content_id: content.id) do %>
-                      <% if content.favorited?(current_user) %>
-                        <i class="fas fa-star"></i>
-                      <% else %>
-                        <i class="far fa-star"></i>
+                  <div class="row">
+                    <div class="category col-8">
+                      <button class="button"><%=  content.category %></button>
+                      <p>By: <%=  content.author %> </p>
+                      <p>Published: <%=  content.published_date %> </p>
+                    </div>
+                    <div class="favorite-button col-4">
+                      <%= link_to favorite_toggle_path(content_id: content.id) do %>
+                        <% if content.favorited?(current_user) %>
+                          <i class="fas fa-star"></i>
+                        <% else %>
+                          <i class="far fa-star"></i>
+                        <% end %>
                       <% end %>
-                    <% end %>
+                    </div>
                   </div>
                   <div class="card-text-content">
                     <%= content.content.html_safe %>
                   </div>
                 </div>
+                <!-- PODCAST -->
               <% else %>
                 <div class="card-text-title">
                     <%= content.title %>
                 </div>
                 <%= image_tag content.preview_picture , class: "card-img-top"%>
-                <div class="card-body-article">
+                <div class="card-body-podcast">
                   <div class="card-text-description">
                     <%= content.description %>
-                    <hr class="blue-line">
-                    <div class="category">
+                  </div>
+                  <hr class="blue-line">
+                  <div class="row">
+                    <div class="category col-8">
                       <button class="button"><%=  content.category %></button>
-                      <p>By: <%=  content.author %> </p>
-                      <p>Published: <%=  content.published_date %> </p>
+                    </div>
+                    <div class="favorite-button col-4">
+                      <%= link_to favorite_toggle_path(content_id: content.id) do %>
+                        <% if content.favorited?(current_user) %>
+                          <i class="fas fa-star"></i>
+                        <% else %>
+                          <i class="far fa-star"></i>
+                        <% end %>
+                      <% end %>
                     </div>
                   </div>
                   <p class="card-podcast-content">
                       <%= audio_tag content.content.html_safe, controls: true %>
                   </p>
-
-                  <div class="favorite-button">
-                    <%= link_to favorite_toggle_path(content_id: content.id) do %>
-                      <% if content.favorited?(current_user) %>
-                        <i class="fas fa-star"></i>
-                      <% else %>
-                        <i class="far fa-star"></i>
-                      <% end %>
-                    <% end %>
-                  </div>
-
+                  <p>By: <%=  content.author %> </p>
+                  <p>Published: <%=  content.published_date %> </p>
                 </div>
               <% end %>
               <a class="carousel-control-next arrow-icon" href="#carouselExampleControls" role="button" data-slide="next">
