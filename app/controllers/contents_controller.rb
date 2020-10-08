@@ -20,6 +20,7 @@ class ContentsController < ApplicationController
 
   def advanced_search
     find_contents
+
   end
 
   private
@@ -52,6 +53,7 @@ class ContentsController < ApplicationController
       @contents_temp = Content.where(format: set_format)
       if params[:category]
         @contents_temp = @contents_temp.where(category: set_topic)
+        @category = set_topic
       end
       @contents_temp.each do |item|
         if params[:duration] == "1" && item.duration < 5
@@ -60,11 +62,10 @@ class ContentsController < ApplicationController
           @contents.push(item)
         elsif params[:duration] == "3" && item.duration > 20
           @contents.push(item)
-        else "Oops, no results found"
         end
+        
       end
-    else
-      @contents = Content.all
     end
   end
+
 end
