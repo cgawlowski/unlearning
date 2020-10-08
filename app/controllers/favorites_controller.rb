@@ -8,11 +8,11 @@
     @favorite = Favorite.find_by(content_id: @content.id, user: current_user)
     if @favorite
       @favorite.destroy!
-      flash[:alert] = "Defavorited"
+      # flash[:alert] = "Defavorited" # please make a js modal in /components/toggleFavorite.js instead
     else
       @favorite = Favorite.new(content_id: @content.id, user: current_user)
       @favorite.save!
-      flash[:alert] = "Favorite added"
+      # flash[:alert] = "Favorite added" # please make a js modal in /components/toggleFavorite.js instead
     end
     
     # we build the HTML for the favorite button using `render_to_string`
