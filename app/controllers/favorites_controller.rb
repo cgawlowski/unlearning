@@ -1,6 +1,6 @@
 class FavoritesController < ApplicationController
   def index
-    @favorite = Favorite.new(favorite_params)
+    @favorite = Favorite.new
     @favorites = Favorite.find_by(user: current_user)
   end
 
@@ -22,6 +22,6 @@ class FavoritesController < ApplicationController
   private
 
   def favorite_params
-    params.require(:favorite).permit(:content_id)
+    params.require(:favorite).permit(:content_id, :consuming_status, :rating, :user_id)
   end
 end
