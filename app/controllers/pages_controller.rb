@@ -5,9 +5,9 @@ class PagesController < ApplicationController
     # render :landing-page, layout: "no_navbar"
   end
 
-  def landing_page
+  def welcome
     @quote = Quote.order(Arel.sql('RANDOM()')).first
-    render :landing_page, layout: "no_navbar"
+    render :welcome, layout: "no_navbar"
   end
 
 end

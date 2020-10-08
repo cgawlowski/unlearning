@@ -310,7 +310,7 @@ input[type="checkbox"] {
     
 }
 
-.landing-container {
+.welcome-container {
     background-color: white;
     display: flex;
     justify-content: center;
@@ -319,7 +319,7 @@ input[type="checkbox"] {
     margin-bottom: 30px;
 }
 
-.landing {
+.welcome {
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
@@ -336,7 +336,7 @@ input[type="checkbox"] {
     color: white;
   }
 
-  .landing-top {
+  .welcome-top {
       display: flex;
       justify-content: space-between;
       margin-top: -150px;

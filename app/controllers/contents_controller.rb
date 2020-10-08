@@ -63,6 +63,7 @@ class ContentsController < ApplicationController
         elsif params[:duration] == "3" && item.duration > 20
           @contents.push(item)
         end
+        
       end
     end
   end
