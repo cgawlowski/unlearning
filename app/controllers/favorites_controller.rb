@@ -1,4 +1,4 @@
-class FavoritesController < ApplicationController
+ class FavoritesController < ApplicationController
   def index
     @favorites = Favorite.where(content_id: @content.id, user: current_user)
   end
@@ -14,7 +14,11 @@ class FavoritesController < ApplicationController
       @favorite.save!
       flash[:alert] = "Favorite added"
     end
-    redirect_to request.referrer
+    
+    # we build the HTML for the favorite button using `render_to_string`
+    new_favorite_button_html = render_to_string(partial: 'contents/favorite_button', formats: [:html], locals: { content: @content })
+    # we send the complete html back to the `fetch()` function that sent the request
+    render json: { success: true, new_favorite_button_html: new_favorite_button_html }
   end
 
   private

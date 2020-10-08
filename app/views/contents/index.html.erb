@@ -34,15 +34,8 @@
                     <p>By: <%=  content.author %> </p>
                     <p>Published: <%=  content.published_date %> </p>
                   </div>
-                  <div class="favorite-button">
-                    <%= link_to favorite_toggle_path(content_id: content.id) do %>
-                      <% if content.favorited?(current_user) %>
-                        <i class="fas fa-star"></i>
-                      <% else %>
-                        <i class="far fa-star"></i>
-                      <% end %>
-                    <% end %>
-                  </div>
+                  <%# Here we need the data-content tag to identify which favorite to toggle %>
+                  <%= render "/contents/favorite_button", content: content %>
                   <div class="card-text-content">
                     <%= content.content.html_safe %>
                   </div>
@@ -66,15 +59,8 @@
                       <%#= audio_tag content.content.html_safe, controls: true %>
                   </p>
 
-                  <div class="favorite-button">
-                    <%= link_to favorite_toggle_path(content_id: content.id) do %>
-                      <% if content.favorited?(current_user) %>
-                        <i class="fas fa-star"></i>
-                      <% else %>
-                        <i class="far fa-star"></i>
-                      <% end %>
-                    <% end %>
-                  </div>
+                  <%# Here we need the data-content tag to identify which favorite to toggle %>
+                  <%= render "/contents/favorite_button", content: content %>
 
                 </div>
               <% end %>
