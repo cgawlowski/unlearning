@@ -1,0 +1,7 @@
+<%= link_to favorite_toggle_path(content_id: content.id), class: "favorite-button", "data-content-id": content.id, remote: true do %>
+  <% if content.favorited?(current_user) %>
+    <i class="fas fa-star"></i>
+  <% else %>
+    <i class="far fa-star"></i>
+  <% end %>
+<% end %>

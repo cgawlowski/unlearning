@@ -78,7 +78,7 @@ contents = Content.create(
   source_url: "https://www.youtube.com/watch?v=UgnNakO6JZw&ab_channel=Nerdwriter1",
   category: "Cinema",
   title: "How Alfred Hitchcock Blocks A Scene ",
-  description: "Famous director<s techniques to create masterpieces",
+  description: "Famous directors techniques to create masterpieces",
   published_date: DateTime.new(2020,3,23),
   preview_picture: "https://res.cloudinary.com/djcwoukgv/image/upload/v1601146341/hitchcock_tl3khz.png",
   content: "https://www.youtube.com/embed/UgnNakO6JZw",
@@ -135,7 +135,7 @@ end
 
 
 response = HTTParty.get(
-  "https://listen-api.listennotes.com/api/v2/search?q=philosophy&sort_by_date=0&type=episode&offset=0&len_min=10&len_max=30&published_before=1580172454000&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=0", 
+  "https://listen-api.listennotes.com/api/v2/search?q=philosophy&sort_by_date=0&type=episode&offset=0&len_min=10&len_max=30&published_before=1580172454000&published_after=0&only_in=title%2Cdescription&language=English&safe_mode=0",
              { headers: {"X-ListenAPI-Key" => ENV["LISTEN_API_KEY"]}})
 podcasts = JSON.parse(response.body)["results"]
 podcasts.each do |p|
@@ -143,12 +143,12 @@ podcasts.each do |p|
     format: "podcast",
     duration: p["audio_length_sec"].to_i / 60,
     source_url: p["audio"],
-    category: "philosophy",
+    category: "Philosophy",
     title: p["title_original"],
     description: p["description_original"],
     published_date: DateTime.new(2020,3,23),
     preview_picture: p["image"],
-    content: "",
+    content: p["audio"],
     author: p["podcast"]["publisher_original"]
   )
 end
@@ -163,12 +163,12 @@ podcasts.each do |p|
     format: "podcast",
     duration: p["audio_length_sec"].to_i / 60,
     source_url: p["audio"],
-    category: "geopolitics",
+    category: "Geopolitics",
     title: p["title_original"],
     description: p["description_original"],
     published_date: DateTime.new(2020,3,23),
     preview_picture: p["image"],
-    content: "",
+    content: p["audio"],
     author: p["podcast"]["publisher_original"]
   )
 end
@@ -182,12 +182,12 @@ podcasts.each do |p|
     format: "podcast",
     duration: p["audio_length_sec"].to_i / 60,
     source_url: p["audio"],
-    category: "science",
+    category: "Science",
     title: p["title_original"],
     description: p["description_original"],
     published_date: DateTime.new(2020,3,23),
     preview_picture: p["image"],
-    content: "",
+    content: p["audio"],
     author: p["podcast"]["publisher_original"]
   )
 end
