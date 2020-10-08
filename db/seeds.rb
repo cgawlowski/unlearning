@@ -212,4 +212,4 @@ Quote.create(quote: 'The expert in anything was once a beginner.', author: '– 
 
 Quote.create(quote: 'The learning process continues until the day you die.', author: '– Kirk Douglas')
 
-
+Quote.create(quote: 'The only true wisdom is in knowing you know nothing.', author: '― Socrates')

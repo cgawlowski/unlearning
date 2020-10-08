@@ -1,22 +1,24 @@
 <div class="head-container">
   <div class="landing-container">
     <div class="landing">
+    
         <%= image_tag("elipses.png", class: "elipses") %>
         
         <div class="landing-top">
             <p class="name">UnLearning</p>
-            
             <%= image_tag("avatar.jpg", class: "avatar" )%>
-      
         </div>
+
         <div class="quote">
           <%= @quote.quote %>
           <br>
           <p class="author"><%= @quote.author %></p>
         </div>
+
         <%= link_to root_path, class: "home-button" do %>
-        <button class="go">  Go!</button>
+          <button class="go">  Go!</button>
         <% end %>
+
     </div>
   </div>
 </div>

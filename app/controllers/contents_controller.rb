@@ -62,12 +62,9 @@ class ContentsController < ApplicationController
           @contents.push(item)
         elsif params[:duration] == "3" && item.duration > 20
           @contents.push(item)
-        else 
-          return "Oops, no results found"
         end
       end
-    else
-      @contents = Content.all
     end
   end
+
 end
