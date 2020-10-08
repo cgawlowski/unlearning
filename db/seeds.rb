@@ -12,7 +12,7 @@ contents = Content.create(
   format: "article",
   duration: 4,
   source_url: "https://www.npr.org/2020/09/11/897692090/how-big-oil-misled-the-public-into-believing-plastic-would-be-recycled",
-  category: "Tech",
+  category: "tech",
   title: "How Big Oil Misled The Public Into Believing Plastic Would Be Recycled",
   description: "Laura Leebrick, a manager at Rogue Disposal & Recycling in southern Oregon, is standing on the end of its landfill watching an avalanche of plastic trash pour out of a semitrailer: containers, bags, packaging, strawberry containers, yogurt cups.
 None of this plastic will be turned into new plastic things. All of it is buried.",
@@ -38,7 +38,7 @@ contents = Content.create(
   format: "video",
   duration: 19,
   source_url: "https://www.youtube.com/watch?v=S22xeq8xxFQ&feature=emb_title&ab_channel=TheSchoolofLife",
-  category: "Philosophy",
+  category: "philosophy",
   title: "Why Voltaire Said: You Must Cultivate Your Own Garden ",
   description: "Voltaire's phrase - you must cultivate your own garden - is one of the most famous statements in the world. But what did Voltaire mean by this - and what can we learn from it to help us live our lives today? Here is a recipe for how to survive our troubled times.",
   published_date: DateTime.new(2020,2,3),
@@ -50,7 +50,7 @@ contents = Content.create(
   format: "video",
   duration: 13,
   source_url: "https://www.youtube.com/watch?v=fDek6cYijxI&ab_channel=Veritasium",
-  category: "Science",
+  category: "science",
   title: "The Science Behind the Butterfly Effect",
   description: "Chaos theory means deterministic systems can be unpredictable.",
   published_date: DateTime.new(2019,12,6),
@@ -63,7 +63,7 @@ contents = Content.create(
   format: "video",
   duration: 10,
   source_url: "https://www.youtube.com/watch?v=v3MtBE37wHY&ab_channel=Vox",
-  category: "Cinema",
+  category: "cinema",
   title: "How slow motion works",
   description: "Slow motion is a key part of modern visual culture, from iPhone selfies to movies. So how does it work?",
   published_date: DateTime.new(2020,7,23),
@@ -72,11 +72,11 @@ contents = Content.create(
   author: "Vox"
 )
 
-contents = Content.create(
+Content.create(
   format: "video",
   duration: 9,
   source_url: "https://www.youtube.com/watch?v=UgnNakO6JZw&ab_channel=Nerdwriter1",
-  category: "Cinema",
+  category: "cinema",
   title: "How Alfred Hitchcock Blocks A Scene ",
   description: "Famous director<s techniques to create masterpieces",
   published_date: DateTime.new(2020,3,23),
@@ -89,7 +89,7 @@ contents = Content.create(
   format: "article",
   duration: 4,
   source_url: "https://resonancesinternationales.wordpress.com/2018/06/09/premier-article-de-blog/",
-  category: "Geopolitics",
+  category: "geopolitics",
   title: "États-Unis-Corée du Nord : qu'attendre du sommet de Singapour ?",
   description: "Après de nombreux rebondissements diplomatiques, l'heure semble désormais à l'optimisme : la République populaire démocratique de Corée (RPDC) a en effet montré de nombreux signes d'ouvertures à l'égard de la communauté internationale, après le contexte particulièrement tendu des derniers mois.",
   published_date: DateTime.new(2020,3,23),
@@ -122,7 +122,7 @@ podcasts.each do |p|
     format: "podcast",
     duration: p["audio_length_sec"].to_i / 60,
     source_url: p["audio"],
-    category: "Cinema",
+    category: "cinema",
     title: p["title_original"],
     description: p["description_original"],
     published_date: DateTime.new(2020,3,23),
@@ -148,7 +148,7 @@ podcasts.each do |p|
     description: p["description_original"],
     published_date: DateTime.new(2020,3,23),
     preview_picture: p["image"],
-    content: "",
+    content: p["audio"],
     author: p["podcast"]["publisher_original"]
   )
 end
@@ -168,7 +168,7 @@ podcasts.each do |p|
     description: p["description_original"],
     published_date: DateTime.new(2020,3,23),
     preview_picture: p["image"],
-    content: "",
+    content: p["audio"],
     author: p["podcast"]["publisher_original"]
   )
 end
@@ -187,7 +187,29 @@ podcasts.each do |p|
     description: p["description_original"],
     published_date: DateTime.new(2020,3,23),
     preview_picture: p["image"],
-    content: "",
+    content: p["audio"],
     author: p["podcast"]["publisher_original"]
   )
 end
+
+Quote.create(quote: 'Change is the end result of all true learning.', author: '― Leo Buscaglia')
+
+Quote.create(quote: 'Live as if you were to die tomorrow. Learn as if you were to live forever.', author: '― Mahatma Gandhi')
+
+Quote.create(quote: 'The more that you read, the more things you will know. The more that you learn, the more places you will go.', author: '― Dr. Seuss')
+
+Quote.create(quote: 'Knowledge is power.', author: '-Francis Bacon')
+
+Quote.create(quote: 'Wisdom is not a product of schooling but of the lifelong attempt to acquire it.', author: '― Albert Einstein')
+
+Quote.create(quote: 'If you want the answer—ask the question.', author: '― Lorii Myers')
+
+Quote.create(quote: 'The purpose of learning is growth, and our minds, unlike our bodies, can continue growing as we continue to live.', author: ' – Mortimer Adler')
+
+Quote.create(quote: 'Education is the passport to the future, for tomorrow belongs to those who prepare for it today.', author: '―Malcolm X')
+
+Quote.create(quote: 'The expert in anything was once a beginner.', author: '– Anonymous')
+
+Quote.create(quote: 'The learning process continues until the day you die.', author: '– Kirk Douglas')
+
+

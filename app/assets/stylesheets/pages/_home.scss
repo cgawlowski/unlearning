@@ -2,12 +2,12 @@
     display: flex;
     justify-content: center;
     // width: 414px;
-    height: 720px;
+    height: 812px;
     background-color: #65C6C4;
 }
 
 .form-check {
-    margin-top: 100px;
+    margin-top: 150px;
     background-color: #65C6C4;
 }
 
@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-row-gap: 70px;
+  grid-row-gap: 100px;
 }
 
 .time {
@@ -89,7 +89,8 @@ input[type="checkbox"] {
         display: block;
         padding: .4em .8em;
         line-height: 1;
-        color: #333;
+        color: #4F4F4F;
+        font-family: Inter;
         background-color: #E2F9F8;
         width: 150px;
         height: 30px;
@@ -124,6 +125,7 @@ input[type="checkbox"] {
     height: 40px;
     font-size: 20px;
     border: none;
+    font-family: Inter;
 }
 
 .search-submit_tag {
@@ -134,13 +136,14 @@ input[type="checkbox"] {
     height: 40px;
     font-size: 20px;
     border: none;
+    font-family: Inter;
 }
 
 .content_tag {
     background-color: white;
     color: #4F4F4F;
     border-radius: 20px;
-    width: 200px;
+    width: 232px;
     height: 40px;
     font-size: 20px;
     padding-left: 10px;
@@ -156,7 +159,8 @@ input[type="checkbox"] {
     background-color: #E2F9F8;
     display: flex;
     justify-content: center;
-    width: 414px;
+    width: 375px;
+    height: 812px;
     margin-bottom: 30px;
 }
 
@@ -167,7 +171,7 @@ input[type="checkbox"] {
 }
 
 .card {
-    width: 380px;
+    width: 360px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -279,6 +283,8 @@ input[type="checkbox"] {
 
 .custom-select {
     border-radius: 10px;
+    color: #4F4F4F;
+    font-family: Inter;
 }
 
 .container {
@@ -296,3 +302,120 @@ input[type="checkbox"] {
 .article, .video, .podcast {
     text-align: center;
 }
+
+
+.head-container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.landing-container {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    width: 375px;
+    height: 812px;
+    margin-bottom: 30px;
+}
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+
+.name {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    position: relative ;
+    left: 10px;
+    color: white;
+  }
+
+  .landing-top {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -150px;
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+
+  .quote {
+    color: #4F4F4F;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    position: absolute;               /* 2 */
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 260px;
+  }
+
+  .go {
+      background-color: #408ab4;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: none;
+      position: absolute;               /* 2 */
+      top: 80%;
+      left: 60%;
+      color: white;
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+  }
+
+  .advanced-button {
+    transition-duration: 0.4s;
+    background-color: #65C6C4;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 10px 12px;
+    padding-inline-start: 12px;
+    padding-inline-end: 12px;
+    cursor: pointer;
+    width: 40%;
+    font-family: Inter;
+  }
+
+  .head-container {
+    height: 740px;
+  }
+
+  .read-btn {
+      background-color: #408ab4;
+      border-radius: 10px;
+      height: 30px;
+      padding-bottom: 10px;
+      border: none;
+      margin-top: -5px;
+      font-family: Inter;
+  }
+
+  .elipses {
+      width: 100%;
+  }
+
+  .author {
+      margin-top: 30px;
+      color: #4F4F4F;
+      font-family: 'Times New Roman', Times, serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      text-align: end;
+  }
