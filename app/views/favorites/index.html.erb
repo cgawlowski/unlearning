@@ -1,9 +1,63 @@
-<div class="button-format">
-  <button class="button">See all</button>
-  <button class="button">Articles</button>
-  <button class="button">Videos</button>
-  <button class="button">Podcasts</button>
-</div>
- <div class="results">
+<div class="head-container">
+  <div class="advanced-container">
+    <div class="advanced-search">
 
- </div>
+    <div class="button-format">
+      <button class="button">See all</button>
+      <button class="button-non-blue">Articles</button>
+      <button class="button-non-blue">Videos</button>
+      <button class="button-non-blue">Podcasts</button>
+    </div>
+
+      <% @favorites.each do |favorite| %>
+      <div class="results">
+        <% if favorite.content.format == "video"  %>
+          <div class="card">
+            <div class="description-top">
+              <div class="video-title-container">
+                <span class="title"><%= favorite.content.title %></span>
+                <span class="author">By <%= favorite.content.author %> </span>
+              </div>
+                <%= image_tag "video.png", class: "video_btn" %>
+            </div>
+          </div>
+        <% elsif favorite.content.format == "article" %>
+          <div class="card">
+            <div class="description-top">
+              <%= image_tag favorite.content.preview_picture, class: "image_card" %>
+              <div class="video-title-container">
+                <span class="title"><%= favorite.content.title %></span>
+                <span class="author">By <%= favorite.content.author %> </span>
+              </div>
+                <%= image_tag "article.png", class: "article_btn" %>
+            </div>
+            <div>
+              <span class="description"><%= favorite.content.description %> </span>
+              <div class="line"></div>
+               <div class="card-bottom">
+                  <div>
+                    <%= link_to "Read", favorite.content.source_url %> ||
+                    <span class="duration"><%= distance_of_time_in_words(favorite.content.duration.minutes) %></span>
+                  </div>
+                  <div class="vector_btn">
+                    <%= image_tag "Vector.png", class: "vector" %>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <!-- Podcast -->
+        <% else %>
+          <div class="card">
+            <div class="description-top">
+              <div class="video-title-container">
+                <span class="title"><%= favorite.content.title %></span>
+                <span class="author">By <%= favorite.content.author %> </span>
+              </div>
+                <%= image_tag "audio.png", class: "audio_btn" %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

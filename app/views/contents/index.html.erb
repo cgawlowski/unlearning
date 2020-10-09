@@ -21,13 +21,7 @@
                     <p>Published: <%=  content.published_date %> </p>
                   </div>
                   <div class="favorite-button col-4">
-                    <%= link_to favorite_toggle_path(content_id: content.id) do %>
-                      <% if content.favorited?(current_user) %>
-                        <i class="fas fa-star"></i>
-                      <% else %>
-                        <i class="far fa-star"></i>
-                      <% end %>
-                    <% end %>
+                    <%= render "/contents/favorite_button", content: content %>
                   </div>
                   </div>
                 </div>
@@ -72,13 +66,7 @@
                       <button class="button"><%=  content.category %></button>
                     </div>
                     <div class="favorite-button col-4">
-                      <%= link_to favorite_toggle_path(content_id: content.id) do %>
-                        <% if content.favorited?(current_user) %>
-                          <i class="fas fa-star"></i>
-                        <% else %>
-                          <i class="far fa-star"></i>
-                        <% end %>
-                      <% end %>
+                      <%= render "/contents/favorite_button", content: content %>
                     </div>
                   </div>
                   <p class="card-podcast-content">
