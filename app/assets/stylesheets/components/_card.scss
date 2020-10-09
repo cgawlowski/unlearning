@@ -67,6 +67,24 @@
   color: white;
 }
 
+.button-non-blue{
+  background-color: white;
+  color: #65C6C4;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px 8px;
+  padding-inline-start: 8px;
+  padding-inline-end: 8px;
+}
+
+.button-format {
+  padding-top: 12px;
+}
+
 .card-text-title {
   font-family: Inter;
   font-style: normal;
