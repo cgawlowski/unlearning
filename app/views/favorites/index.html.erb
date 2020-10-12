@@ -2,10 +2,10 @@
   <div class="library-container">
     <div class="advanced-search">
       <div class="button-format">
-        <button class="button">See all</button>
-        <button class="button-non-blue">Articles</button>
-        <button class="button-non-blue">Videos</button>
-        <button class="button-non-blue">Podcasts</button>
+        <a class="button" href="/favorites" role="button">See all</a>
+        <a class="button-non-blue" href="/favorites" role="button">Articles</a>
+        <a class="button-non-blue" href="/favorites" role="button">Videos</a>
+        <a class="button-non-blue" href="/favorites" role="button">Podcast</a>
       </div>
         <% @favorites.each do |favorite| %>
           <% if favorite.content.format == "video"  %>
