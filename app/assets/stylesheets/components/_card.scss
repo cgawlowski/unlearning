@@ -82,7 +82,7 @@
 }
 
 .button-format {
-  padding-top: 12px;
+  padding-top: 20px;
 }
 
 .card-text-title {
@@ -154,4 +154,33 @@
     border-radius: 10px;
     filter: drop-shadow(2px 2px 16px rgba(0, 0, 0, 0.11));
     //margin: 0px 16px;
+
+}
+
+
+.author-card {
+    margin-top: 12px;
+    color: #4F4F4F;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: italic;
+    // text-align: end;
+  }
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    a {
+      color: #65C6C4;
+    }
+}
+
+.library-container {
+    background-color: #E2F9F8;
+    display: flex;
+    justify-content: center;
+    width: 375px;
+    // height: 812px;
+    margin-bottom: 30px;
 }
