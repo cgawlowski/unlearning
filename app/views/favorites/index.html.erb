@@ -1,63 +1,85 @@
 <div class="head-container">
-  <div class="advanced-container">
+<!--   <div class="advanced-container"> -->
     <div class="advanced-search">
+      <div class="button-format">
+        <button class="button">See all</button>
+        <button class="button-non-blue">Articles</button>
+        <button class="button-non-blue">Videos</button>
+        <button class="button-non-blue">Podcasts</button>
+      </div>
 
-    <div class="button-format">
-      <button class="button">See all</button>
-      <button class="button-non-blue">Articles</button>
-      <button class="button-non-blue">Videos</button>
-      <button class="button-non-blue">Podcasts</button>
-    </div>
+        <% @favorites.each do |favorite| %>
 
-      <% @favorites.each do |favorite| %>
-      <div class="results">
-        <% if favorite.content.format == "video"  %>
-          <div class="card">
-            <div class="description-top">
-              <div class="video-title-container">
-                <span class="title"><%= favorite.content.title %></span>
-                <span class="author">By <%= favorite.content.author %> </span>
+          <% if favorite.content.format == "video"  %>
+            <div class="card">
+              <div class="description-top">
+                <div class="video-title-container">
+                  <span class="title"><%= favorite.content.title %></span>
+
+                  <span class="video"><%= content_tag(:iframe, '', src: favorite.content.content, class: "iframe-video", height: 315, frameborder: 0) %></span>
+
+                </div>
+                  <%= image_tag "video.png", class: "video_btn" %>
               </div>
-                <%= image_tag "video.png", class: "video_btn" %>
             </div>
-          </div>
-        <% elsif favorite.content.format == "article" %>
-          <div class="card">
-            <div class="description-top">
-              <%= image_tag favorite.content.preview_picture, class: "image_card" %>
-              <div class="video-title-container">
-                <span class="title"><%= favorite.content.title %></span>
-                <span class="author">By <%= favorite.content.author %> </span>
+          <% elsif favorite.content.format == "article" %>
+            <div class="card">
+              <div class="title-container">
+                <%= image_tag favorite.content.preview_picture , class: "image_card"%>
+                <div class="text">
+                  <span class="title"><%= favorite.content.title %></span>
+                  <span class="author"> <%= favorite.content.author %> </span>
+                </div>
+                 <%= image_tag "article.png", class: "article_btn" %>
               </div>
-                <%= image_tag "article.png", class: "article_btn" %>
-            </div>
-            <div>
-              <span class="description"><%= favorite.content.description %> </span>
-              <div class="line"></div>
-               <div class="card-bottom">
+              <div>
+                <span class="description"><%= favorite.content.description %></span>
+                <div class="line"></div>
+                <div class="card-bottom">
                   <div>
-                    <%= link_to "Read", favorite.content.source_url %> ||
+                    <%= link_to "#", class: "home-button" do %>
+                    <%= image_tag("play.png", class: "library_btn") %>
+                    <% end %>
+                    <%= link_to "Read", favorite.content.content.html_safe %> ||
                     <span class="duration"><%= distance_of_time_in_words(favorite.content.duration.minutes) %></span>
                   </div>
                   <div class="vector_btn">
-                    <%= image_tag "Vector.png", class: "vector" %>
+                      <%= image_tag "Vector.png", class: "vector" %>
                   </div>
                 </div>
-            </div>
-          </div>
-          <!-- Podcast -->
-        <% else %>
-          <div class="card">
-            <div class="description-top">
-              <div class="video-title-container">
-                <span class="title"><%= favorite.content.title %></span>
-                <span class="author">By <%= favorite.content.author %> </span>
               </div>
-                <%= image_tag "audio.png", class: "audio_btn" %>
             </div>
-          </div>
+            <!-- Podcast -->
+          <% else %>
+            <div class="card">
+              <div class="title-container">
+                <%= image_tag favorite.content.preview_picture , class: "image_card"%>
+                <div class="text">
+                  <span class="title"><%= favorite.content.title %></span>
+                  <span class="author"> <%= favorite.content.author %> </span>
+                </div>
+                 <%= image_tag "audio.png", class: "audio_btn" %>
+              </div>
+              <span class="description"><%= favorite.content.description %></span>
+              <div class="line"></div>
+
+              <div class="card-bottom">
+                <div>
+                  <%= link_to "#", class: "home-button" do %>
+                  <%= image_tag("play.png", class: "library_btn") %>
+                  <% end %>
+                  <%= link_to "Listen", favorite.content.content.html_safe %> ||
+                  <span class="duration"><%= distance_of_time_in_words(favorite.content.duration.minutes) %></span>
+                </div>
+                <div class="vector_btn">
+                  <%= image_tag "Vector.png", class: "vector" %>
+                </div>
+              </div>
+                  <!-- <%= audio_tag favorite.content.content.html_safe, controls: true %> -->
+            </div>
+          <% end %>
         <% end %>
-      <% end %>
+
     </div>
-  </div>
+ <!--  </div> -->
 </div>
