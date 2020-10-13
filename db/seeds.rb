@@ -19,18 +19,20 @@ None of this plastic will be turned into new plastic things. All of it is buried
   published_date: DateTime.new(2020,9,11),
   preview_picture: "https://media.npr.org/assets/img/2020/08/03/img_6898_slide-8e9d4545963201bab96b2487eccbc77cca4d6e7a-s600-c85.jpg",
   content: "<p>To me that felt like it was a betrayal of the public trust,' she said 'I had been lying to people ... unwittingly.
-Rogue, like most recycling companies, had been sending plastic trash to China, but when China shut its doors two years ago, Leebrick scoured the U.S. for buyers. She could find only someone who wanted white milk jugs. She sends the soda bottles to the state.
+Rogue, like most recycling companies, had been sending plastic trash to China, but when China shut its doors two years ago, Leebrick scoured the U.S. for buyers. </p>
+<p>She could find only someone who wanted white milk jugs. She sends the soda bottles to the state.
 But when Leebrick tried to tell people the truth about burying all the other plastic, she says people didn't want to hear it.</p>
-<p>I remember the first meeting where I actually told a city council that it was costing more to recycle than it was to dispose of the same material as garbage,' she says, 'and it was like heresy had been spoken in the room: You're lying. This is gold. We take the time to clean it, take the labels off, separate it and put it here. It's gold. This is valuable.
-But it's not valuable, and it never has been. And what's more, the makers of plastic — the nation's largest oil and gas companies — have known this all along, even as they spent millions of dollars telling the American public the opposite.</p>
+<p class='blockquote'>I remember the first meeting where I actually told a city council that it was costing more to recycle than it was to dispose of the same material as garbage,' she says. </p> <p>'And it was like heresy had been spoken in the room: You're lying.
+This is gold. We take the time to clean it, take the labels off, separate it and put it here. It's gold. This is valuable.</p>
+<p>But it's not valuable, and it never has been. And what's more, the makers of plastic — the nation's largest oil and gas companies — have known this all along, even as they spent millions of dollars telling the American public the opposite.</p>
   <h4>In Partnership
   NPR and Frontline</h4>
-  <p>This story is part of a joint investigation with the PBS series Frontline that includes the documentary Plastic Wars, which aired March 31 on PBS. Watch it online now.
-  NPR and PBS Frontline spent months digging into internal industry documents and interviewing top former officials. We found that the industry sold the public on an idea it knew wouldn't work — that the majority of plastic could be, and would be, recycled — all while making billions of dollars selling the world new plastic.</p>
+  <p>This story is part of a joint investigation with the PBS series Frontline that includes the documentary Plastic Wars, which aired March 31 on PBS.
+  <p>NPR and PBS Frontline spent months digging into internal industry documents and interviewing top former officials. </p> <p class='blockquote'> We found that the industry sold the public on an idea it knew wouldn't work — that the majority of plastic could be, and would be, recycled — all while making billions of dollars selling the world new plastic.</p>
   <p>The industry's awareness that recycling wouldn't keep plastic out of landfills and the environment dates to the program's earliest days, we found. There is serious doubt that [recycling plastic] can ever be made viable on an economic basis, one industry insider wrote in a 1974 speech.
   Yet the industry spent millions telling people to recycle, because, as one former top industry insider told NPR, selling recycling sold plastic, even if it wasn't true.</p>
-  <p>If the public thinks that recycling is working, then they are not going to be as concerned about the environment, Larry Thomas, former president of the Society of the Plastics Industry, known today as the Plastics Industry Association and one of the industry's most powerful trade groups in Washington, D.C., told NPR.
-  In response, industry representative Steve Russell, until recently the vice president of plastics for the trade group the American Chemistry Council, said the industry has never intentionally misled the public about recycling and is committed to ensuring all plastic is recycled.
+  <p>If the public thinks that recycling is working, then they are not going to be as concerned about the environment, Larry Thomas, former president of the Society of the Plastics Industry, known today as the Plastics Industry Association and one of the industry's most powerful trade groups in Washington, D.C., told NPR.</p>
+  <p>In response, industry representative Steve Russell, until recently the vice president of plastics for the trade group the American Chemistry Council, said the industry has never intentionally misled the public about recycling and is committed to ensuring all plastic is recycled.
   The proof is the dramatic amount of investment that is happening right now, Russell said. I do understand the skepticism, because it hasn't happened in the past, but I think the pressure, the public commitments and, most important, the availability of technology is going to give us a different outcome.</p>",
   author: "Laura Sullivan"
 )
