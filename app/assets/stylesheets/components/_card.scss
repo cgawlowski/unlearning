@@ -8,6 +8,7 @@
     line-height: 23px;
     letter-spacing: 0.01em;
     color: #4F4F4F;
+    padding-left: 5px;
   }
 }
 
@@ -31,14 +32,18 @@
   top: 208px;
   flex: none;
   border: 1px solid #65C6C4;
-  order: 2;
+  // order: 2;
   align-self: flex-start;
   flex-grow: 0;
   margin: 0px 16px;
 }
 
-.category{
+.category {
   padding-top:10px;
+}
+
+.category p {
+  padding-left: 5px;
 }
 
 .button {
@@ -46,7 +51,7 @@
   background-color: #65C6C4;
   border-radius: 8px;
   border: none;
-  color: black;
+  color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -59,7 +64,25 @@
 
 .button:hover {
   background-color: white;
-  color: white;
+  color: #65C6C4;
+}
+
+.button-non-blue{
+  background-color: white;
+  color: #65C6C4;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px 8px;
+  padding-inline-start: 8px;
+  padding-inline-end: 8px;
+}
+
+.button-format {
+  padding-top: 20px;
 }
 
 .card-text-title {
@@ -68,7 +91,6 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
-  text-align: center;
   letter-spacing: 0.01em;
   text-transform: uppercase;
   color: #000000;
@@ -87,6 +109,8 @@
   font-style: italic;
   font-weight: bold;
   padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 2px;
 }
 
 .customize {
@@ -103,7 +127,6 @@
     position: fixed;
     bottom: 60px;
     top: unset;
-
 }
 
 .iframe-video{
@@ -114,6 +137,61 @@
   width: 100%;
 }
 
-.favorite-button {
+.card-podcast-content {
+  filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+  width: 400px;
+}
 
+.card {
+    width: 360px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: -40px;
+    padding: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
+    filter: drop-shadow(2px 2px 16px rgba(0, 0, 0, 0.11));
+    //margin: 0px 16px;
+
+}
+
+
+.author-card {
+    margin-top: 12px;
+    color: #4F4F4F;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: italic;
+    // text-align: end;
+  }
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    a {
+      color: #65C6C4;
+    }
+}
+
+.library-container {
+    background-color: #E2F9F8;
+    display: flex;
+    justify-content: center;
+    width: 375px;
+    // height: 812px;
+    margin-bottom: 30px;
+}
+
+.blockquote {
+    position: relative;
+    clear: both;
+    text-align: center;
+    border: 0;
+    padding: 35px 25px;
+    margin: 25px 0;
+    font-style: italic;
+    color: #F2994A;
 }
