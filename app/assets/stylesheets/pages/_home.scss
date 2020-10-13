@@ -47,7 +47,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
-    color: white;  
+    color: white;
 }
 
 
@@ -82,7 +82,7 @@
 }
 
 input[type="checkbox"] {
-    
+
     position: absolute;
     opacity: 0;
     & + label {
@@ -268,7 +268,7 @@ input[type="checkbox"] {
 
 .description-top {
     display: flex;
-    justify-content: space-between;  
+    justify-content: space-between;
 }
 
 .video_btn, .audio_btn, .article_btn {
@@ -278,7 +278,7 @@ input[type="checkbox"] {
 
 .video-btn {
     display: flex;
-    justify-content: center;  
+    justify-content: center;
 }
 
 .custom-select {
@@ -307,7 +307,7 @@ input[type="checkbox"] {
 .head-container {
     display: flex;
     justify-content: center;
-    
+
 }
 
 .welcome-container {
@@ -413,7 +413,6 @@ input[type="checkbox"] {
   .author {
       margin-top: 30px;
       color: #4F4F4F;
-      font-family: 'Times New Roman', Times, serif;
       font-style: normal;
       font-weight: 500;
       font-size: 18px;
@@ -422,7 +421,7 @@ input[type="checkbox"] {
 
   .modal-header {
       position: sticky;
-      
+
   }
 
   .modal-dialog {

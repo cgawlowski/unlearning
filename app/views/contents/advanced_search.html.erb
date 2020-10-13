@@ -16,16 +16,16 @@
             <span class="title"><%= content.title %></span>
             <span class="author">by_<%= content.author %> </span>
           </div>
-          <%= image_tag "video.png", class: "video_btn" %> 
-          </div>
+          <%= image_tag "video.png", class: "video_btn" %>
+        </div>
           <div>
-            <%= link_to "#", class: "home-button" do %> 
+            <%= link_to "#", class: "home-button" do %>
             <%= content_tag(:iframe, '', src: content.content,
                               width: 350, height: 250, frameborder: 0) %>
             <% end %>
 
               <div>
-                <span class="description"><%= content.description %> 
+                <span class="description"><%= content.description %>
                 </span>
 
                 <div class="line">
@@ -52,15 +52,15 @@
           <p >
           <div class="card">
             <div class="title-container">
-              <%= image_tag content.preview_picture, class: "image_card" %> 
+              <%= image_tag content.preview_picture, class: "image_card" %>
               <div class="text">
                 <span class="title"><%= content.title %></span>
                 <span class="author">by_<%= content.author %> </span>
               </div>
-              <%= image_tag "audio.png", class: "audio_btn" %> 
+              <%= image_tag "audio.png", class: "audio_btn" %>
             </div>
 
-              <span class="description"><%= content.description %> 
+              <span class="description"><%= content.description %>
               </span>
 
               <div class="line">
@@ -68,15 +68,15 @@
 
               <div class="card-bottom">
                 <div>
-                  <%= link_to "#", class: "home-button" do %> 
-                  <%= image_tag("play.png", class: "library_btn") %> 
+                  <%= link_to "#", class: "home-button" do %>
+                  <%= image_tag("play.png", class: "library_btn") %>
                   <% end %>
                   <%= link_to "Listen", content.source_url %> ||
-                  <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span> 
+                  <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span>
                 </div>
 
                 <div class="vector_btn">
-                  <%= image_tag "Vector.png", class: "vector" %> 
+                  <%= image_tag "Vector.png", class: "vector" %>
                 </div>
               </div>
             </div>
@@ -86,16 +86,16 @@
           <p >
             <div class="card">
               <div class="title-container">
-                <%= image_tag content.preview_picture, class: "image_card" %> 
+                <%= image_tag content.preview_picture, class: "image_card" %>
                 <div class="text">
                   <span class="title"><%= content.title %></span>
                   <span class="author">by_<%= content.author %> </span>
                 </div>
-                <%= image_tag "article.png", class: "article_btn" %> 
+                <%= image_tag "article.png", class: "article_btn" %>
               </div>
-          
+
               <div>
-                <span class="description"><%= content.description %> 
+                <span class="description"><%= content.description %>
                 </span>
 
                 <div class="line">
@@ -108,16 +108,17 @@
                 </button>
                   ||
                   <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span> 
+
                 </div>
                 
 
                             
 
                 <div class="vector_btn">
-                  <%= image_tag "Vector.png", class: "vector" %> 
+                  <%= image_tag "Vector.png", class: "vector" %>
                 </div>
               </div>
-              </div> 
+              </div>
             </div>
           </div>
           </p>
@@ -143,8 +144,3 @@
   </div>
 </div>
 
-
-
-
-
-                
