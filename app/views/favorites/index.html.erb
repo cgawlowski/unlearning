@@ -1,6 +1,7 @@
 <div class="background-advanced">
   <div class="library-container">
     <div class="advanced-search">
+      <h2 class="">My library</h2>
       <div class="button-format">
         <a class="button" href="/favorites" role="button">See all</a>
         <a class="button-non-blue" href="/favorites" role="button">Articles</a>
@@ -29,10 +30,6 @@
                     <%= link_to "Watch on Youtube", favorite.content.source_url %> ||
                     <span class="duration"><%= distance_of_time_in_words(favorite.content.duration.minutes) %></span>
                   </div>
-
-                  <div class="vector_btn">
-                    <%= image_tag "Vector.png", class: "vector" %>
-                  </div>
                 </div>
               </div>
             </div>
@@ -54,13 +51,10 @@
                   <div class="card-bottom">
                     <div>
                       <%= link_to "#", class: "home-button" do %>
-                      <%= image_tag("play.png", class: "library_btn") %>
+
                       <% end %>
                       <%= link_to "Read", favorite.content.content.html_safe %> ||
                       <span class="duration"><%= distance_of_time_in_words(favorite.content.duration.minutes) %></span>
-                    </div>
-                    <div class="vector_btn">
-                        <%= image_tag "Vector.png", class: "vector" %>
                     </div>
                   </div>
               </div>
@@ -90,9 +84,7 @@
                   <%= link_to "Listen", favorite.content.content.html_safe %> ||
                   <span class="duration"><%= distance_of_time_in_words(favorite.content.duration.minutes) %></span>
                 </div>
-                <div class="vector_btn">
-                  <%= image_tag "Vector.png", class: "vector" %>
-                </div>
+
               </div>
             </div>
             </p>
