@@ -120,7 +120,7 @@ response = HTTParty.get(
             { headers: {"X-ListenAPI-Key" => ENV["LISTEN_API_KEY"]}})
 podcasts = JSON.parse(response.body)["results"]
 podcasts.each do |p|
-  Content.create(
+  Content.create!(
     format: "podcast",
     duration: p["audio_length_sec"].to_i / 60,
     source_url: p["audio"],
