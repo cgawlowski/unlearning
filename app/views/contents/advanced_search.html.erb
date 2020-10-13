@@ -1,13 +1,13 @@
 <div class="head-container">
   <div class="advanced-container">
     <div class="advanced-search">
-    
-  
+
+
 
       <button class="advanced-button"><%= @category.capitalize %></button>
 
       <% @contents.each do |content| %>
-      
+
       <% if content.format == "video"  %>
         <p >
         <div class="card">
@@ -34,15 +34,15 @@
                 <div class="card-bottom">
                   <div>
                     <%= link_to "Watch on Youtube", content.source_url %> ||
-                    <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span> 
+                    <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span>
                   </div>
 
                   <div class="vector_btn">
-                    <%= image_tag "Vector.png", class: "vector" %> 
+                    <%= render "/contents/favorite_button", content: content %>
                   </div>
-                  
+
                 </div>
-              </div> 
+              </div>
             </div>
           </div>
         </p>
@@ -76,7 +76,7 @@
                 </div>
 
                 <div class="vector_btn">
-                  <%= image_tag "Vector.png", class: "vector" %>
+                  <%= render "/contents/favorite_button", content: content %>
                 </div>
               </div>
             </div>
@@ -107,15 +107,15 @@
                   Read
                 </button>
                   ||
-                  <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span> 
+                  <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span>
 
                 </div>
-                
 
-                            
+
+
 
                 <div class="vector_btn">
-                  <%= image_tag "Vector.png", class: "vector" %>
+                  <%= render "/contents/favorite_button", content: content %>
                 </div>
               </div>
               </div>
@@ -137,10 +137,10 @@
                 </div>
               </div>
             </div>
-          </div>             
+          </div>
         <% end %>
       <% end %>
     </div>
   </div>
-</div>
+
 
