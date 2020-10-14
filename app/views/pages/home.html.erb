@@ -4,15 +4,12 @@
         <div class="form-check">
             <%= form_with(url: "/contents", 
             method: "get", local:true, class: 'form-container') do %>
-        
                 <div class="time">
-                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How much time do yo have ?</label>
+                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How much time do you have?</label>
                      <%= select_tag(:duration, raw('<option value="1">Something quick ! (5 minutes max)</option>
                      <option value="2">Less than 20 minutes</option>
                      <option value="3">I have got all the time in the world !</option>'), class: "custom-select my-1 mr-sm-2", id: "inlineFormCustomSelectPref") %>
                 </div>
-
-
                 <div class="content">
                     <label class="format" for="inlineFormCustomSelectPref">What format do you want?</label>
         
@@ -20,28 +17,35 @@
                         <%= check_box_tag(:article, 1, false, class: 'article') %>
                         <%= label_tag(:article, "ARTICLE") %>
                     </div>
-
                     <div class="checkbox-container">
                         <%= check_box_tag(:video, 1, false, class: 'video') %>
                         <%= label_tag(:video, "VIDEO") %>
                     </div>
-
                     <div class="checkbox-container">
                         <%= check_box_tag(:podcast, 1, false, class: 'podcast') %>
                         <%= label_tag(:podcast, "PODCAST") %>
                     </div>
                 </div>
-
                 <div class="buttons">
                     <div class="submit_button">
-                        
                         <%= hidden_field_tag :search, true %>
                         <%= submit_tag("Search content", class: "submit_tag") %>
                     </div>
-                    <%= link_to "Customized content", search_path, class: 'content_tag' %>
                 </div>   
             <% end %>
 
          </div>
     </div>
+</div>
+
+<div class="footer">
+    <%= link_to root_path, class: "home-button" do %>
+        <%= image_tag("home.png", class: "home_btn") %>
+    <% end %>
+    <%= link_to "/search", class: "home-button" do %>
+        <%= image_tag("search.png", class: "search_btn") %>
+    <% end %>
+    <%= link_to "/favorites", class: "home-button" do %>
+        <%= image_tag("library.png", class: "library_btn") %>
+    <% end %>
 </div>
