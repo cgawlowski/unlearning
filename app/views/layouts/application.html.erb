@@ -14,24 +14,20 @@
   </head>
 
   <body>
+
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
       <div class="home">
-
-      <%= link_to home_path, class: "home-button" do %>
-        <div class="logo">
-        <%= image_tag("circles.png", class: "circles") %>
-        </div>
+      <%= link_to root_path, class: "home-button" do %>
+          <div class="logo">
+          <%= image_tag("circles.png", class: "circles") %>
+          </div>
         <% end %>
-
         <h3 class="unlearning">UnLearning</h3>
       </div>
-
-
       <div>
         <%= image_tag("avatar.jpg", class: "avatar" )%>
       </div>
     </div>
-
 
     <%= yield %>
 
@@ -39,15 +35,16 @@
       <p class="alert"><%= alert %></p>
 
       <div class="footer">
-      <%= link_to home_path, class: "home-button" do %>
-        <%= image_tag("home.png", class: "home_btn") %>
-      <% end %>
-      <%= link_to "/search", class: "home-button" do %>
-        <%= image_tag("search.png", class: "search_btn") %>
-      <% end %>
-      <%= link_to "/favorites", class: "home-button" do %>
-        <%= image_tag("library.png", class: "library_btn") %>
-      <% end %>
+        <%= link_to root_path, class: "home-button" do %>
+          <%= image_tag("home.png", class: "home_btn") %>
+        <% end %>
+        <%= link_to "/search", class: "home-button" do %>
+          <%= image_tag("search.png", class: "search_btn") %>
+        <% end %>
+        <%= link_to "/favorites", class: "home-button" do %>
+          <%= image_tag("library.png", class: "library_btn") %>
+        <% end %>
       </div>
+  
   </body>
 </html>
