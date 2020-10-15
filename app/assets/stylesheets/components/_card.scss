@@ -177,12 +177,11 @@
 }
 
 .library-container {
-    background-color: #E2F9F8;
     display: flex;
     justify-content: center;
-    width: 375px;
-    // height: 812px;
     margin-bottom: 30px;
+    width: 360px;
+    padding-left: 50px;
 }
 
 .blockquote {
@@ -194,4 +193,9 @@
     margin: 25px 0;
     font-style: italic;
     color: #F2994A;
+}
+
+.card-bottom-library {
+    display: flex;
+    // justify-content: space-between;
 }
