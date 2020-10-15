@@ -1,7 +1,7 @@
 <div class="background-advanced">
   <div class="library-container">
     <div class="advanced-search">
-      <h2 class="">My library</h2>
+      <h2 class="library-title">My library</h2>
       <div class="button-format">
         <a class="button" href="/favorites" role="button">See all</a>
         <a class="button-non-blue" href="/favorites" role="button">Articles</a>
@@ -25,7 +25,7 @@
               <span class="description"><%= favorite.content.description %>
                 </span>
               <div class="line"></div>
-                <div class="card-bottom">
+                <div class="card-bottom-library">
                   <div>
                     <%= link_to "Watch on Youtube", favorite.content.source_url %> ||
                     <span class="duration"><%= distance_of_time_in_words(favorite.content.duration.minutes) %></span>
@@ -48,14 +48,11 @@
               <div>
                 <span class="description"><%= favorite.content.description %></span>
                 <div class="line"></div>
-                  <div class="card-bottom">
-                    <div>
-                      <%= link_to "#", class: "home-button" do %>
-
-                      <% end %>
-                      <%= link_to "Read", favorite.content.content.html_safe %> ||
+                  <div class="card-bottom-library">
+                    <button type="button" class="btn btn-primary read-btn" data-toggle="modal" data-target="#exampleModal-<%=favorite.content.id%>">
+                      Read</button>
+                          ||
                       <span class="duration"><%= distance_of_time_in_words(favorite.content.duration.minutes) %></span>
-                    </div>
                   </div>
               </div>
             </div>
@@ -76,7 +73,7 @@
               <span class="description"><%= favorite.content.description %></span>
               <div class="line"></div>
 
-              <div class="card-bottom">
+              <div class="card-bottom-library">
                 <div>
                   <%= link_to "#", class: "home-button" do %>
                   <%= image_tag("play.png", class: "library_btn") %>
@@ -88,6 +85,22 @@
               </div>
             </div>
             </p>
+
+            <div class="modal fade" id="exampleModal-<%= favorite.content.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <%= content_tag(:iframe, '', src: content.source_url,
+                                          width: 350, height: 800, frameborder: 0) %>
+                  </div>
+                </div>
+              </div>
+            </div>
           <% end %>
         <% end %>
     </div>
