@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>UNLearning</title>
+    <title>UNLearning | <%= yield(:html_title) if content_for?(:html_title) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,11 +13,20 @@
 
   <body>
 
-    
-
     <%= yield %>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 
+    <div class="footer">
+        <%= link_to root_path, class: "home-button" do %>
+            <%= image_tag("home.png", class: "home_btn") %>
+        <% end %>
+        <%= link_to "/search", class: "home-button" do %>
+            <%= image_tag("search.png", class: "search_btn") %>
+        <% end %>
+        <%= link_to "/favorites", class: "home-button" do %>
+            <%= image_tag("library.png", class: "library_btn") %>
+        <% end %>
+    </div>
   </body>
 </html>
