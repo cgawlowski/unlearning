@@ -7,7 +7,7 @@ class PagesController < ApplicationController
 
   def welcome
     @quote = Quote.order(Arel.sql('RANDOM()')).first
-    render :welcome, layout: "no_navbar"
+    render :welcome, layout: "nothing"
   end
 
 end
