@@ -14,13 +14,12 @@ class ContentsController < ApplicationController
     end
   end
 
-  def search
-    render :search, layout: "no_navbar"
-  end
+  # def search
+  #   render :search, layout: "no_navbar"
+  # end
 
   def advanced_search
     find_contents
-
   end
 
   private
@@ -63,9 +62,7 @@ class ContentsController < ApplicationController
         elsif params[:duration] == "3" && item.duration > 20
           @contents.push(item)
         end
-
       end
     end
   end
-
 end
