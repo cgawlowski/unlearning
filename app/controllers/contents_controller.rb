@@ -14,9 +14,6 @@ class ContentsController < ApplicationController
     end
   end
 
-  def search
-    render :search, layout: "no_navbar"
-  end
 
   def advanced_search
     find_contents
