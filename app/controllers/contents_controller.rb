@@ -14,10 +14,8 @@ class ContentsController < ApplicationController
     end
   end
 
-
   def advanced_search
     find_contents
-
   end
 
   private
@@ -60,9 +58,7 @@ class ContentsController < ApplicationController
         elsif params[:duration] == "3" && item.duration > 20
           @contents.push(item)
         end
-
       end
     end
   end
-
 end

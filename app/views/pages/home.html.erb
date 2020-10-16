@@ -3,7 +3,8 @@
     <div class="home-container">
 
         <div class="form-check">
-            <%= form_with(url: "/contents", 
+            <%= form_with(url: "/contents",
+
             method: "get", local:true, class: 'form-container') do %>
         
                 <div class="time">
@@ -16,7 +17,7 @@
 
                 <div class="content">
                     <label class="format" for="inlineFormCustomSelectPref">What format do you want?</label>
-        
+
                     <div class="checkbox-container">
                         <%= check_box_tag(:article, 1, false, class: 'article') %>
                         <%= label_tag(:article, "ARTICLE") %>
@@ -38,13 +39,13 @@
                         
                         <%= hidden_field_tag :search, true %>
                         <%= submit_tag("Search content", class: "submit_tag") %>
-                    </div>
-                    
+                    </div>                    
                 </div>   
+
             <% end %>
 
          </div>
     </div>
 </div>
 
-<% content_for(:html_title) { 'Home page | Choose format&time' } %>
+<% content_for(:html_title) { 'Unlearning | See what is trending in the news today' } %>

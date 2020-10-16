@@ -9,7 +9,7 @@
             <div class="description-top">
               <div class="video-title-container">
                 <span class="title"><%= content.title %></span>
-                <span class="author">by_<%= content.author %> </span>
+                <!-- <span class="author">by_<%= content.author %> </span> -->
               </div>
               <%= image_tag "video.png", class: "video_btn" %>
             </div>
@@ -46,7 +46,7 @@
                 <%= image_tag content.preview_picture, class: "image_card" %>
                 <div class="text">
                   <span class="title"><%= content.title %></span>
-                  <span class="author">by_<%= content.author %> </span>
+                  <!-- <span class="author">by_<%= content.author %> </span> -->
                 </div>
                 <%= image_tag "audio.png", class: "audio_btn" %>
               </div>
@@ -78,7 +78,7 @@
                   <%= image_tag content.preview_picture, class: "image_card" %>
                   <div class="text">
                     <span class="title"><%= content.title %></span>
-                    <span class="author">by_<%= content.author %> </span>
+                   <!--  <span class="author">by_<%= content.author %> </span> -->
                   </div>
                   <%= image_tag "article.png", class: "article_btn" %>
                 </div>
@@ -92,7 +92,7 @@
 
                 <div class="card-bottom">
                   <div>
-                    <button type="button" class="btn btn-primary read-btn" data-toggle="modal" data-target="#exampleModal-<%=content.id%>">
+                    <button type="button" class="button" data-toggle="modal" data-target="#exampleModal-<%=content.id%>">
                     Read</button>
                     ||
                     <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span>
@@ -126,4 +126,4 @@
   </div>
 </div>
 
-<% content_for(:html_title) { 'Advance-search page| List of content' } %>
+<% content_for(:html_title) { 'Unlearning | Selected contents for you' } %>

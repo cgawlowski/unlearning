@@ -7,5 +7,4 @@ class PagesController < ApplicationController
     @quote = Quote.order(Arel.sql('RANDOM()')).first
     render :welcome, layout: "nothing"
   end
-
 end
