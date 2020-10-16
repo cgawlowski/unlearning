@@ -92,7 +92,7 @@
 
                 <div class="card-bottom">
                   <div>
-                    <button type="button" class="btn btn-primary read-btn" data-toggle="modal" data-target="#exampleModal-<%=content.id%>">
+                    <button type="button" class="button" data-toggle="modal" data-target="#exampleModal-<%=content.id%>">
                     Read</button>
                     ||
                     <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span>
@@ -126,4 +126,4 @@
   </div>
 </div>
 
-<% content_for(:html_title) { 'Advance-search page| List of content' } %>
+<% content_for(:html_title) { 'Unlearning | Selected contents for you' } %>
