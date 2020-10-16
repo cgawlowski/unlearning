@@ -3,7 +3,9 @@
     <div class="home-container">
 
         <div class="form-check">
+
             <%= form_with(url: "/contents", 
+
             method: "get", local:true, class: 'form-container') do %>
         
                 <div class="time">
@@ -38,9 +40,13 @@
                         
                         <%= hidden_field_tag :search, true %>
                         <%= submit_tag("Search content", class: "submit_tag") %>
+
                     </div>
                     <%= link_to "Customized content", search_path, class: 'content_tag' %>
                 </div>   
+
+                    </div>                    
+
             <% end %>
 
          </div>
