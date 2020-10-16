@@ -1,89 +1,46 @@
 <div class="head-container">
   <div class="advanced-container">
     <div class="advanced-search">
-    
-  
-
       <button class="advanced-button"><%= @category.capitalize %></button>
-
       <% @contents.each do |content| %>
-      
-      <% if content.format == "video"  %>
-        <p >
-        <div class="card">
-        <div class="description-top">
-          <div class="video-title-container">
-            <span class="title"><%= content.title %></span>
-            <span class="author">by_<%= content.author %> </span>
-          </div>
-          <%= image_tag "video.png", class: "video_btn" %>
-        </div>
-          <div>
-            <%= link_to "#", class: "home-button" do %>
-            <%= content_tag(:iframe, '', src: content.content,
-                              width: 350, height: 250, frameborder: 0) %>
-            <% end %>
-
-              <div>
-                <span class="description"><%= content.description %>
-                </span>
-
-                <div class="line">
-                </div>
-
-                <div class="card-bottom">
-                  <div>
-                    <%= link_to "Watch on Youtube", content.source_url %> ||
-                    <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span> 
-                  </div>
-
-                  <div class="vector_btn">
-                    <%= image_tag "Vector.png", class: "vector" %> 
-                  </div>
-                  
-                </div>
-              </div> 
-            </div>
-          </div>
-        </p>
-
-
-      <% elsif content.format == "podcast" %>
-          <p >
+        <% if content.format == "video"  %>
+          <p>
           <div class="card">
-            <div class="title-container">
-              <%= image_tag content.preview_picture, class: "image_card" %>
-              <div class="text">
+            <div class="description-top">
+              <div class="video-title-container">
                 <span class="title"><%= content.title %></span>
                 <span class="author">by_<%= content.author %> </span>
               </div>
-              <%= image_tag "audio.png", class: "audio_btn" %>
+              <%= image_tag "video.png", class: "video_btn" %>
             </div>
+            <div>
+              <%= link_to "#", class: "home-button" do %>
+              <%= content_tag(:iframe, '', src: content.content,
+                                width: 350, height: 250, frameborder: 0) %>
+              <% end %>
 
-              <span class="description"><%= content.description %>
-              </span>
-
-              <div class="line">
-              </div>
-
-              <div class="card-bottom">
                 <div>
-                  <%= link_to "#", class: "home-button" do %>
-                  <%= image_tag("play.png", class: "library_btn") %>
-                  <% end %>
-                  <%= link_to "Listen", content.source_url %> ||
-                  <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span>
-                </div>
+                  <span class="description"><%= content.description %></span>
+                  <div class="line"></div>
+                  <div class="card-bottom">
+                    <div>
+                      <%= link_to "Watch", content.source_url %> ||
+                      <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span>
+                    </div>
 
-                <div class="vector_btn">
-                  <%= image_tag "Vector.png", class: "vector" %>
+                    <div class="vector_btn">
+                      <%= render "/contents/favorite_button", content: content %>
+                    </div>
+
+                  </div>
                 </div>
-              </div>
             </div>
-           </p>
+          </div>
+          </p>
 
-      <% else %>
-          <p >
+
+        <% elsif content.format == "podcast" %>
+            <p >
             <div class="card">
               <div class="title-container">
                 <%= image_tag content.preview_picture, class: "image_card" %>
@@ -91,55 +48,82 @@
                   <span class="title"><%= content.title %></span>
                   <span class="author">by_<%= content.author %> </span>
                 </div>
-                <%= image_tag "article.png", class: "article_btn" %>
+                <%= image_tag "audio.png", class: "audio_btn" %>
               </div>
 
-              <div>
-                <span class="description"><%= content.description %>
-                </span>
+                <span class="description"><%= content.description %></span>
 
-                <div class="line">
+                <div class="line"></div>
+
+                <div class="card-bottom">
+                  <div>
+                    <%= link_to "#", class: "home-button" do %>
+                    <%= image_tag("play.png", class: "library_btn") %>
+                    <% end %>
+                    <%= link_to "Listen", content.source_url %> ||
+                    <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span>
+                  </div>
+
+                  <div class="vector_btn">
+                    <%= render "/contents/favorite_button", content: content %>
+                  </div>
+                </div>
+              </div>
+             </p>
+
+        <% else %>
+            <p>
+              <div class="card">
+                <div class="title-container">
+                  <%= image_tag content.preview_picture, class: "image_card" %>
+                  <div class="text">
+                    <span class="title"><%= content.title %></span>
+                    <span class="author">by_<%= content.author %> </span>
+                  </div>
+                  <%= image_tag "article.png", class: "article_btn" %>
                 </div>
 
-                 <div class="card-bottom">
                 <div>
-                  <button type="button" class="btn btn-primary read-btn" data-toggle="modal" data-target="#exampleModal-<%=content.id%>">
-                  Read
-                </button>
-                  ||
-                  <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span> 
+                  <span class="description"><%= content.description %>
+                  </span>
 
+                  <div class="line">
+                  </div>
+
+                <div class="card-bottom">
+                  <div>
+                    <button type="button" class="btn btn-primary read-btn" data-toggle="modal" data-target="#exampleModal-<%=content.id%>">
+                    Read</button>
+                    ||
+                    <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span>
+                  </div>
+                      <div class="vector_btn">
+                        <%= render "/contents/favorite_button", content: content %>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                
-
-                            
-
-                <div class="vector_btn">
-                  <%= image_tag "Vector.png", class: "vector" %>
+            </p>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal-<%= content.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <%= content_tag(:iframe, '', src: content.source_url,
+                                          width: 350, height: 800, frameborder: 0) %>
+                  </div>
                 </div>
-              </div>
               </div>
             </div>
-          </div>
-          </p>
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal-<%= content.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <%= content_tag(:iframe, '', src: content.source_url,
-                                        width: 350, height: 800, frameborder: 0) %>
-                </div>
-              </div>
-            </div>
-          </div>             
-        <% end %>
+          <% end %>
       <% end %>
     </div>
   </div>
 </div>
+
+<% content_for(:html_title) { 'Advance-search page| List of content' } %>

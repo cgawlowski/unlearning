@@ -1,7 +1,9 @@
+
 <div class="first-container">
     <div class="home-container">
-
+ 
         <div class="form-check">
+
             <%= form_with(url: "/contents", 
             method: "get", local:true, class: 'form-container') do %>
                 <div class="time">
@@ -37,3 +39,5 @@
          </div>
     </div>
 </div>
+
+<% content_for(:html_title) { 'Home page | Choose format&time' } %>
