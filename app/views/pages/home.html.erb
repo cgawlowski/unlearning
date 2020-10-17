@@ -4,10 +4,10 @@
 
         <div class="form-check">
 
-            <%= form_with(url: "/contents", 
+            <%= form_with(url: "/contents",
 
             method: "get", local:true, class: 'form-container') do %>
-        
+
                 <div class="time">
                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How much time do yo have ?</label>
                      <%= select_tag(:duration, raw('<option value="1">Something quick ! (5 minutes max)</option>
@@ -18,7 +18,7 @@
 
                 <div class="content">
                     <label class="format" for="inlineFormCustomSelectPref">What format do you want?</label>
-        
+
                     <div class="checkbox-container">
                         <%= check_box_tag(:article, 1, false, class: 'article') %>
                         <%= label_tag(:article, "ARTICLE") %>
@@ -37,15 +37,15 @@
 
                 <div class="buttons">
                     <div class="submit_button">
-                        
+
                         <%= hidden_field_tag :search, true %>
                         <%= submit_tag("Search content", class: "submit_tag") %>
 
                     </div>
-                  
-                </div>   
 
-                    </div>                    
+                </div>
+
+                    </div>
 
             <% end %>
 
@@ -53,4 +53,4 @@
     </div>
 </div>
 
-<% content_for(:html_title) { 'Unlearning | See what is trending in the news today' } %>
+<% content_for(:html_title) { 'See what is trending' } %>
