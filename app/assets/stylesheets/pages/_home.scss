@@ -149,6 +149,8 @@ input[type="checkbox"] {
 .head-container {
     display: flex;
     justify-content: center;
+    
+    
 }
 
 .advanced-container {
@@ -156,8 +158,8 @@ input[type="checkbox"] {
     display: flex;
     justify-content: center;
     width: 414px;
-    height: 736px;
-    margin-bottom: 30px;
+    height: fit-content;
+    
 }
 
 .advanced-search {
@@ -172,7 +174,7 @@ input[type="checkbox"] {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-    margin-bottom: -40px;
+    margin-bottom: 0px;
     padding: 10px;
     border-radius: 10px;
     filter: drop-shadow(2px 2px 16px rgba(0, 0, 0, 0.11));
