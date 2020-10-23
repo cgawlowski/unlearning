@@ -1,10 +1,10 @@
 <%= link_to favorite_toggle_path(content_id: content.id), class: "favorite-button", "data-content-id": content.id, remote: true do %>
   <% if content.favorited?(current_user) %>
-    <span style="font-size: 18px; color: #F2994A;">
+    <span class="heart" >
     <i class="fas fa-heart"></i>
     </span>
   <% else %>
-  <span style="font-size: 18px; color: #F2994A;">
+  <span class="full-heart">
     <i class="far fa-heart"></i>
     </span>
   <% end %>
