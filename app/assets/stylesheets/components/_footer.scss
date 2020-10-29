@@ -11,11 +11,43 @@
   width: 100%;
 }
 
-.home_btn, .library_btn, .search_btn {
-    height: 20px;
-    width: 20px;
-}
 
 .offset-footer {
   padding-bottom: 50px;
+}
+
+
+@media (max-width: 2500px) {
+  .footer {
+    height: 60px;  
+  }
+
+  .home_btn, .library_btn, .search_btn {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+
+
+@media (max-width: 1000px) {
+  .footer {
+    height: 60px;
+  }
+
+  .home_btn, .library_btn, .search_btn {
+    height: 30px;
+    width: 30px;
+  }
+} 
+
+@media (max-width: 750px) {
+  .footer {
+    height: 50px;  
+  }
+
+  .home_btn, .library_btn, .search_btn {
+    height: 20px;
+    width: 20px;
+  }
 }

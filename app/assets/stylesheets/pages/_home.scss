@@ -1,8 +1,8 @@
 .home-container {
     display: flex;
     justify-content: center;
-    width: 414px;
-    height: 736px;
+    width: 100%;
+    min-height: 100vh;
     background-color: #65C6C4;
 }
 
@@ -50,7 +50,7 @@
     justify-content: center;
     font-style: normal;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 24px;
     color: white;
 }
 
@@ -68,6 +68,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
+    margin-bottom: 30px;
 }
 
 .search-format {
@@ -181,6 +182,7 @@ input[type="checkbox"] {
     //margin: 0px 16px;
 }
 
+
 .title-container {
     display: flex;
     gap: 0px 20px;
@@ -276,7 +278,6 @@ input[type="checkbox"] {
 }
 
 .custom-select {
-    border-radius: 10px;
     color: #4F4F4F;
 }
 
@@ -285,7 +286,8 @@ input[type="checkbox"] {
   display: flex;
   justify-content: center;
   padding-bottom: 40px;
-  height: 736px;
+  height: 100%;
+  width: 100%;
 }
 
 
@@ -301,10 +303,11 @@ input[type="checkbox"] {
 .welcome-container {
     background-color: white;
     display: flex;
-    justify-content: center;
-    width: 414px;
-    height: 736px;
+
+    width: 100%;
+    height: 100vh;
     margin-bottom: 30px;
+    position: relative;
 }
 
 .welcome {
@@ -346,17 +349,14 @@ input[type="checkbox"] {
 
 .go {
     background-color: #408ab4;
-    width: 80px;
-    height: 80px;
     border-radius: 50%;
     border: none;
     position: absolute;               /* 2 */
     top: 80%;
-    left: 60%;
+    left: 80%;
     color: white;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
 }
 
 .advanced-button {
@@ -376,9 +376,6 @@ input[type="checkbox"] {
     width: 40%;
 }
 
-.head-container {
-    height: 740px;
-}
 
 .read-btn {
     background-color: #408ab4;
@@ -389,8 +386,18 @@ input[type="checkbox"] {
     margin-top: -5px;
 }
 
-.elipses {
-    width: 100%;
+.logo-circles {
+    position: absolute;
+    left: 0px;
+  
+}
+
+
+.welcome-avatar {
+    position: absolute;
+    right: 0px;   
+    border-radius: 100%;
+    border: 1px solid black;   
 }
 
 .author {
@@ -406,6 +413,543 @@ input[type="checkbox"] {
     position: sticky;
 }
 
-.modal-dialog {
-    width: 375px;
+
+.button-format {
+    margin-left: auto;
 }
+
+
+@media (max-width: 2500px) {
+    //large
+    .advanced-container  {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .quote {
+        font-size: 36px;
+        width: 390px;
+        }
+    
+    .author {
+        font-size: 24px;
+    }
+
+    .go {
+        width: 120px;
+        height: 120px;
+        font-size: 36px;
+    }
+
+
+    .logo-circles {
+        width: 450px;
+        height: 180px;
+        
+        }
+    
+        .welcome-avatar {
+            width: 75px;
+            height: 75px;
+            margin-top: 30px;
+            margin-right: 30px;
+          }
+             
+            
+          .welcome-name {
+            font-size: 33px;
+            left: 15px;
+            top: 33px;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            position: absolute;
+        }  
+        
+    
+        .time, .format {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+    
+        .submit_tag, .search-submit_tag {
+            border-radius: 20px;
+            width: 232px;
+            height: 40px;
+            font-size: 20px;
+        }
+        
+    
+        .custom-select {
+            border-radius: 10px;
+            width: 370px;
+            font-size: 20px;
+        }
+    
+    
+        .checkbox-container {
+            height: 50px;
+        }
+    
+        input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            & + label {
+                width: 150px;
+                height: 30px;
+                border-radius: 20px;
+                font-size: 15px;
+            }
+        }
+    .card {
+        width: 1080px;
+        margin-top: 90px;
+        margin-bottom: 0px;
+        padding: 30px;
+        border-radius: 30px;
+        filter: drop-shadow(6px 6px 48px rgba(0, 0, 0, 0.11));
+    }
+
+
+    // here!
+
+    .fav-card {
+        width: 1080px;
+        margin-top: 90px;
+        margin-bottom: 0px;
+        padding: 30px;
+        border-radius: 30px;
+        filter: drop-shadow(6px 6px 48px rgba(0, 0, 0, 0.11));
+        background-color: white;
+        margin-left: 50%;
+
+    }
+
+    .library-video-title-container {
+        height: 500px;
+    }
+
+
+    .author-card {
+        font-size: 28px;
+    }
+    .advanced-button {
+        border-radius: 16px;
+        font-size: 32px;
+        margin: 30px 20px 24px;
+        padding-inline-start: 24px;
+        padding-inline-end: 24px;
+        width: 40%;
+        height: 60px;
+    }
+
+        
+    .title-container {
+        gap: 0px 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+
+    }
+    
+    .video-title-container {
+        gap: 0px 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .image_card {
+        width: 142px;
+        height: 142px;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+    
+    .description {
+        font-size: 28px;
+    }
+    
+    .line {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #65C6C4;
+        width: 320px;
+    }
+    
+    .title {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    
+    .author {
+        font-size: 26px;
+    }
+    
+    .duration {
+        font-size: 30px;
+    }
+
+    .listen {
+        font-size: 30px;
+    }
+
+    .fav-listen {
+        font-size: 30px;
+    }
+
+    .heart {
+        font-size: 40px;
+        color: #F2994A;
+    }
+
+    .full-heart {
+    font-size: 40px; 
+    color: #F2994A;
+    }
+
+    .modal-dialog {
+        width: 750px;
+    }
+  }
+
+
+
+  @media (max-width: 1000px) {
+        //medium
+
+        .quote {
+            font-size: 36px;
+            width: 390px;
+            }
+        
+        .author {
+            font-size: 24px;
+        }
+    
+        .go {
+            width: 120px;
+            height: 120px;
+            font-size: 36px;
+        }
+    
+    
+        .logo-circles {
+            width: 450px;
+            height: 180px;
+            
+            }
+        
+            .welcome-avatar {
+                width: 75px;
+                height: 75px;
+                margin-top: 30px;
+                margin-right: 30px;
+              }
+                 
+                
+              .welcome-name {
+                font-size: 33px;
+                left: 15px;
+                top: 33px;
+                font-family: 'Times New Roman', Times, serif;
+                color: white;
+                position: absolute;
+            }  
+            
+        
+
+    .time, .format {
+        font-size: 37px;
+        margin-bottom: 30px;
+    }
+
+    .submit_tag, .search-submit_tag {
+        border-radius: 30px;
+        width: 348px;
+        height: 60px;
+        font-size: 30px;
+    }
+  
+    .custom-select {
+        border-radius: 15px;
+        width: 555px;
+        font-size: 30px;
+    }
+
+
+    .checkbox-container {
+        height: 75px;
+    }
+
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        & + label {
+            width: 225px;
+            height: 45px;
+            border-radius: 30px;
+            font-size: 22px;
+        }
+    }
+
+    .card {
+        width: 720px;
+        margin-top: 60px;
+        margin-bottom: 0px;
+        padding: 20px;
+        border-radius: 20px;
+        filter: drop-shadow(4px 4px 32px rgba(0, 0, 0, 0.11));
+    }
+
+
+    .fav-card {
+        width: 720px;
+        margin-top: 60px;
+        margin-bottom: 0px;
+        padding: 20px;
+        border-radius: 20px;
+        filter: drop-shadow(4px 4px 32px rgba(0, 0, 0, 0.11));
+        margin-left: 25%; 
+    }
+    
+    .button-format {
+    margin-left: 30%;   
+    width: 750px;    
+    }
+
+    .iframe-video {
+        width: 600px;
+        height: 350px;
+    }
+
+    .advanced-button {
+        border-radius: 12px;
+        font-size: 24px;
+        margin: 20px 15px 18px;
+        padding-inline-start: 18px;
+        padding-inline-end: 18px;
+        width: 40%;
+        height: 40px;
+    }
+
+   
+    .heart {
+        font-size: 30px;
+        color: #F2994A;
+    }
+
+    .full-heart {
+    font-size: 30px; 
+    color: #F2994A;
+        }
+    
+            
+    .modal-dialog {
+        width: 750px;
+    }
+
+    .modal-body {
+        width: 750px;
+
+    }
+  } 
+
+  @media (max-width: 750px) {
+    //small
+
+    .quote {
+        font-size: 24px;
+        width: 260px;
+        }
+    
+    .author {
+        font-size: 18px;
+    }
+
+    .go {
+        width: 80px;
+        height: 80px;
+        font-size: 24px;
+        left: 60%;
+    }
+
+
+    .logo-circles {
+        width: 280px;
+        height: 110px;
+        
+        }
+    
+        .welcome-avatar {
+            width: 50px;
+            height: 50px;
+            margin-top: 20px;
+            margin-right: 20px;
+          }
+             
+            
+          .welcome-name {
+            font-size: 22px;
+            left: 10px;
+            top: 22px;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            position: absolute;
+        }  
+        
+    
+    .time, .format {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+
+    .submit_tag, .search-submit_tag {
+        border-radius: 20px;
+        width: 232px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+
+    .custom-select {
+        border-radius: 10px;
+        width: 370px;
+        font-size: 20px;
+    }
+
+
+    .checkbox-container {
+        height: 50px;
+    }
+
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        & + label {
+            width: 150px;
+            height: 30px;
+            border-radius: 20px;
+            font-size: 15px;
+        }
+    }
+
+    .card {
+        width: 360px;
+        margin-top: 30px;
+        margin-bottom: 0px;
+        padding: 10px;
+        border-radius: 10px;
+        filter: drop-shadow(2px 2px 16px rgba(0, 0, 0, 0.11));
+    }
+
+
+    .fav-card {
+        width: 360px;
+        margin-top: 30px;
+        margin-bottom: 0px;
+        padding: 10px;
+        border-radius: 10px;
+        filter: drop-shadow(2px 2px 16px rgba(0, 0, 0, 0.11));
+        margin-left: 5%;
+    }
+
+        
+    .button-format {
+        margin-left: 5%;
+        width: 400px;    
+        }
+
+        
+    .iframe-video {
+        width: 300px;
+        height: 150px;
+    }
+
+    .library-title {
+        margin-left: 30px;
+    }
+
+    .advanced-button {
+        border-radius: 8px;
+        font-size: 16px;
+        margin: 15px 10px 12px;
+        padding-inline-start: 12px;
+        padding-inline-end: 12px;
+        width: 40%;
+        height: 30px;
+    }
+    
+    .title-container {
+        gap: 0px 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .video-title-container {
+        gap: 0px 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .image_card {
+        width: 71px;
+        height: 72px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+    }
+    
+    .description {
+        font-size: 14px;
+    }
+    
+    .line {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #65C6C4;
+        width: 160px;
+    }
+    
+    .title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+    .author {
+        font-size: 13px;
+    }
+    
+    .duration {
+        font-size: 15px;
+    }
+    
+
+    .listen {
+        font-size: 15px;
+    }
+    
+
+    .heart {
+        font-size: 20px;
+        color: #F2994A;
+    }
+
+    .full-heart {
+    font-size: 20px; 
+    color: #F2994A;
+        }
+    
+    
+    .modal-dialog {
+        width: 375px;
+    }
+
+    .modal-body {
+        width: 350;
+        height: 800;
+    }
+    
+  }
