@@ -98,8 +98,6 @@
   margin-bottom: 10px;
   text-align: center;
 
-
-
 }
 
 .card-author {
@@ -138,8 +136,7 @@
 }
 
 .iframe-video{
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   padding-top: 20px;
 }
 
@@ -257,7 +254,7 @@
     video {
       padding-top: 5px;
     }
-  
+
 
 }
 
@@ -278,18 +275,18 @@
       padding-top: 20px;
     }
   }
-  
+
   .card-video {
     padding-top: 24px;
     font-size: 40px;
   }
-  
+
   .card-video description {
     padding-top: 24px;
     padding-left: 20px;
     font-size: 28px;
   }
-  
+
   .blue-line {
     width: 330px;
     height: 0px;
@@ -297,15 +294,15 @@
     top: 416px;
     margin: 0px 32px;
   }
-  
+
   .category {
     padding-top:20px;
   }
-  
+
   .category p {
     padding-left: 10px;
   }
-  
+
   .button {
     transition-duration: 0.8s;
     border-radius: 16px;
@@ -322,11 +319,11 @@
     padding-inline-start: 16px;
     padding-inline-end: 16px;
   }
-  
+
   .button-format {
     padding-top: 40px;
   }
-  
+
   .card-text-title {
     font-size: 28px;
     line-height: 58px;
@@ -334,14 +331,14 @@
     margin-top: 50px;
     margin-bottom: 20px;
 
-  
+
   }
-  
+
   .card-body-article{
     padding-top: 24px;
     height: 1200px;
   }
-  
+
   .card-text-description {
     font-size: 24px;
     padding-bottom: 20px;
@@ -349,29 +346,29 @@
     padding-right: 4px;
     width: 700px;
   }
-  
+
   .customize {
     padding-top: 40px;
   }
-  
+
   .card-text-content {
     font-size: 24px;
   }
-  
+
   .arrow-icon{
       bottom: 120px;
   }
-  
+
   .iframe-video{
-    width: 700px;
-    height: 400px;
+    width: 100%;
+
     padding-top: 40px;
   }
-  
+
   .card-podcast-content {
     width: 100%;
   }
-  
+
   .card-podcast-content {
     width: 800px;
   }
@@ -379,30 +376,29 @@
 
 
   .card-img-top {
-    width: 600px;
-    
+    width: 100%;
   }
 
-  
+
   .card-body-podcast {
     display: flex;
     flex-direction: column;
     margin-top: 200px;
   }
-  
+
   .card-full-content {
     display: flex;
     justify-content: space-around;
   }
 
 
-  
+
   .card-article-full-content {
     display: flex;
     justify-content: space-around;
   }
 
-    
+
   .card-author {
     font-size: 24px;
   }
@@ -428,18 +424,18 @@
       padding-top: 10px;
     }
   }
-  
+
   .card-video {
     padding-top: 12px;
     font-size: 20px;
   }
-  
+
   .card-video description {
     padding-top: 12px;
     padding-left: 10px;
     font-size: 14px;
   }
-  
+
   .blue-line {
     width: 300px;
     height: 0px;
@@ -447,26 +443,26 @@
     top: 416px;
     margin: 0px 30px;
   }
-  
+
   .category {
     margin-top: -10px;
     float: left;
   }
-  
+
   .category p {
     padding-left: 5px;
   }
 
-    
+
   .article-category {
     margin-top: -40px;
     float: left;
   }
-  
+
   .article-category p {
     padding-left: 5px;
   }
-  
+
   .button {
     border-radius: 12px;
     font-size: 22px;
@@ -485,7 +481,7 @@
     float: left;
   }
 
-   
+
   .article-button {
     border-radius: 12px;
     font-size: 22px;
@@ -503,73 +499,69 @@
     padding-inline-end: 18px;
     float: left;
   }
-  
+
   .button-format {
     padding-top: 20px;
   }
-  
+
   .card-text-title {
     font-size: 36px;
     line-height: 45px;
     letter-spacing: 0.02em;
     margin-top: 33px;
     margin-bottom: 15px;
-  
+
   }
-  
+
   .card-body-article{
     padding-top: 12px;
     height: 600px;
   }
-  
+
   .card-text-description {
     font-size: 20px;
     padding-bottom: 20px;
-    padding-left: 30px;
+    padding-left: 20px;
     padding-right: 4px;
-    width: 700px;
+    width: 100%;
     text-align: start;
+    margin-top: 200px;
   }
-  
+
   .card-article-text-description{
     font-size: 20px;
     padding-bottom: 20px;
     padding-left: 30px;
     padding-right: 4px;
-    width: 700px;
+    width: 100%;
     margin-top: 200px;
   }
   .customize {
     padding-top: 20px;
   }
-  
-  .card-text-content {
-    font-size: 12px;
 
-  }
-  
+
   .arrow-icon{
       bottom: 60px;
   }
-  
+
   .iframe-video{
-    width: 700px;
-    height: 400px;
+    width: 100%;
     padding-top: 20px;
   }
-  
+
   .card-podcast-content {
     width: 100%;
     margin-left: 30px;
   }
-  
+
   .card-podcast-content {
     width: 400px;
   }
- 
+
 
   .card-img-top {
-    width: 700px;
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -586,14 +578,14 @@
   }
 
 
-  
+
   .card-full-content {
     display: flex;
     flex-direction: column;
   }
 
 
-    
+
   .card-author {
     margin-left: 30px;
   }
@@ -602,7 +594,7 @@
     text-align: start;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: 60px;
   }
 
   .article-heart {
@@ -615,7 +607,7 @@
   }
 
 
-  
+
   .card-article-full-content {
     display: flex;
     flex-direction: column;
@@ -627,7 +619,7 @@
     margin-top: -360px;
   }
 
-  
+
 }
 
 
@@ -641,18 +633,18 @@
       padding-top: 10px;
     }
   }
-  
+
   .card-video {
     padding-top: 12px;
     font-size: 20px;
   }
-  
+
   .card-video description {
     padding-top: 12px;
     padding-left: 10px;
     font-size: 14px;
   }
-  
+
   .blue-line {
     width: 165px;
     height: 0px;
@@ -660,22 +652,22 @@
     top: 208px;
     margin: 0px 16px;
   }
-  
+
   .category {
     margin-top: -10px;
     float: left;
   }
-  
+
   .category p {
     padding-left: 5px;
   }
-  
-    
+
+
   .article-category {
     margin-top: -50px;
     float: left;
   }
-  
+
   .article-category p {
     padding-left: 5px;
   }
@@ -697,7 +689,7 @@
     padding-inline-end: 12px;
   }
 
-    
+
   .article-button {
     transition-duration: 0.4s;
     border-radius: 8px;
@@ -714,11 +706,11 @@
     padding-inline-start: 12px;
     padding-inline-end: 12px;
   }
-  
+
   .button-format {
     padding-top: 20px;
   }
-  
+
   .card-text-title {
     font-weight: 500;
     font-size: 24px;
@@ -726,14 +718,14 @@
     letter-spacing: 0.01em;
     margin-top: 25px;
     margin-bottom: 10px;
-  
+
   }
-  
+
   .card-body-article{
     padding-top: 12px;
     height: 600px;
   }
-  
+
   .card-text-description {
     font-size: 14px;
     padding-bottom: 10px;
@@ -741,34 +733,33 @@
     padding-right: 2px;
     width: 400px;
   }
-  
+
   .customize {
     padding-top: 20px;
   }
-  
+
   .card-text-content {
     font-size: 12px;
   }
-  
+
   .arrow-icon{
       bottom: 60px;
   }
-  
+
   .iframe-video{
-    width: 90%;
-    height: 200px;
+    width: 100%;
     padding-top: 20px;
   }
-  
+
   .card-podcast-content {
     width: 100%;
     margin-left: 5px;
   }
-  
+
   .card-podcast-content {
     width: 400px;
   }
- 
+
 
   .card-img-top {
     width: 400px;
@@ -789,18 +780,18 @@
   }
 
 
-  
+
   .card-full-content {
     display: flex;
     flex-direction: column;
   }
-    
+
   .card-author {
     margin-left: 10px;
   }
 
 
-  
+
   .card-article-full-content {
     display: flex;
     flex-direction: column;
