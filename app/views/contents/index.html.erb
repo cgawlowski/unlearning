@@ -8,23 +8,24 @@
             <div class="card-all-content">
               <!-- VIDEO -->
               <% if content.format == "video"  %>
-                <%= content_tag(:iframe, '', src: content.content, class: "iframe-video", height: 315, frameborder: 0) %>
-                <div class="card-video">
-                  <div class="favorite-button">
-                    <p><i class="far fa-id-badge"></i> <%=  content.author %> | <%=  content.published_date %> </p>
-                  </div>
-                  <div class="card-text-description">
-                    <%= content.description %>
-                  </div>
-                  <hr class="blue-line">
-                    <div class="category">
-                      <button class="button"><%=  content.category %></button>
-                      <%= render "/contents/favorite_button", content: content %>
+                <div class="card-full-content">
+                  <%= content_tag(:iframe, '', src: content.content, class: "iframe-video", height: 315, frameborder: 0) %>
+                  <div class="card-video">
+                    <div class="favorite-button">
+                      <p class=" card-author"><i class="far fa-id-badge"></i> <%=  content.author %> | <%=  content.published_date %> </p>
                     </div>
-
-                </div>
+                    <div class="card-text-description">
+                      <%= content.description %>
+                    </div>
+                    <hr class="blue-line">
+                      <div class="category">
+                        <button class="button"><%=  content.category %></button>
+                        <%= render "/contents/favorite_button", content: content %>
+                      </div>
+                    </div>
+                  </div>
                 <!-- ARTICLE -->
-              <% elsif content.format == "article" %>
+               <% elsif content.format == "article" %>
                 <div class="card-text-title">
                   <%= content.title %>
                 </div>
@@ -32,10 +33,11 @@
                   <p><i class="far fa-id-badge"></i> <%=  content.author %> | <%=  content.published_date %> </p>
                 </div>
                 <%= image_tag content.preview_picture , class: "card-img-top"%>
-                <div class="card-body-article">
-                  <div class="card-text-description">
+                <div class="card-text-description">
                     <%= content.description %>
                   </div>
+                <div class="card-body-article">
+
                   <hr class="blue-line">
                   <div class="category">
                     <button class="button"><%=  content.category %></button>
@@ -45,28 +47,38 @@
                     <%= content.content.html_safe %>
                   </div>
                 </div>
+
+
+
                 <!-- PODCAST -->
               <% else %>
-                <div class="card-text-title">
-                    <%= content.title %>
-                </div>
-                <div class="favorite-button">
-                  <p><i class="far fa-id-badge"></i> <%=  content.author %> | <%=  content.published_date %> </p>
-                </div>
-                <%= image_tag content.preview_picture , class: "card-img-top"%>
-                <div class="card-body-podcast">
-                  <div class="card-text-description">
-                    <%= content.description %>
+
+
+                  <div class="card-text-title">
+                      <%= content.title %>
                   </div>
-                  <hr class="blue-line">
-                    <div class="category">
-                      <button class="button"><%=  content.category %></button>
-                      <%= render "/contents/favorite_button", content: content %>
+                  <div class="card-full-content">
+                    <div class="image-container">
+                      <div class="favorite-button">
+                        <p class=" card-author"><i class="far fa-id-badge"></i> <%=  content.author %> | <%=  content.published_date %> </p>
+                      </div>
+                      <%= image_tag content.preview_picture , class: "card-img-top"%>
                     </div>
-                  <p class="card-podcast-content">
-                      <%= audio_tag content.content.html_safe, controls: true %>
-                  </p>
-                </div>
+
+                    <div class="card-body-podcast">
+                      <div class="card-text-description">
+                        <%= content.description %>
+                      </div>
+                      <hr class="blue-line">
+                        <div class="category">
+                          <button class="button"><%=  content.category %></button>
+                          <%= render "/contents/favorite_button", content: content %>
+                        </div>
+                      <p class="card-podcast-content">
+                          <%= audio_tag content.content.html_safe, controls: true %>
+                      </p>
+                    </div>
+                  </div>
               <% end %>
               <a class="carousel-control-next arrow-icon" href="#carouselExampleControls" role="button" data-slide="next">
                 <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

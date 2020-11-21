@@ -1,9 +1,14 @@
-<div class="head-container">
+
+
+
   <div class="welcome-container">
+
+        <%= image_tag("logo-circles.png", class: "logo-circles") %>
+                <h3 class="welcome-name">UnLearning</h3>
+        <%= image_tag("avatar.jpg", class: "welcome-avatar" )%>
     <div class="welcome">
 
 
-        <%= image_tag("elipses.png", class: "elipses") %>
 
 
         <div class="welcome-top">
@@ -25,6 +30,5 @@
 
     </div>
   </div>
-</div>
 
 <% content_for(:html_title) { 'Your favorites quotes about learning' } %>

@@ -57,10 +57,7 @@
 
                 <div class="card-bottom">
                   <div>
-                    <%= link_to "#", class: "home-button" do %>
-                    <%= image_tag("play.png", class: "library_btn") %>
-                    <% end %>
-                    <%= link_to "Listen", content.source_url %> ||
+                    <%= link_to "Listen", content.source_url, class: "listen" %> ||
                     <span class="duration"><%= distance_of_time_in_words(content.duration.minutes) %></span>
                   </div>
 
