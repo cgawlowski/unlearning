@@ -39,6 +39,20 @@ class ContentsController < ApplicationController
       return "science"
     elsif params[:category]  == "4"
       return "geopolitics"
+    elsif params[:category]  == "5"
+      return "history"
+    elsif params[:category]  == "6"
+      return "video games"
+    elsif params[:category]  == "7"
+      return "tech"
+    elsif params[:category]  == "8"
+      return "sport"
+    elsif params[:category]  == "9"
+      return "geography"
+    elsif params[:category]  == "10"
+      return "literature"
+    elsif params[:category]  == "11"
+      return "fun fact"
     end
   end
 
