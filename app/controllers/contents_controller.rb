@@ -2,6 +2,7 @@ class ContentsController < ApplicationController
   def index
     find_contents
     @favorite = Favorite.new
+    @content = Content.new
   end
 
   def set_time
@@ -57,6 +58,9 @@ class ContentsController < ApplicationController
           @contents.push(item)
         elsif params[:duration] == "3" && item.duration > 20
           @contents.push(item)
+        else
+          render_to_string(partial: 'contents/no_result_content', formats: [:html], locals: { content: @content })
+          # render json: { success: true, no_result_content_html: no_result_content_html }
         end
       end
     end
