@@ -2,7 +2,6 @@ class ContentsController < ApplicationController
   def index
     find_contents
     @favorite = Favorite.new
-    @content = Content.new
   end
 
   def set_time
@@ -40,6 +39,20 @@ class ContentsController < ApplicationController
       return "science"
     elsif params[:category]  == "4"
       return "geopolitics"
+    elsif params[:category]  == "5"
+      return "history"
+    elsif params[:category]  == "6"
+      return "video games"
+    elsif params[:category]  == "7"
+      return "tech"
+    elsif params[:category]  == "8"
+      return "sport"
+    elsif params[:category]  == "9"
+      return "geography"
+    elsif params[:category]  == "10"
+      return "literature"
+    elsif params[:category]  == "11"
+      return "fun fact"
     end
   end
 
@@ -58,9 +71,6 @@ class ContentsController < ApplicationController
           @contents.push(item)
         elsif params[:duration] == "3" && item.duration > 20
           @contents.push(item)
-        else
-          render_to_string(partial: 'contents/no_result_content', formats: [:html], locals: { content: @content })
-          # render json: { success: true, no_result_content_html: no_result_content_html }
         end
       end
     end
