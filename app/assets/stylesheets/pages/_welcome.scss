@@ -1,11 +1,140 @@
-// Default size
-@media (max-width: 2500px) {
+// Default screen size
+
+.welcome-container {
+  background-color: white;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 30px;
+  position: relative;
 }
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.welcome-top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -150px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.quote {
+  color: #4F4F4F;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  position: absolute;               /* 2 */
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+}
+
+
+
+// Large screens
+
+@media (max-width: 2500px) {
+
+  .quote {
+    font-size: 36px;
+    width: 390px;
+  }
+
+  .author {
+      font-size: 24px;
+  }
+
+  .logo-circles {
+    width: 450px;
+    height: 180px;
+  }
+
+  .welcome-avatar {
+    width: 75px;
+    height: 75px;
+    margin-top: 30px;
+    margin-right: 30px;
+  }
+
+  .welcome-name {
+    font-size: 33px;
+    left: 15px;
+    top: 33px;
+    color: white;
+    position: absolute;
+  }
+
+}
+
 
 //Medium screen
+
 @media (max-width: 1000px) {
+
+  .logo-circles {
+    width: 450px;
+    height: 180px;
+  }
+
+  .welcome-avatar {
+    width: 75px;
+    height: 75px;
+    margin-top: 30px;
+    margin-right: 30px;
+  }
+
+  .welcome-name {
+    font-size: 33px;
+    left: 15px;
+    top: 33px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    position: absolute;
+  }
+
 }
 
+
 //Small screen
+
 @media (max-width: 750px) {
+
+  .logo-circles {
+    width: 280px;
+    height: 110px;
+  }
+
+  .welcome-avatar {
+      width: 50px;
+      height: 50px;
+      margin-top: 20px;
+      margin-right: 20px;
+  }
+
+  .welcome-name {
+    font-size: 22px;
+    left: 10px;
+    top: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    position: absolute;
+  }
+
+  .quote {
+    font-size: 24px;
+    width: 260px;
+  }
+
+  .author {
+      font-size: 18px;
+  }
+  
 }
