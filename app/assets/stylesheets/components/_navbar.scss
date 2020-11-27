@@ -1,16 +1,13 @@
 .navbar-lewagon {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   background: white;
-  margin-left: auto;
-  margin-right: auto;
-  border-bottom: solid #65C6C4 1px;
-  position: relative;
 }
 
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
 
-.navbar-lewagon .nav-brand img {
+.navbar-lewagon .navbar-brand img {
   width: 40px;
 }
 
