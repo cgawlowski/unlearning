@@ -1,67 +1,42 @@
+
 <div class="first-container">
     <div class="home-container">
+        <%# Form %>
         <div class="form-check">
-            <%# Form %>
-                <%# Transition code %>
-                <div id="sequence" class="seq">
-                    <div class="seq-bg"></div>
-                    <div class="seq-screen">
-                        <ul class="seq-canvas">
-                            <%= form_with(url: "/contents", method: "get", local:true) do %>
-                                <%# First question %>
-                                <li class="seq-in seq-valign">
-                                    <div class="seq-content">
-                                        <label for="inlineFormCustomSelectPref" data-seq class="seq-description">How much time do yo have ?</label>
-                                        <%= select_tag(:duration, raw('<option value="1">Something quick ! (5 minutes max)</option>
-                                        <option value="2">Less than 20 minutes</option>
-                                        <option value="3">I have got all the time in the world !</option>'), class: "custom-select my-1 mr-sm-2", id: "inlineFormCustomSelectPref") %>
-                                    </div>
-                                </li>
-                                <%# Second question %>
-                                <li class="seq-valign">
-                                    <div class="seq-content">
-                                        <label  for="inlineFormCustomSelectPref" data-seq class="seq-description">What format do you want?</label>
-                                        <div class="checkbox-container">
-                                            <%= check_box_tag(:article, 1, false, class: 'article') %>
-                                            <%= label_tag(:article, "ARTICLE") %>
-                                        </div>
-                                        <div class="checkbox-container">
-                                            <%= check_box_tag(:video, 1, false, class: 'video') %>
-                                            <%= label_tag(:video, "VIDEO") %>
-                                        </div>
-                                        <div class="checkbox-container">
-                                            <%= check_box_tag(:podcast, 1, false, class: 'podcast') %>
-                                            <%= label_tag(:podcast, "PODCAST") %>
-                                        </div>
-                                        <%# Submit button %>
-                                        <div class="buttons">
-                                            <div class="submit_button">
-                                                <%= hidden_field_tag :search, true %>
-                                                <%= submit_tag("Search content", class: "submit_tag") %>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            <% end %>
-                        </ul>
-                    </div>
-
-                    <fieldset class="seq-nav" aria-controls="sequence" aria-label="Slider buttons">
-                        <button type="button" class="seq-prev" aria-label="Previous">
-                            <span class="seq-prev-arrow">&lt;</span>
-                        </button>
-
-                        <ul role="navigation" aria-label="Pagination" class="seq-pagination">
-                            <li><a href="#step1" rel="step1" title="Go to slide 1">1</a></li>
-                            <li><a href="#step2" rel="step2" title="Go to slide 2">2</a></li>
-                        </ul>
-
-                        <button type="button" class="seq-next" aria-label="Next">
-                            <span class="seq-next-arrow">&gt;</span>
-                        </button>
-                    </fieldset>
+            <%= form_with(url: "/contents", method: "get", local:true, class: 'form-container') do %>
+                <%# First question %>
+                <div class="time">
+                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How much time do yo have ?</label>
+                     <%= select_tag(:duration, raw('<option value="1">Something quick ! (5 minutes max)</option>
+                     <option value="2">Less than 20 minutes</option>
+                     <option value="3">I have got all the time in the world !</option>'), class: "custom-select my-1 mr-sm-2", id: "inlineFormCustomSelectPref") %>
                 </div>
+                <%# Second question %>
+                <div class="content">
+                    <label class="format" for="inlineFormCustomSelectPref">What format do you want?</label>
+                    <div class="checkbox-container">
+                        <%= check_box_tag(:article, 1, false, class: 'article') %>
+                        <%= label_tag(:article, "ARTICLE") %>
+                    </div>
+                    <div class="checkbox-container">
+                        <%= check_box_tag(:video, 1, false, class: 'video') %>
+                        <%= label_tag(:video, "VIDEO") %>
+                    </div>
+                    <div class="checkbox-container">
+                        <%= check_box_tag(:podcast, 1, false, class: 'podcast') %>
+                        <%= label_tag(:podcast, "PODCAST") %>
+                    </div>
+                </div>
+                <%# Submit button %>
+                <div class="buttons">
+                    <div class="submit_button">
+                        <%= hidden_field_tag :search, true %>
+                        <%= submit_tag("Search content", class: "submit_tag") %>
+                    </div>
+                </div>
+            <% end %>
         </div>
     </div>
 </div>
+
 <% content_for(:html_title) { 'See what is trending' } %>
