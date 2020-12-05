@@ -1,22 +1,12 @@
+// Default screen size
+
 .home-container {
     display: flex;
     justify-content: center;
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     background-color: #65C6C4;
 }
-
-// .form-check {
-//     margin-top: 50px;
-//     background-color: #65C6C4;
-// }
-
-
-.search-form-check {
-    margin-top: 50px;
-    background-color: #408AB4;
-}
-
 
 .form-container {
     display: flex;
@@ -29,10 +19,25 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     font-style: normal;
+    margin-top: 50px;
     font-weight: 500;
     font-size: 24px;
     color:  white;
+}
+
+.format {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.search-form-check {
+    margin-top: 50px;
+    background-color: #408AB4;
 }
 
 .timesearch {
@@ -62,13 +67,6 @@
     font-style: normal;
     justify-content: center;
     color: white;
-}
-
-.format {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    margin-bottom: 30px;
 }
 
 .search-format {
@@ -116,26 +114,6 @@ input[type="checkbox"] {
     justify-content: center;
 }
 
-.submit_tag {
-    background-color: #34699A;
-    color: white;
-    border-radius: 20px;
-    width: 232px;
-    height: 40px;
-    font-size: 20px;
-    border: none;
-}
-
-.search-submit_tag {
-    background-color: #65C6C4;
-    color: white;
-    border-radius: 20px;
-    width: 232px;
-    height: 40px;
-    font-size: 20px;
-    border: none;
-}
-
 .content_tag {
     background-color: white;
     color: #4F4F4F;
@@ -145,7 +123,6 @@ input[type="checkbox"] {
     font-size: 20px;
     padding-left: 10px;
 }
-
 
 .head-container {
     display: flex;
@@ -176,9 +153,7 @@ input[type="checkbox"] {
     padding: 10px;
     border-radius: 10px;
     filter: drop-shadow(2px 2px 16px rgba(0, 0, 0, 0.11));
-    //margin: 0px 16px;
 }
-
 
 .title-container {
     display: flex;
@@ -231,7 +206,9 @@ input[type="checkbox"] {
     color: #4F4F4F;
     font-style: normal;
     font-weight: normal;
-    font-size: 13px;
+    margin-top: 30px;
+    font-size: 18px;
+    text-align: end;
 }
 
 .duration {
@@ -286,7 +263,6 @@ input[type="checkbox"] {
   height: 800px;
 }
 
-
 .article, .video, .podcast {
     text-align: center;
 }
@@ -296,23 +272,6 @@ input[type="checkbox"] {
     justify-content: center;
 }
 
-.welcome-container {
-    background-color: white;
-    display: flex;
-
-    width: 100%;
-    height: 100vh;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.welcome {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-}
-
-
 .name {
     font-style: normal;
     font-weight: normal;
@@ -320,39 +279,6 @@ input[type="checkbox"] {
     position: relative ;
     left: 10px;
     color: white;
-}
-
-.welcome-top {
-    display: flex;
-    justify-content: space-between;
-    margin-top: -150px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.quote {
-    color: #4F4F4F;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    position: absolute;               /* 2 */
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    width: 260px;
-}
-
-.go {
-    background-color: #408ab4;
-    border-radius: 50%;
-    border: none;
-    position: absolute;               /* 2 */
-    top: 80%;
-    left: 80%;
-    color: white;
-    font-style: normal;
-    font-weight: 500;
 }
 
 .advanced-button {
@@ -372,7 +298,6 @@ input[type="checkbox"] {
     width: 40%;
 }
 
-
 .read-btn {
     background-color: #408ab4;
     border-radius: 10px;
@@ -382,13 +307,6 @@ input[type="checkbox"] {
     margin-top: -5px;
 }
 
-.logo-circles {
-    position: absolute;
-    left: 0px;
-
-}
-
-
 .welcome-avatar {
     position: absolute;
     right: 0px;
@@ -396,106 +314,54 @@ input[type="checkbox"] {
     border: 1px solid black;
 }
 
-.author {
-    margin-top: 30px;
-    color: #4F4F4F;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    text-align: end;
-}
-
 .modal-header {
     position: sticky;
 }
-
 
 .button-format {
     margin-left: auto;
 }
 
 
+// Large screens
 @media (max-width: 2500px) {
-    //large
     .advanced-container  {
       width: 100%;
       height: 100vh;
     }
 
-    .quote {
-        font-size: 36px;
-        width: 390px;
-        }
-
-    .author {
+    .time, .format {
         font-size: 24px;
+        margin-bottom: 20px;
     }
 
-    .go {
-        width: 120px;
-        height: 120px;
-        font-size: 36px;
+    .submit_tag, .search-submit_tag {
+        border-radius: 20px;
+        width: 232px;
+        height: 40px;
+        font-size: 20px;
     }
 
+    .custom-select {
+        border-radius: 10px;
+        width: 370px;
+        font-size: 20px;
+    }
 
-    .logo-circles {
-        width: 450px;
-        height: 180px;
+    .checkbox-container {
+        height: 50px;
+    }
 
-        }
-
-        .welcome-avatar {
-            width: 75px;
-            height: 75px;
-            margin-top: 30px;
-            margin-right: 30px;
-          }
-
-
-          .welcome-name {
-            font-size: 33px;
-            left: 15px;
-            top: 33px;
-            color: white;
-            position: absolute;
-        }
-
-
-        .time, .format {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-
-        .submit_tag, .search-submit_tag {
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        & + label {
+            width: 150px;
+            height: 30px;
             border-radius: 20px;
-            width: 232px;
-            height: 40px;
-            font-size: 20px;
+            font-size: 15px;
         }
-
-
-        .custom-select {
-            border-radius: 10px;
-            width: 370px;
-            font-size: 20px;
-        }
-
-
-        .checkbox-container {
-            height: 50px;
-        }
-
-        input[type="checkbox"] {
-            position: absolute;
-            opacity: 0;
-            & + label {
-                width: 150px;
-                height: 30px;
-                border-radius: 20px;
-                font-size: 15px;
-            }
-        }
+    }
     .card {
         width: 1080px;
         margin-top: 90px;
@@ -504,9 +370,6 @@ input[type="checkbox"] {
         border-radius: 30px;
         filter: drop-shadow(6px 6px 48px rgba(0, 0, 0, 0.11));
     }
-
-
-    // here!
 
     .fav-card {
         width: 1080px;
@@ -517,17 +380,16 @@ input[type="checkbox"] {
         filter: drop-shadow(6px 6px 48px rgba(0, 0, 0, 0.11));
         background-color: white;
         margin-left: 50%;
-
     }
 
     .library-video-title-container {
         height: 500px;
     }
 
-
     .author-card {
         font-size: 28px;
     }
+
     .advanced-button {
         border-radius: 16px;
         font-size: 32px;
@@ -538,13 +400,11 @@ input[type="checkbox"] {
         height: 60px;
     }
 
-
     .title-container {
         gap: 0px 40px;
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 20px;
-
     }
 
     .video-title-container {
@@ -609,50 +469,8 @@ input[type="checkbox"] {
   }
 
 
-
+// Medium screen
   @media (max-width: 1000px) {
-        //medium
-
-        .quote {
-            font-size: 36px;
-            width: 390px;
-            }
-
-        .author {
-            font-size: 24px;
-        }
-
-        .go {
-            width: 120px;
-            height: 120px;
-            font-size: 36px;
-        }
-
-
-        .logo-circles {
-            width: 450px;
-            height: 180px;
-
-            }
-
-            .welcome-avatar {
-                width: 75px;
-                height: 75px;
-                margin-top: 30px;
-                margin-right: 30px;
-              }
-
-
-              .welcome-name {
-                font-size: 33px;
-                left: 15px;
-                top: 33px;
-                font-family: 'Times New Roman', Times, serif;
-                color: white;
-                position: absolute;
-            }
-
-
 
     .time, .format {
         font-size: 37px;
@@ -671,7 +489,6 @@ input[type="checkbox"] {
         width: 555px;
         font-size: 30px;
     }
-
 
     .checkbox-container {
         height: 75px;
@@ -697,7 +514,6 @@ input[type="checkbox"] {
         filter: drop-shadow(4px 4px 32px rgba(0, 0, 0, 0.11));
     }
 
-
     .fav-card {
         width: 720px;
         margin-top: 60px;
@@ -709,8 +525,8 @@ input[type="checkbox"] {
     }
 
     .button-format {
-    margin-left: 30%;
-    width: 750px;
+        margin-left: 30%;
+        width: 750px;
     }
 
     .iframe-video {
@@ -728,17 +544,15 @@ input[type="checkbox"] {
         height: 40px;
     }
 
-
     .heart {
         font-size: 30px;
         color: #F2994A;
     }
 
     .full-heart {
-    font-size: 30px;
-    color: #F2994A;
-        }
-
+        font-size: 30px;
+        color: #F2994A;
+    }
 
     .modal-dialog {
         width: 750px;
@@ -746,59 +560,17 @@ input[type="checkbox"] {
 
     .modal-body {
         width: 750px;
-
     }
   }
 
+
+  // Small screen
   @media (max-width: 750px) {
-    //small
-
-    .quote {
-        font-size: 24px;
-        width: 260px;
-        }
-
-    .author {
-        font-size: 18px;
-    }
-
-    .go {
-        width: 80px;
-        height: 80px;
-        font-size: 24px;
-        left: 60%;
-    }
-
-
-    .logo-circles {
-        width: 280px;
-        height: 110px;
-
-        }
-
-        .welcome-avatar {
-            width: 50px;
-            height: 50px;
-            margin-top: 20px;
-            margin-right: 20px;
-          }
-
-
-          .welcome-name {
-            font-size: 22px;
-            left: 10px;
-            top: 22px;
-            font-family: 'Times New Roman', Times, serif;
-            color: white;
-            position: absolute;
-        }
-
 
     .time, .format {
         font-size: 24px;
         margin-bottom: 20px;
     }
-
 
     .submit_tag, .search-submit_tag {
         border-radius: 20px;
@@ -807,13 +579,11 @@ input[type="checkbox"] {
         font-size: 20px;
     }
 
-
     .custom-select {
         border-radius: 10px;
         width: 370px;
         font-size: 20px;
     }
-
 
     .checkbox-container {
         height: 50px;
@@ -855,7 +625,6 @@ input[type="checkbox"] {
         margin-left: 5%;
         width: 400px;
         }
-
 
     .iframe-video {
         width: 300px;
@@ -926,17 +695,15 @@ input[type="checkbox"] {
         font-size: 15px;
     }
 
-
     .heart {
         font-size: 20px;
         color: #F2994A;
     }
 
     .full-heart {
-    font-size: 20px;
-    color: #F2994A;
-        }
-
+        font-size: 20px;
+        color: #F2994A;
+    }
 
     .modal-dialog {
         width: 375px;
@@ -946,5 +713,4 @@ input[type="checkbox"] {
         width: 350;
         height: 800;
     }
-
   }

@@ -1,3 +1,5 @@
+// Favorites button
+
 const toggleFavorite = (buttonHTML) => {
   // the content id is stored in the data attirbute in the HTML; check the index.html for content
   const contentId = buttonHTML.dataset.contentId;
