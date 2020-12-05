@@ -47,17 +47,42 @@
 
 <body>
 
-  <div class="navbar">
-    <%= image_tag("logo-circles.png", class: "logo-circles") %>
-      <h3 class="welcome-name">UnLearning</h3>
-    <%= image_tag("avatar.jpg", class: "welcome-avatar" )%>
-    <div class="welcome">
-      <div class="welcome-top">
-        <%= image_tag("avatar.jpg", class: "avatar" )%>
-      </div>
-    </div>
-  </div>
+  <%# Navbar %>
 
+  <%#= image_tag("logo-circles.png", class: "logo-circles") %>
+  <%#= image_tag("avatar.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false )%>
+
+  <nav class="navbar navbar-expand-lg navbar-mainbg">
+    <a class="navbar-brand navbar-logo" href="http://localhost:3000/">UnLearning</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);">
+                <i class="fa fa-search"></i>
+                Search</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="javascript:void(0);">
+                <i class="fa fa-search-plus"></i>
+                Advanced Search</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);">
+                <i class="fa fa-bookmark"></i>
+                My Library</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);">
+                <i class="fa fa-user"></i>
+                Profile</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
 
   <%= yield %>
 
