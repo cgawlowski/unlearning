@@ -32,10 +32,29 @@
     color: #4F4F4F;  
 }
 
+.submit_tag {
+    background-color: #34699A;
+    color: white;
+    border-radius: 20px;
+    width: 232px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+}
+
+.search-submit_tag {
+    background-color: #65C6C4;
+    color: white;
+    border-radius: 20px;
+    width: 232px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+}
+
 .search-format {
     font-style: normal;
     font-weight: 500;
-
 }
 
 .search-article, .search-video, .search-podcast {
@@ -124,11 +143,9 @@
         margin-top: -20px;
     }
 
-
     .article, .video, .podcast  {
         height: 50px;
     }
-  
 }
   
   @media (max-width: 1000px) {
@@ -150,9 +167,7 @@
         margin-top: -20px;
     }
 
-
     .article, .video, .podcast  {
         height: 50px;
     }
-    
   }

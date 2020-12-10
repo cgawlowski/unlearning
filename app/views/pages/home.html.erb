@@ -1,54 +1,40 @@
 <div class="first-container">
     <div class="home-container">
-
+        <%# Form %>
         <div class="form-check">
-
-            <%= form_with(url: "/contents",
-
-            method: "get", local:true, class: 'form-container') do %>
-
+            <%= form_with(url: "/contents", method: "get", local:true, class: 'form-container') do %>
+                <%# First question %>
                 <div class="time">
                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How much time do yo have ?</label>
                      <%= select_tag(:duration, raw('<option value="1">Something quick ! (5 minutes max)</option>
                      <option value="2">Less than 20 minutes</option>
                      <option value="3">I have got all the time in the world !</option>'), class: "custom-select my-1 mr-sm-2", id: "inlineFormCustomSelectPref") %>
                 </div>
-
-
+                <%# Second question %>
                 <div class="content">
                     <label class="format" for="inlineFormCustomSelectPref">What format do you want?</label>
-
                     <div class="checkbox-container">
                         <%= check_box_tag(:article, 1, false, class: 'article') %>
                         <%= label_tag(:article, "ARTICLE") %>
                     </div>
-
                     <div class="checkbox-container">
                         <%= check_box_tag(:video, 1, false, class: 'video') %>
                         <%= label_tag(:video, "VIDEO") %>
                     </div>
-
                     <div class="checkbox-container">
                         <%= check_box_tag(:podcast, 1, false, class: 'podcast') %>
                         <%= label_tag(:podcast, "PODCAST") %>
                     </div>
                 </div>
-
+                <%# Submit button %>
                 <div class="buttons">
                     <div class="submit_button">
-
                         <%= hidden_field_tag :search, true %>
                         <%= submit_tag("Search content", class: "submit_tag") %>
-
                     </div>
-
                 </div>
-
-                    </div>
-
             <% end %>
-
-         </div>
+        </div>
     </div>
 </div>
 
