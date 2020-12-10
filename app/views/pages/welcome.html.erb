@@ -1,16 +1,8 @@
-
-
-
   <div class="welcome-container">
-
         <%= image_tag("logo-circles.png", class: "logo-circles") %>
                 <h3 class="welcome-name">UnLearning</h3>
         <%= image_tag("avatar.jpg", class: "welcome-avatar" )%>
     <div class="welcome">
-
-
-
-
         <div class="welcome-top">
             <p class="name">UnLearning</p>
             <%= image_tag("avatar.jpg", class: "avatar" )%>
@@ -21,14 +13,10 @@
           <br>
           <p class="author"><%= @quote.author %></p>
         </div>
-
-
         <%= link_to home_path, class: "home-button" do %>
-
           <button class="go">  Go!</button>
         <% end %>
 
     </div>
   </div>
-
 <% content_for(:html_title) { 'Your favorites quotes about learning' } %>
