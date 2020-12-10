@@ -12,11 +12,10 @@
   }
 }
 
-// .button {
-//     width: 90%;
-//     margin-bottom: 20px;
-//     // color: #65C6C4;
-//   }
+.link {
+    color: #65C6C4;
+    text-decoration: none;
+  }
 
 .remember_me{
   transition-duration: 0.4s;
@@ -103,7 +102,6 @@ body {
   margin-top: 10px;
   color: #fff;
   letter-spacing: 1px;
-  font-family: 'Rubik', sans-serif;
 }
 .animation {
   -webkit-animation-name: move;
@@ -140,6 +138,11 @@ body {
   -webkit-animation-delay: 2.5s;
           animation-delay: 2.5s;
 }
+
+.a7 {
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
+}
 @keyframes move {
   0% {
     opacity: 0;
@@ -165,3 +168,5 @@ body {
     width: 440px;
   }
 }
+
+
