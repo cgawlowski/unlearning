@@ -13,7 +13,7 @@
 }
 
 .link {
-    color: #65C6C4;
+    color: #408AB4;
     text-decoration: none;
   }
 
@@ -50,7 +50,7 @@ body {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
-.right-section {
+.right-section-signup {
   flex: 1;
   background: linear-gradient(to right, #f50629 0%, #fd9d08 100%);
   transition: 1s;
@@ -59,9 +59,29 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.right-section-login {
+  flex: 1;
+  background: linear-gradient(to right, #f50629 0%, #fd9d08 100%);
+  transition: 1s;
+  background-image: url(https://res.cloudinary.com/djcwoukgv/image/upload/v1607628626/login-unlearning_g2pmpr.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.right-section-password {
+  flex: 1;
+  background: linear-gradient(to right, #f50629 0%, #fd9d08 100%);
+  transition: 1s;
+  background-image: url(https://res.cloudinary.com/djcwoukgv/image/upload/v1607628626/new-password-unlearning_alvfyi.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .header > h1 {
   margin: 0;
-  color: #65C6C4;
+  color: #F2994A;
 }
 .header > h4 {
   margin-top: 10px;
@@ -78,7 +98,7 @@ body {
   text-align: right;
 }
 .form > p > a {
-  color: #000;
+  // color: #000;
   font-size: 14px;
 }
 .form-field {
@@ -94,14 +114,21 @@ body {
 .form-field:focus {
   border-color: #0f7ef1;
 }
-.form > button {
-  padding: 12px 10px;
-  border: 0;
-  background: linear-gradient(to right, #f50629 0%, #fd9d08 100%);
-  border-radius: 3px;
-  margin-top: 10px;
-  color: #fff;
-  letter-spacing: 1px;
+.button-form {
+  transition-duration: 0.4s;
+  background-color: #F2994A;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px 12px;
+  padding-inline-start: 12px;
+  padding-inline-end: 12px;
+  cursor: pointer;
 }
 .animation {
   -webkit-animation-name: move;
