@@ -4,11 +4,13 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
     background-color: #65C6C4;
 }
 
 .form-container {
+    position: relative;
+    top: 30vh;
     display: flex;
     flex-direction: column;
     align-items: center;

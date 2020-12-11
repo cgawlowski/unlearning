@@ -58,7 +58,7 @@
 
 <body>
 
-  <%# Navbar %>
+<%# Navbar %>
 
       <div class="html-container">
       <div class="html-section">
@@ -69,7 +69,7 @@
                 <li><a href="http://localhost:3000/" target="_blank" class="active">Home</a></li>
                 <li><a href="http://localhost:3000/home" target="_blank" class="active1">Search</a></li>
                 <li><a href="http://localhost:3000/search" target="_blank" class="active2">Advanced Search</a></li>
-                <li><a href="http://localhost:3000/favorites" target="_blank" class="active3">My Library</a></li>
+                <li><a href="http://localhost:3000/favorites" target="_blank" class="active3">Library</a></li>
               </ul>
             </nav>
           </div>
@@ -126,18 +126,6 @@
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
-    <div class="footer">
-      <%= link_to root_path, class: "home-button" do %>
-        <%= image_tag("home.png", class: "home_btn") %>
-      <% end %>
-      <%= link_to "/search", class: "home-button" do %>
-        <%= image_tag("search.png", class: "search_btn") %>
-      <% end %>
-      <%= link_to "/favorites", class: "home-button" do %>
-        <%= image_tag("library.png", class: "library_btn") %>
-      <% end %>
-    </div>
 
 </body>
 </html>
