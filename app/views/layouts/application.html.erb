@@ -43,42 +43,25 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+
+  <%# <Navbar> %>
+  <meta charset="utf-8">
+	<meta name="author" content="anonymous">
+	<meta name="generator" content="Sublime text3">
+	<meta name="robot" content="index, follow">
+	<meta http-equiv="refresh" content="">
+	<meta name="description" content="This is navigation bar on html page">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keyowrds" content="html, navigation bar, navigation, bar, javascript, content">
+
 </head>
 
 <body>
-
-  <%# Navbar %>
-
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-      <div class="home">
-      <%= link_to root_path, class: "home-button" do %>
-          <div class="logo">
-          <%= image_tag("circles.png", class: "circles") %>
-          </div>
-        <% end %>
-        <h3 class="unlearning">UnLearning</h3>
-      </div>
-      <div>
-        <%= image_tag("avatar.jpg", class: "avatar" )%>
-      </div>
-    </div>
 
   <%= yield %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
-    <div class="footer">
-      <%= link_to root_path, class: "home-button" do %>
-        <%= image_tag("home.png", class: "home_btn") %>
-      <% end %>
-      <%= link_to "/search", class: "home-button" do %>
-        <%= image_tag("search.png", class: "search_btn") %>
-      <% end %>
-      <%= link_to "/favorites", class: "home-button" do %>
-        <%= image_tag("library.png", class: "library_btn") %>
-      <% end %>
-    </div>
 
 </body>
 </html>
