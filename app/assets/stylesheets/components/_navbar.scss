@@ -6,7 +6,6 @@
   margin: 0;
 }
 
-
 /*Body section...@*/
 body {
   margin: 0;
@@ -17,10 +16,7 @@ body {
   background-repeat: no-repeat;
   opacity: 1;
   overflow: hidden;
-  background: rgb(36,145,156);
-  background: radial-gradient(circle, rgba(36,145,156,0.8886905103838411) 5%, rgba(101,198,196,1) 79%);
   }
-
 
 ul {
   list-style-type: none;
@@ -83,7 +79,6 @@ li a {
 }
 
 .navigation {
-
   position: absolute;
   transform: translate(-50%, -50%);
   top: 7%;
@@ -119,7 +114,7 @@ li a {
   transition: 2s;
 }
 
-.active:hover {
+.active0:hover {
   color: #fff;
   animation: 1.5s myFlash linear infinite;
   text-shadow: 2px 2px 30px #fff;
