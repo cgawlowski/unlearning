@@ -1,10 +1,14 @@
 // Default screen size
+.first-container {
+    background: rgb(36,145,156);
+    background: radial-gradient(circle, rgba(36,145,156,0.8886905103838411) 5%, rgba(101,198,196,1) 79%);    margin-top: 10vh;
+}
 
 .home-container {
     display: flex;
     justify-content: center;
     width: 100%;
-    min-height: 80vh;
+    min-height: 100vh;
     background: rgb(36,145,156);
     background: radial-gradient(circle, rgba(36,145,156,0.8886905103838411) 5%, rgba(101,198,196,1) 79%);    margin-top: 10vh;
 }
