@@ -1,25 +1,20 @@
 // Default screen size
-.first-container {
+.home-container {
     background: rgb(36,145,156);
     background: radial-gradient(circle, rgba(36,145,156,0.8886905103838411) 5%, rgba(101,198,196,1) 79%);    margin-top: 10vh;
-}
-
-.home-container {
     display: flex;
     justify-content: center;
     width: 100%;
-    min-height: 100vh;
-    background: rgb(36,145,156);
-    background: radial-gradient(circle, rgba(36,145,156,0.8886905103838411) 5%, rgba(101,198,196,1) 79%);    margin-top: 10vh;
+    height: 100vh;
 }
 
-.form-container {
+.form-container-basic {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    grid-row-gap: 30px;
+    grid-row-gap: 40px;
     margin-top: 30px;
 }
 
@@ -43,30 +38,6 @@
     margin-bottom: 30px;
 }
 
-.search-form-check {
-    margin-top: 100px;
-    background-color: #408AB4;
-}
-
-.timesearch {
-    display: flex;
-    flex-direction: column;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    color: white;
-}
-
-.topic {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    color: white;
-}
-
 .content {
     display: flex;
     flex-direction: column;
@@ -74,13 +45,6 @@
     grid-row-gap: 5px;
     font-style: normal;
     justify-content: center;
-    color: white;
-}
-
-.search-format {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
     color: white;
 }
 
@@ -207,7 +171,6 @@ input[type="checkbox"] {
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.01em;
-    text-transform: uppercase;
 }
 
 .author {

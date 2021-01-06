@@ -4,7 +4,9 @@
 }
 
 .search-container {
-    background-color: #408AB4;
+    //Previous color :  background-color: #408AB4;
+    background: rgb(64,123,180);
+    background: radial-gradient(circle, rgba(64,123,180,1) 65%, rgba(64,138,180,1) 89%);    display: flex;
     display: flex;
     justify-content: center;
     padding-top: 40px;
@@ -12,8 +14,19 @@
     width: 100%;
   }
 
+.form-container-advanced {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    grid-row-gap: 40px;
+    margin-top: 30px;
+}
+
 .search-form-check {
     top: 100px;
+    margin-top: 100px;
 }
 
 .search_my_class {
@@ -55,6 +68,8 @@
 .search-format {
     font-style: normal;
     font-weight: 500;
+    font-size: 24px;
+    color: white;
 }
 
 .search-article, .search-video, .search-podcast {
@@ -72,6 +87,25 @@
     font-weight: 500;
     font-size: 24px;
     color: #4F4F4F;
+}
+
+.timesearch {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+}
+
+.topic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
 }
 
 .search-buttons {
