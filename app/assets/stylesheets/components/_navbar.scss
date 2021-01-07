@@ -28,7 +28,7 @@ ul {
   border-radius: 40px;
   box-shadow: 3px 3px 20px #ff3352;
   border-top-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-bottom-right-radius: 40px;
 }
 
 @keyframes myGradient {
@@ -51,7 +51,7 @@ ul {
   margin-left: 30px;
 }
 
-.active {
+.active0 {
   transition: 1s;
 }
 
@@ -82,7 +82,7 @@ li a {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 7%;
-  left: 50%;
+  left: 23%;
 }
 
 .fa-search:hover {
