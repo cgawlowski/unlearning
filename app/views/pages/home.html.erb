@@ -5,10 +5,10 @@
             <div class="navigation">
                 <nav>
                     <ul class="nav-type">
-                    <li><a href="http://localhost:3000/" class="active0">Home</a></li>
-                    <li><a href="http://localhost:3000/home" class="active1">Search</a></li>
-                    <li><a href="http://localhost:3000/search" class="active2">Advanced</a></li>
-                    <li><a href="http://localhost:3000/favorites" class="active3">Library</a></li>
+                        <li><%= link_to 'Home', root_path %></li>
+                        <li><%= link_to 'Search', home_path %></li>
+                        <li><%= link_to 'Advanced', search_path %></li>
+                        <li><%= link_to 'Library', favorites_path %></li>
                     </ul>
                 </nav>
             </div>
