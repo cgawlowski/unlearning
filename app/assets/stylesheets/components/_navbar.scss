@@ -6,6 +6,7 @@
   margin: 0;
 }
 
+
 /*Body section...@*/
 body {
   margin: 0;
@@ -53,6 +54,7 @@ ul {
 
 .active0 {
   transition: 1s;
+  font-family: cursive;
 }
 
 .active1{
@@ -82,7 +84,7 @@ li a {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 7%;
-  left: 23%;
+  left: 25%;
 }
 
 .fa-search:hover {
