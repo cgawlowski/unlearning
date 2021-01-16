@@ -1,22 +1,22 @@
 // Default screen size
-
 .home-container {
+    // background-color: #65C6C4;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     display: flex;
     justify-content: center;
     width: 100%;
-    min-height: 80vh;
-    background-color: #65C6C4;
-    margin-top: 10vh;
+    height: 100vh;
+    padding-top: 60px;
 }
 
-
-.form-container {
+.form-container-basic {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    grid-row-gap: 30px;
+    grid-row-gap: 40px;
     margin-top: 30px;
 }
 
@@ -40,30 +40,6 @@
     margin-bottom: 30px;
 }
 
-.search-form-check {
-    margin-top: 100px;
-    background-color: #408AB4;
-}
-
-.timesearch {
-    display: flex;
-    flex-direction: column;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    color: white;
-}
-
-.topic {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    color: white;
-}
-
 .content {
     display: flex;
     flex-direction: column;
@@ -71,13 +47,6 @@
     grid-row-gap: 5px;
     font-style: normal;
     justify-content: center;
-    color: white;
-}
-
-.search-format {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
     color: white;
 }
 
@@ -204,7 +173,6 @@ input[type="checkbox"] {
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.01em;
-    text-transform: uppercase;
 }
 
 .author {

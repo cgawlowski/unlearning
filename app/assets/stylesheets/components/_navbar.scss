@@ -17,9 +17,7 @@ body {
   background-repeat: no-repeat;
   opacity: 1;
   overflow: hidden;
-  background: #65C6C4;
-  transition: 3s;
-}
+  }
 
 
 ul {
@@ -32,7 +30,8 @@ ul {
   border-radius: 40px;
   box-shadow: 3px 3px 20px #ff3352;
   border-top-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-bottom-right-radius: 40px;
+
 }
 
 @keyframes myGradient {
@@ -55,8 +54,9 @@ ul {
   margin-left: 30px;
 }
 
-.active {
+.active0 {
   transition: 1s;
+  font-family: cursive;
 }
 
 .active1{
@@ -83,11 +83,10 @@ li a {
 }
 
 .navigation {
-
   position: absolute;
   transform: translate(-50%, -50%);
   top: 7%;
-  left: 50%;
+  left: 25%;
 }
 
 .fa-search:hover {
@@ -119,7 +118,7 @@ li a {
   transition: 2s;
 }
 
-.active:hover {
+.active0:hover {
   color: #fff;
   animation: 1.5s myFlash linear infinite;
   text-shadow: 2px 2px 30px #fff;
@@ -299,7 +298,6 @@ nav {
   font-family: verdana;
   line-height: 30px;
   display: none;
-
 }
 
 

@@ -1,86 +1,57 @@
-<div class="first-container">
-    <%# Navbar %>
-    <div class="html-container">
-        <div class="html-section">
-            <div class="html-project">
-                <div class="navigation">
-                    <nav>
-                        <ul class="nav-type">
-                            <li><a href="http://localhost:3000/" target="_blank" class="active">Home</a></li>
-                            <li><a href="http://localhost:3000/home" target="_blank" class="active1">Search</a></li>
-                            <li><a href="http://localhost:3000/search" target="_blank" class="active2">Advanced</a></li>
-                            <li><a href="http://localhost:3000/favorites" target="_blank" class="active3">Library</a></li>
-                        </ul>
-                    </nav>
-                </div>
+<%# Navbar %>
+<div class="html-container">
+    <div class="html-section">
+        <div class="html-project">
+            <div class="navigation">
+                <nav>
+                    <ul class="nav-type">
+                        <li><%= link_to 'UnLearning', root_path, class: "active0" %></li>
+                        <li><%= link_to 'Search', home_path, class: "active1" %></li>
+                        <li><%= link_to 'Advanced', search_path, class: "active2" %></li>
+                        <li><%= link_to 'Library', favorites_path, class: "active3" %></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-        <noscript>
-            <div class="first-line">
-                <div class="linear">
-                    <div class="line-w5">          
-                    </div>
-                </div>
-            </div>
-        </noscript>
-        <template>
-            <div class="flash-fluid">
-                <div class="flash-time">
-                    <div class="flash-GIF">      
-                    </div>
-                </div>
-            </div>
-        </template>
-        <noscript>     
-            <div class="cyrcle-center">
-                <div class="radial-cyrcle">
-                </div>
-            </div>
-        </noscript>
     </div>
-    <div class="dropdown" id="anotherFunction">
-        <div class="drop1">HTML</div>
-        <div class="drop2">CSS</div>
-        <div class="drop3">Javascript</div>
-        <div class="drop4">Sass</div>
-    </div>
+</div>
 
-    <div class="home-container">
-        <%# Form %>
-        <div class="form-check">
-            <%= form_with(url: "/contents", method: "get", local:true, class: 'form-container') do %>
-                <%# First question %>
-                <div class="time">
-                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How much time do yo have ?</label>
-                     <%= select_tag(:duration, raw('<option value="1">Something quick ! (5 minutes max)</option>
-                     <option value="2">Less than 20 minutes</option>
-                     <option value="3">I have got all the time in the world !</option>'), class: "custom-select my-1 mr-sm-2", id: "inlineFormCustomSelectPref") %>
+<%# Form %>
+<div class="home-container">
+    <div class="form-check">
+        <%= form_with(url: "/contents", method: "get", local:true, class: 'form-container-basic') do %>
+            <%# First question %>
+            <div class="time">
+                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How much time do yo have ?</label>
+                    <%= select_tag(:duration, raw('
+                    <option value="1">Something quick ! (5 minutes max)</option>
+                    <option value="2">Less than 20 minutes</option>
+                    <option value="3">I have got all the time in the world !</option>'), class: "custom-select my-1 mr-sm-2", id: "inlineFormCustomSelectPref") %>
+            </div>
+            <%# Second question %>
+            <div class="content">
+                <label class="format" for="inlineFormCustomSelectPref">What format do you want?</label>
+                <div class="checkbox-container">
+                    <%= check_box_tag(:article, 1, false, class: 'article') %>
+                    <%= label_tag(:article, "ARTICLE") %>
                 </div>
-                <%# Second question %>
-                <div class="content">
-                    <label class="format" for="inlineFormCustomSelectPref">What format do you want?</label>
-                    <div class="checkbox-container">
-                        <%= check_box_tag(:article, 1, false, class: 'article') %>
-                        <%= label_tag(:article, "ARTICLE") %>
-                    </div>
-                    <div class="checkbox-container">
-                        <%= check_box_tag(:video, 1, false, class: 'video') %>
-                        <%= label_tag(:video, "VIDEO") %>
-                    </div>
-                    <div class="checkbox-container">
-                        <%= check_box_tag(:podcast, 1, false, class: 'podcast') %>
-                        <%= label_tag(:podcast, "PODCAST") %>
-                    </div>
+                <div class="checkbox-container">
+                    <%= check_box_tag(:video, 1, false, class: 'video') %>
+                    <%= label_tag(:video, "VIDEO") %>
                 </div>
-                <%# Submit button %>
-                <div class="buttons">
-                    <div class="submit_button">
-                        <%= hidden_field_tag :search, true %>
-                        <%= submit_tag("Search content", class: "submit_tag") %>
-                    </div>
+                <div class="checkbox-container">
+                    <%= check_box_tag(:podcast, 1, false, class: 'podcast') %>
+                    <%= label_tag(:podcast, "PODCAST") %>
                 </div>
-            <% end %>
-        </div>
+            </div>
+            <%# Submit button %>
+            <div class="buttons">
+                <div class="submit_button">
+                    <%= hidden_field_tag :search, true %>
+                    <%= submit_tag("Search content", class: "submit_tag") %>
+                </div>
+            </div>
+        <% end %>
     </div>
 </div>
 

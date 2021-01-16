@@ -34,6 +34,7 @@ export const toggleFavorites = () => {
 
 // Navbar
 //function section in Javascript and Jquery...
+
 function myData() {
   retrun;
 }

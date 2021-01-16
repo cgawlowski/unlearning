@@ -1,3 +1,22 @@
+<%# Navbar %>
+<div class="html-container">
+    <div class="html-section">
+        <div class="html-project">
+            <div class="navigation">
+                <nav>
+                    <ul class="nav-type">
+                      <li><%= link_to 'UnLearning', root_path, class: "active0" %></li>
+                      <li><%= link_to 'Search', home_path, class: "active1" %></li>
+                      <li><%= link_to 'Advanced', search_path, class: "active2" %></li>
+                      <li><%= link_to 'Library', favorites_path, class: "active3" %></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%# Form %>
 <div class="search-container">
     <%# Navbar %>
     <div class="html-container">
@@ -48,9 +67,8 @@
   <%# form %>
   <div class="row justify-content" >
     <div class="search-form-check">
-
-      <%= form_with(url: "/advanced-search", method: "get", local:true, class: 'form-container') do %>
-
+      <%= form_with(url: "/advanced-search", method: "get", local:true, class: 'form-container-advanced') do %>
+        <%# First question %>
         <div class="content">
           <label class="search-format" for="inlineFormCustomSelectPref">What format do you want?</label>
           <div class="article">
@@ -66,7 +84,7 @@
             <%= label_tag(:podcast, "PODCAST") %>
           </div>
         </div>
-
+        <%# Second question %>
         <div>
           <label class="timesearch" for="inlineFormCustomSelectPref">How much time do yo have ?</label>
             <%= select_tag(:duration, raw('
@@ -76,7 +94,7 @@
             class: "custom-select my-1 mr-sm-2", id: "inlineFormCustomSelectPref") %>
           <%= hidden_field_tag :search, true %>
         </div>
-
+        <%# Third question %>
         <div class="topic">
           <label for="exampleFormControlSelect2">Which topic ?</label>
             <%= select_tag(:category, raw('
